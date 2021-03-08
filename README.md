@@ -1,4 +1,4 @@
-# HE-F1
+# HE-F1 
 HE-F1 est un jeu de gestion d'écuries de Formule 1.  
 Une écurie se compose de plusieurs membres. Le responsable d'une écurie peut gérer ses membres (ajouter ou supprimer un membre).  
 Les écuries reçoivent une somme de base à chaque début de saison. Cet argent sert à réparer les pièces endommagées ou à améliorer les pièces existantes.
