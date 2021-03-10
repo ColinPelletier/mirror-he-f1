@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/fragments.html :: header"></div>
+<body>
+
+	<!-- UPDATE CHAP_06 -->
+	<div th:replace="fragments/fragments.html :: navigation"></div>
+	<div class="container mt-sm-3">
+		<h1>Login</h1>
+		<span class="welcome" th:text="${msg}"></span>
+		<div th:if="${param.error}">
+			<p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
+		</div>
+		<div th:if="${param.logout}">You have been logged out.</div>
+		<form th:action="@{/login}" method="post">
+			<div class="form-group">
+				<label for="inputUsername">Email</label> 
+				<input type="email" id="email" name="email" th:placeholder="Email" class="form-control"	required />
+				<!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+			</div>
+			<div class="form-group">
+				<label for="inputPassword1">Password</label> 
+				<input type="password" id="password" name="password" th:placeholder="Password" class="form-control" required />
+			</div>
+			<button type="submit" class="btn btn-primary">Login</button>
+		</form>
+	</div>
+	<div th:replace="fragments/fragments.html :: scripts"></div>
+</body>
+</html>

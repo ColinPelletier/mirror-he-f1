@@ -9,5 +9,5 @@ public class HeF1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(HeF1Application.class, args);
 	}
-
+	
 }
