@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,9 +24,17 @@ public class UserController {
 	 * Select the login view to render by returning its name
 	 */
 	@GetMapping("/login")
-	public String login(Map<String, Object> model) {		
+	public String login(Map<String, Object> model) {	
+		model.put("author", new User());
 		return "login";
 	}
+	
+//	@GetMapping("/login")
+//	public String login(Model model) {
+//		model.addAttribute("person", new Person());
+//		
+//		return "login";
+//	}
 	
 
 	@GetMapping("/signup")
