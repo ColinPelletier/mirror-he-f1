@@ -1,16 +1,19 @@
 package ch.hearc.hef1.model;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -43,6 +46,9 @@ public class User {
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="user")
+	private List<RepairUpgrade> repairUpgrades;
 
 	public int getId() {
 		return id;
@@ -84,8 +90,8 @@ public class User {
 		this.roles = roles;
 	}
 	
-//	public List<Todo> getTodos()
-//	{
-//		return todos;
-//	}	
+	public List<RepairUpgrade> getRepairUpgrades()
+	{
+		return repairUpgrades;
+	}	
 }

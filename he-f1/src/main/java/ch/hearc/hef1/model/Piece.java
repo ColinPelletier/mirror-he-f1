@@ -1,20 +1,41 @@
 package ch.hearc.hef1.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pieces")
 public class Piece {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column
 	private int id;
 
-	//fk category
-	private int categoryId;
-	
+	// fk category
+	@ManyToOne
+	@JoinColumn(name = "piece_category")
+	private PieceCategory pieceCategory;
+
+	@Column
 	private String nom;
-	
+
+	@Column
 	private double baseRepairPrice;
-	
+
+	@Column
 	private double baseRepairTime;
-	
+
+	@Column
 	private double baseUpgradePrice;
-	
+
+	@Column
 	private double baseUpgradeTime;
 
 	/**
@@ -22,8 +43,8 @@ public class Piece {
 	 */
 	public Piece() {
 		// empty
-	}	
-	
+	}
+
 	/**
 	 * Constructor
 	 * 
@@ -35,22 +56,21 @@ public class Piece {
 	 * @param baseUpgradePrice
 	 * @param baseUpgradeTime
 	 */
-	public Piece(int id, int categoryId, String nom, double baseRepairPrice, double baseRepairTime,
+	public Piece(int id, PieceCategory pieceCategory, String nom, double baseRepairPrice, double baseRepairTime,
 			double baseUpgradePrice, double baseUpgradeTime) {
 		this.id = id;
-		this.categoryId = categoryId;
+		this.pieceCategory = pieceCategory;
 		this.nom = nom;
 		this.baseRepairPrice = baseRepairPrice;
 		this.baseRepairTime = baseRepairTime;
 		this.baseUpgradePrice = baseUpgradePrice;
 		this.baseUpgradeTime = baseUpgradeTime;
 	}
-	
-	
+
 	/*
-	 * Getters and Setters 
+	 * Getters and Setters
 	 */
-	
+
 	public int getId() {
 		return id;
 	}
@@ -59,12 +79,12 @@ public class Piece {
 		this.id = id;
 	}
 
-	public int getCategoryId() {
-		return categoryId;
+	public PieceCategory getCategoryId() {
+		return pieceCategory;
 	}
 
-	public void setCategoryId(int categoryId) {
-		this.categoryId = categoryId;
+	public void setCategoryId(PieceCategory pieceCategory) {
+		this.pieceCategory = pieceCategory;
 	}
 
 	public String getNom() {
@@ -106,6 +126,5 @@ public class Piece {
 	public void setBaseUpgradeTime(double baseUpgradeTime) {
 		this.baseUpgradeTime = baseUpgradeTime;
 	}
-	
-	
+
 }
