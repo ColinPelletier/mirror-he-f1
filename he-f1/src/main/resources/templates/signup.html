@@ -24,10 +24,15 @@
 					placeholder="Enter a email" class="form-control" id="email"
 					name="email" required />
 			</div>
-			<select class="form-control">
-  				<option>Mécanicien</option>
-  				<option>Ingénieur</option>
-			</select>
+			<div>
+			<label>Spécialisation</label>
+				<select class="form-control" th:field="*{role}">
+	  				<!-- <option value="MANAGER">Manageur</option>
+					<option value="ENGINEER">Ingénieur</option> -->
+					
+					<option th:each="role : ${roles}" th:value="${}" th:text="${}"></option>
+				</select>
+			</div>
 			<div class="form-group">
 				<label for="inputPassword1">Password</label> <input type="password"
 					th:field="*{password}"

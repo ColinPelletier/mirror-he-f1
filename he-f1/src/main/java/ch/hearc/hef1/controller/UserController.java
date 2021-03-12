@@ -2,16 +2,17 @@ package ch.hearc.hef1.controller;
 
 import java.util.Map;
 
+import javax.management.relation.Role;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.hef1.model.User;
+import ch.hearc.hef1.model.UserRole;
 import ch.hearc.hef1.service.UserService;
 
 @Controller
@@ -29,14 +30,6 @@ public class UserController {
 		return "login";
 	}
 	
-//	@GetMapping("/login")
-//	public String login(Model model) {
-//		model.addAttribute("person", new Person());
-//		
-//		return "login";
-//	}
-	
-
 	@GetMapping("/signup")
 	public String signup(Map<String, Object> model) {
 		User user = new User();
@@ -49,6 +42,11 @@ public class UserController {
 	public String createAuthor(@Valid User author, BindingResult bindingResult, Map<String, Object> model) {
 
 		User userExists = userService.findUserByEmail(author.getEmail());
+		model.put("roles", UserRole.values());
+		//System.out.println("name = " + author.getUsername());
+		System.out.println("================================================");
+		System.out.println(author.getRole());
+		System.out.println("================================================");
 
 		if (userExists != null) {
 			return ("redirect:/signup?error=true");

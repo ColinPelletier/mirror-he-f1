@@ -1,16 +1,10 @@
 package ch.hearc.hef1.model;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -39,13 +33,10 @@ public class User {
 	@Length(min = 5, message = "*Your password must have at least 5 characters")
 	@NotEmpty(message = "*Please provide your password")
 	private String password;
-
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
-	private Set<Role> roles;
 	
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
-//	private List<Todo> todos;
+	@Column
+	private UserRole role;
+
 
 	public int getId() {
 		return id;
@@ -79,16 +70,12 @@ public class User {
 		this.password = password;
 	}
 	
-	public Set<Role> getRoles() {
-		return roles;
+	public UserRole getRole() {
+		return role;
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
+	public void setRole(final UserRole role) {
+		this.role = role;
 	}
-	
-//	public List<Todo> getTodos()
-//	{
-//		return todos;
-//	}	
+
 }
