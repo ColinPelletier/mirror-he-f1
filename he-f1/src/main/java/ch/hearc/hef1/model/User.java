@@ -1,10 +1,14 @@
 package ch.hearc.hef1.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -37,6 +41,8 @@ public class User {
 	@Column
 	private UserRole role;
 
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="user")
+	private List<RepairUpgrade> repairUpgrades;
 
 	public int getId() {
 		return id;
@@ -77,5 +83,9 @@ public class User {
 	public void setRole(final UserRole role) {
 		this.role = role;
 	}
-
+	
+	public List<RepairUpgrade> getRepairUpgrades()
+	{
+		return repairUpgrades;
+	}	
 }

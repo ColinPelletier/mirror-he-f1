@@ -2,14 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head>
-        <title>Spring Security Example </title>
-         <div th:replace="fragments/fragments.html :: header"></div>
+        <title>Login</title>
+         <head th:replace="fragments/fragments.html :: header"></head>
     </head>
     <body>
         <!-- Replace fragment  -->
         <div th:replace="fragments/fragments.html :: navigation"></div>
-        <!-- Template from https://bbbootstrap.com/snippets/simple-todo-list-template-11821916 -->
-        <!--For Page-->
+
         <div th:if="${param.error}">
             Invalid username and password.
         </div>

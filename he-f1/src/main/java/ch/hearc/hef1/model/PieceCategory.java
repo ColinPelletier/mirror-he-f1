@@ -12,27 +12,24 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="teams")
-public class Team {
-
+@Table(name="piece_category")
+public class PieceCategory {
+	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
 	private int id;
-
-	@Column
-	private String name;
-
-	@Column
-	private double budget;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
-	private List<Car> cars;
-
+	@Column
+	private String nom;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="pieceCategory")
+	private List<Piece> pieces;
+	
 	/**
 	 * Default constructor
 	 */
-	public Team() {
+	public PieceCategory() {
 		// empty
 	}
 
@@ -40,15 +37,14 @@ public class Team {
 	 * Constructor
 	 * 
 	 * @param id
-	 * @param name
-	 * @param budget
+	 * @param nom
 	 */
-	public Team(int id, String name, double budget) {
+	public PieceCategory(int id, String nom) {
 		this.id = id;
-		this.name = name;
-		this.budget = budget;
+		this.nom = nom;
 	}
-
+	
+	
 	/*
 	 * Getters and Setters
 	 */
@@ -61,24 +57,16 @@ public class Team {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getNom() {
+		return nom;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
-
-	public double getBudget() {
-		return budget;
-	}
-
-	public void setBudget(double budget) {
-		this.budget = budget;
-	}
-
-	public List<Car> getCars()
+	
+	public List<Piece> getPieces()
 	{
-		return cars;
+		return this.pieces;
 	}
 }
