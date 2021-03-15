@@ -1,3 +1,5 @@
+name: deploy ap on docker
+
 version: '3'
 services:
   mysql-db:
@@ -5,10 +7,10 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_DATABASE: my_todo
-      MYSQL_USER: root
-      MYSQL_PASSWORD: toor
-      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: he_f1
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
     volumes:
       - db-data:/var/lib/mysql
     networks:
@@ -34,9 +36,9 @@ services:
     depends_on: 
       - mysql-db  
     environment:      
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: toor
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db/my_todo?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: $MYSQL_USER
+      SPRING_DATASOURCE_PASSWORD: $MYSQL_PASSWORD
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db/he_f1?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
     command: mvn clean spring-boot:run
     networks:
       - backend
