@@ -1,6 +1,11 @@
 package ch.hearc.hef1.controller;
 
+import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.management.relation.Role;
 import javax.validation.Valid;
@@ -34,6 +39,14 @@ public class UserController {
 	public String signup(Map<String, Object> model) {
 		User user = new User();
 		model.put("user", user);
+		
+//		List<String> roles = Stream.of(UserRole.values())
+//                .map(Enum::name)
+//                .collect(Collectors.toList());
+		
+		List<Enum> roles = new ArrayList<Enum>(EnumSet.allOf(UserRole.class));
+		
+		model.put("roles", roles);
 		
 		return "signup";
 	}

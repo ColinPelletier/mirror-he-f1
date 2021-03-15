@@ -29,8 +29,8 @@
 				<select class="form-control" th:field="*{role}">
 	  				<!-- <option value="MANAGER">Manageur</option>
 					<option value="ENGINEER">Ingénieur</option> -->
-					
-					<option th:each="role : ${roles}" th:value="${}" th:text="${}"></option>
+
+					<option th:each="role : ${roles}" th:value="${role}" th:text="${role.getDescription()}"></option>
 				</select>
 			</div>
 			<div class="form-group">
