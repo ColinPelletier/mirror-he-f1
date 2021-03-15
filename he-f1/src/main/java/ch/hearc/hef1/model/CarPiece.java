@@ -29,7 +29,6 @@ public class CarPiece {
 	private Car car;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name = "repair_upgrade_id", referencedColumnName = "user_id")
 	@JoinColumn(name = "repair_upgrade_id")
 	private RepairUpgrade repairUpgrade;
 	
