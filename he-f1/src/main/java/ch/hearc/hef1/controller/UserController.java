@@ -40,10 +40,6 @@ public class UserController {
 		User user = new User();
 		model.put("user", user);
 		
-//		List<String> roles = Stream.of(UserRole.values())
-//                .map(Enum::name)
-//                .collect(Collectors.toList());
-		
 		List<Enum> roles = new ArrayList<Enum>(EnumSet.allOf(UserRole.class));
 		
 		model.put("roles", roles);
