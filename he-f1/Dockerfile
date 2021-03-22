@@ -3,7 +3,6 @@ FROM openjdk:11 as build
 
 # Set the current working directory inside the image
 WORKDIR /app
-#WORKDIR /he-f1
 
 # Copy maven executable to the image
 COPY mvnw .
