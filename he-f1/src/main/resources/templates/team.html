@@ -8,14 +8,17 @@
     <body>
         <!-- Replace fragment  -->
         <div th:replace="fragments/fragments.html :: navigation"></div>
+         
+         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDialog">Créer une écurie</button>
+         <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
 		
-		<div style="margin:30px;">
+		<div th:each="team: ${teams}" style="margin:30px;">
 			<div class="row justify-content-between">
 			    <div class="col-3">
-			      <h1>Scuderia AlphaTauri</h1>
+			      <h1 th:text="${team.name}">Scuderia AlphaTauri</h1>
 			    </div>
 			    <div class="col-2">
-			      <h3>Budget : 36'000'000$</h3>
+			      <h3 th:text="Budget : ${team.budget}"></h3>
 			    </div>
 		  	</div>
 		  	<div style="margin-bottom:10px;" class="row justify-content-between">
@@ -57,12 +60,20 @@
 				</div>
 				<div class="col-9">
 					<div class="card">
-				  		<img width="100%" height="auto" th:src="@{/images/alphatauri.png}" alt="at02">
+				  		<img width="100%" height="auto" th:src="@{/images/${team.name}.png}" alt="at02">
 				  	</div>
 				</div>
 		  	</div>
 		</div>
 		 
         <div th:replace="fragments/fragments.html :: scripts"></div>
+       	<script>
+	       	var teamDialog = document.getElementById('teamDialog')
+	
+	       	teamDialog.addEventListener('show.bs.modal', function (event) {
+	       	  // Button that triggered the modal
+	       	  var button = event.relatedTarget
+	       	})
+       	</script>
     </body>
 </html>

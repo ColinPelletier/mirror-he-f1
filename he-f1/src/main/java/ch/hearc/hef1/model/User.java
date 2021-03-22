@@ -8,6 +8,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
@@ -32,6 +34,10 @@ public class User {
 	@Email(message = "*Please provide a valid Email")
 	@NotEmpty(message = "*Please provide an email")
 	private String email;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "team_id")
+	private Team team;
 
 	@Column
 	@Length(min = 5, message = "*Your password must have at least 5 characters")
@@ -58,6 +64,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public Team getTeam() {
+		return team;
+	}
+
+	public void setTeam(Team team) {
+		this.team = team;
 	}
 
 	public String getUsername() {
