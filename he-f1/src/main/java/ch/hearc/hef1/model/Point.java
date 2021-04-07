@@ -8,23 +8,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="points")
+@Table(name = "points")
 public class Point {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	public int id;
-	
+	private long id;
+
 	@Column
-	public int position;
-	
+	private int position;
+
 	@Column
-	public int nbPoints;
-	
+	private int nbPoints;
+
 	@Column
-	public double money;
-	
+	private double money;
+
 	/**
 	 * Default constructor
 	 */
@@ -44,50 +44,41 @@ public class Point {
 		this.nbPoints = nbPoints;
 		this.money = money;
 	}
-	
-	
+
 	/*
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
-
 
 	public int getPosition() {
 		return position;
 	}
 
-
 	public void setPosition(int position) {
 		this.position = position;
 	}
-
 
 	public int getNbPoints() {
 		return nbPoints;
 	}
 
-
 	public void setNbPoints(int nbPoints) {
 		this.nbPoints = nbPoints;
 	}
-
 
 	public double getMoney() {
 		return money;
 	}
 
-
 	public void setMoney(double money) {
 		this.money = money;
 	}
-	
 
 }

@@ -12,13 +12,13 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="grand_prix")
+@Table(name = "grand_prix")
 public class GP {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
+	private long id;
 
 	@Column
 	private String name;
@@ -49,17 +49,15 @@ public class GP {
 		this.date = date;
 		this.country = country;
 	}
-	
 
 	/*
 	 * Getters and Setters
 	 */
-
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

@@ -53,6 +53,38 @@ public class TeamController {
 		return "redirect:/team"; // redirect to /team controller method
 	}
 
+	@GetMapping("/team/test-display")
+	public String testTeam(Map<String, Object> model) {
+		/*
+		 * To create a team : Create an empty object and pass it to the form. In the
+		 * form, map this object attributes with the corresponding form properties. The
+		 * model will then be available in the PostMapping method an could easily be
+		 * updated in the DB
+		 */
+
+		model.put("teamToCreate", new Team());
+
+		model.put("teams", teamRepository.findAll());
+
+		return "test-display";
+	}
+
+	@GetMapping("/team/test-form")
+	public String testForm(Map<String, Object> model) {
+		/*
+		 * To create a team : Create an empty object and pass it to the form. In the
+		 * form, map this object attributes with the corresponding form properties. The
+		 * model will then be available in the PostMapping method an could easily be
+		 * updated in the DB
+		 */
+
+		model.put("teamToCreate", new Team());
+
+		model.put("teams", teamRepository.findAll());
+
+		return "test-form";
+	}
+
 	// @GetMapping("/team")
 	// public String team(Map<String, Object> model) {
 	//

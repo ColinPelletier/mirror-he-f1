@@ -16,7 +16,7 @@ public class Piece {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
+	private long id;
 
 	// fk category
 	@ManyToOne
@@ -24,7 +24,7 @@ public class Piece {
 	private PieceCategory pieceCategory;
 
 	@Column
-	private String nom;
+	private String name;
 
 	@Column
 	private double baseRepairPrice;
@@ -50,17 +50,17 @@ public class Piece {
 	 * 
 	 * @param id
 	 * @param categoryId
-	 * @param nom
+	 * @param name
 	 * @param baseRepairPrice
 	 * @param baseRepairTime
 	 * @param baseUpgradePrice
 	 * @param baseUpgradeTime
 	 */
-	public Piece(int id, PieceCategory pieceCategory, String nom, double baseRepairPrice, double baseRepairTime,
+	public Piece(int id, PieceCategory pieceCategory, String name, double baseRepairPrice, double baseRepairTime,
 			double baseUpgradePrice, double baseUpgradeTime) {
 		this.id = id;
 		this.pieceCategory = pieceCategory;
-		this.nom = nom;
+		this.name = name;
 		this.baseRepairPrice = baseRepairPrice;
 		this.baseRepairTime = baseRepairTime;
 		this.baseUpgradePrice = baseUpgradePrice;
@@ -71,11 +71,11 @@ public class Piece {
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -87,12 +87,12 @@ public class Piece {
 		this.pieceCategory = pieceCategory;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getName() {
+		return name;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public double getBaseRepairPrice() {
