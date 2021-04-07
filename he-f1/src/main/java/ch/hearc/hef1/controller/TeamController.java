@@ -1,6 +1,10 @@
 package ch.hearc.hef1.controller;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -10,21 +14,33 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import ch.hearc.hef1.model.Car;
+import ch.hearc.hef1.model.CarPiece;
 import ch.hearc.hef1.model.Team;
+import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.TeamRepository;
+import ch.hearc.hef1.service.CarService;
 import ch.hearc.hef1.service.UserService;
 
 @Controller
 public class TeamController {
 	// private TeamService teamService;
+	private static final String REDIRECT_ERROR = "redirect:/error";
 
 	@Autowired
 	TeamRepository teamRepository;
 
 	@Autowired
-	private UserService userService;
+	UserService userService;
+
+	@Autowired
+	CarService carService;
+
+	@Autowired
+	CarRepository carRepository;
 
 	/**
 	 * Select the team view to render by returning its name
@@ -37,6 +53,7 @@ public class TeamController {
 		 * model will then be available in the PostMapping method an could easily be
 		 * updated in the DB
 		 */
+		// TODO check access
 
 		model.put("teamToCreate", new Team());
 
@@ -45,8 +62,50 @@ public class TeamController {
 		return "team";
 	}
 
+	@GetMapping("/team/{strTeamId}/car/{strCarId}")
+	public String teamCar(@PathVariable String strTeamId, @PathVariable String strCarId, Map<String, Object> model) {
+		// TODO : check if the user is a member of this team
+
+		// Check id validity
+		long teamId;
+		long carId;
+
+		try {
+			teamId = Long.parseLong(strTeamId);
+			carId = Long.parseLong(strCarId);
+		} catch (NumberFormatException e) {
+			System.err.println("id must be an integer");
+			return REDIRECT_ERROR;
+		}
+
+		Optional<Team> team = teamRepository.findById(teamId);
+		Optional<Car> car = carRepository.findById(carId);
+
+		// check wether the teams owns this car
+		if (team.isPresent() && car.isPresent()) {
+			if (carService.isTeamOwner(car.get(), team.get())) {
+				List<CarPiece> carPieces = carService.findCarPieces(car.get());
+				System.out.println(carPieces.size());
+
+				model.put("teamToCreate", new Team());
+				model.put("team", team.get());
+				model.put("car", car.get());
+				model.put("carPieces", carPieces);
+			} else {
+				System.err.println("Car " + carId + " is not owned by team " + teamId);
+				return REDIRECT_ERROR;
+			}
+		} else {
+			System.err.println("Invalid id for car or team");
+			return REDIRECT_ERROR;
+		}
+
+		return "team";
+	}
+
 	@PostMapping("/team/create")
 	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors, Model model) {
+		// TODO check access
 
 		teamRepository.save(team);
 
@@ -61,7 +120,7 @@ public class TeamController {
 		 * model will then be available in the PostMapping method an could easily be
 		 * updated in the DB
 		 */
-
+		// TODO check access
 		model.put("teamToCreate", new Team());
 
 		model.put("teams", teamRepository.findAll());
@@ -71,6 +130,7 @@ public class TeamController {
 
 	@GetMapping("/team/test-form")
 	public String testForm(Map<String, Object> model) {
+		// TODO check access
 		/*
 		 * To create a team : Create an empty object and pass it to the form. In the
 		 * form, map this object attributes with the corresponding form properties. The

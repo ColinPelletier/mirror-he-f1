@@ -80,4 +80,10 @@ public class Team {
 	public List<Car> getCars() {
 		return cars;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Team team = (Team) obj;
+		return this.id == team.id && this.name.equals(team.name);
+	}
 }

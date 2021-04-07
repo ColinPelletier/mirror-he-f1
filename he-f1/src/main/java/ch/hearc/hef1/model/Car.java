@@ -37,7 +37,7 @@ public class Car {
 	 * Constructor
 	 * 
 	 * @param id
-	 * @param teamId
+	 * @param team
 	 * @param name
 	 */
 	public Car(int id, Team team, String name) {

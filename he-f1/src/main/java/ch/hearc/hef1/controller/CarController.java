@@ -6,6 +6,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
@@ -21,9 +23,11 @@ public class CarController {
     @Autowired
     CarRepository carRepository;
 
-    @GetMapping("/car/pieces")
-    public String carPieces(Map<String, Object> model) {
-        Car car = carRepository.findById((long) 1).get();
+    @GetMapping("/car/{strCarId}/pieces")
+    public String carPieces(@PathVariable String strCarId, Map<String, Object> model) {
+        // TODO check access
+        long carId = Long.parseLong(strCarId);
+        Car car = carRepository.findById(carId).get();
         List<CarPiece> carPieces = carService.findCarPieces(car);
 
         model.put("model", car);
