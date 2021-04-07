@@ -12,20 +12,20 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="piece_category")
+@Table(name = "piece_category")
 public class PieceCategory {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
 	private int id;
-	
+
 	@Column
-	private String nom;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="pieceCategory")
+	private String name;
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pieceCategory")
 	private List<Piece> pieces;
-	
+
 	/**
 	 * Default constructor
 	 */
@@ -37,14 +37,13 @@ public class PieceCategory {
 	 * Constructor
 	 * 
 	 * @param id
-	 * @param nom
+	 * @param name
 	 */
-	public PieceCategory(int id, String nom) {
+	public PieceCategory(int id, String name) {
 		this.id = id;
-		this.nom = nom;
+		this.name = name;
 	}
-	
-	
+
 	/*
 	 * Getters and Setters
 	 */
@@ -57,16 +56,15 @@ public class PieceCategory {
 		this.id = id;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getName() {
+		return name;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public List<Piece> getPieces()
-	{
+
+	public List<Piece> getPieces() {
 		return this.pieces;
 	}
 }
