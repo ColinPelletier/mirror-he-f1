@@ -5,9 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import ch.hearc.hef1.model.Team;
 
-@Repository("TodoRepository")
-public interface TeamRepository extends JpaRepository<Team, Long> 
-{
-
+@Repository("TeamRepository")
+public interface TeamRepository extends JpaRepository<Team, Long> {
+    public Team findByName(String name);
 }
-

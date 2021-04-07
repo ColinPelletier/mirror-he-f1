@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import ch.hearc.hef1.model.User;
 
 @Repository("UserRepository")
-public interface UserRepository extends JpaRepository<User, Long> 
-{
-	User findByEmail(String email);
+public interface UserRepository extends JpaRepository<User, Long> {
+	public User findByEmail(String email);
 }

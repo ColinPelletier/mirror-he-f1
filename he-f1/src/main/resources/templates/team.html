@@ -15,10 +15,10 @@
 		<div th:each="team: ${teams}" style="margin:30px;">
 			<div class="row justify-content-between">
 			    <div class="col-3">
-			      <h1 th:text="${team.name}">Scuderia AlphaTauri</h1>
+			      <h1 th:text="${team.name}"></h1>
 			    </div>
 			    <div class="col-2">
-			      <h3 th:text="Budget : ${team.budget}"></h3>
+			      <h3 th:text="${'Budget : ' + team.budget + '$'}"></h3>
 			    </div>
 		  	</div>
 		  	<div style="margin-bottom:10px;" class="row justify-content-between">
