@@ -85,7 +85,6 @@ public class TeamController {
 		if (team.isPresent() && car.isPresent()) {
 			if (carService.isTeamOwner(car.get(), team.get())) {
 				List<CarPiece> carPieces = carService.findCarPieces(car.get());
-				System.out.println(carPieces.size());
 
 				model.put("teamToCreate", new Team());
 				model.put("team", team.get());
@@ -107,7 +106,9 @@ public class TeamController {
 	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors, Model model) {
 		// TODO check access
 
-		teamRepository.save(team);
+		Team createdTeam = teamRepository.save(team);
+
+		// TODO : create 2 cars and every pieces for these cars
 
 		return "redirect:/team"; // redirect to /team controller method
 	}
