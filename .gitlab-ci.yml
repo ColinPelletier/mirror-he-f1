@@ -20,7 +20,7 @@ build:
   stage: build
   script:
     - echo "Build process"
-    - mvn package -Dmaven.test.skip=true
+    - mvn -f "he-f1" package -Dmaven.test.skip=true
     - echo "Build ok"
   only:
     #    - master
