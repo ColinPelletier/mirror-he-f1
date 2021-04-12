@@ -24,7 +24,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
+	private long id;
 
 	@Column
 	@NotEmpty(message = "*Please provide your username")
@@ -34,7 +34,7 @@ public class User {
 	@Email(message = "*Please provide a valid Email")
 	@NotEmpty(message = "*Please provide an email")
 	private String email;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "team_id")
 	private Team team;
@@ -43,18 +43,18 @@ public class User {
 	@Length(min = 5, message = "*Your password must have at least 5 characters")
 	@NotEmpty(message = "*Please provide your password")
 	private String password;
-	
+
 	@Column
 	private UserRole role;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="user")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 	private List<RepairUpgrade> repairUpgrades;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -65,7 +65,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	public Team getTeam() {
 		return team;
 	}
@@ -89,7 +89,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public UserRole getRole() {
 		return role;
 	}
@@ -97,9 +97,8 @@ public class User {
 	public void setRole(final UserRole role) {
 		this.role = role;
 	}
-	
-	public List<RepairUpgrade> getRepairUpgrades()
-	{
+
+	public List<RepairUpgrade> getRepairUpgrades() {
 		return repairUpgrades;
-	}	
+	}
 }

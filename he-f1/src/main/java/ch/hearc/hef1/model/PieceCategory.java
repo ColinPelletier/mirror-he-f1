@@ -18,7 +18,7 @@ public class PieceCategory {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
+	private long id;
 
 	@Column
 	private String name;
@@ -48,11 +48,11 @@ public class PieceCategory {
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

@@ -18,12 +18,12 @@ public class CarPiece {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
-	
+	private long id;
+
 	@ManyToOne
 	@JoinColumn(name = "piece_id")
 	private Piece piece;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "car_id")
 	private Car car;
@@ -31,13 +31,13 @@ public class CarPiece {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "repair_upgrade_id")
 	private RepairUpgrade repairUpgrade;
-	
+
 	@Column
 	private double wear;
-	
+
 	@Column
 	private double level;
-	
+
 	/**
 	 * Default constructor
 	 */
@@ -61,16 +61,16 @@ public class CarPiece {
 		this.wear = wear;
 		this.level = level;
 	}
-	
+
 	/*
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -113,6 +113,5 @@ public class CarPiece {
 	public void setLevel(double level) {
 		this.level = level;
 	}
-	
-	
+
 }
