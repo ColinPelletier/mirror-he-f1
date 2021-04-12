@@ -1,0 +1,27 @@
+<div th:fragment="loginDialog" id="loginDialog" class="modal fade" tabindex="-1" role="dialog"
+    aria-labelledby="loginDialogLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div style="margin-bottom:20px;" class="modal-header">
+                <h5 class="modal-title" id="loginDialogLabel">Sign in</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form th:action="@{/login}" method="post" class="col-12">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="username" id="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+                <div>
+                    <a href="/signup">Sign up for free !</a>
+                    <button type="submit" class="btn btn-danger mb-3 float-right">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

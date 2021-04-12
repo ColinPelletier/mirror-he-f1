@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-    <head>
-        <title>Team</title>
-         <head th:replace="fragments/fragments.html :: header"></head>
-    </head>
-    <body>
-        <!-- Replace fragment  -->
-        <div th:replace="fragments/fragments.html :: navigation"></div>
-         
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDialog">Créer une écurie</button>
-        <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
-		
-		 <div th:object="${team}" style="margin:30px;">
-			<div class="row justify-content-between">
-			    <div class="col-3">
-			      <h1 th:text="*{name}"></h1>
-			    </div>
-			    <div class="col-2">
-			      <h3 th:text="*{'Budget : ' + budget + '$'}"></h3>
-			    </div>
-		  	</div>
-		  	<div style="margin-bottom:10px;" class="row justify-content-between">
-		  		<div class="col-3">
-		  		  <div class="input-group mb-3">
-					  <input type="text" class="form-control" placeholder="Piece's name" aria-label="search" aria-describedby="search">
-					  <div class="input-group-append">
-					    <button class="btn btn-outline-danger" type="button" id="search">Search</button>
-					  </div>
-					</div>
-		  		</div>
-		  		<div class="col-3 btn-group" role="group" aria-label="select-car">
-				  <button type="button" class="btn btn-danger">Pierre Gasly</button>
-				  <button type="button" class="btn btn-outline-danger">Yuki Tsunoda</button>
-				</div>
-		  	</div>
-		  	<div class="row justify-content-between">
-		  		<div class="col-3">
-				  	<ul class="list-group">
-					  <li class="list-group-item" th:each="carPiece: ${carPieces}">
-					  	<div class="d-flex w-100 justify-content-between">
-					      <h5 class="mb-1"></h5>
-					      <small th:text="${'Usure :' + carPiece.wear + '%'}"></small>
-					    </div>
-						<div class="d-flex w-100 justify-content-between">
-							<h5 class="mb-1"></h5>
-							<small th:text="${'Niveau :' + carPiece.level}"></small>
-						  </div>
-					    <div class="d-flex w-100 justify-content-between">
-					    	<p class="mb-1" 
-								th:text="${'Réparation :' + carPiece.piece.baseRepairPrice * carPiece.level}">
-							</p>
-					    	<button type="submit" class="btn-sm btn-danger mb-1">Réparer</button>
-					    </div>
-					    <div class="d-flex w-100 justify-content-between">
-					    	<p class="mb-1" 
-								th:text="${'Amélioration :' + carPiece.piece.baseUpgradePrice * carPiece.level}">
-							</p>
-					    	<button type="submit" class="btn-sm btn-danger">Améliorer</button>
-							<!-- TODO ADD REPAIR AND UPGRADE TIME -->
-					    </div>
-					  </li>
-					</ul>
-				</div>
-				<div class="col-9">
-					<div class="card">
-				  		<img width="100%" height="auto" th:src="@{/images/${team.name}.png}" th:alt="${car.name}">
-				  	</div>
-				</div>
-		  	</div>
-		</div>
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
-		<!-- <div th:each="team: ${teams}" style="margin:30px;">
+<head>
+    <title>Team</title>
+
+    <head th:replace="fragments/fragments.html :: header"></head>
+</head>
+
+<body>
+    <!-- Replace fragment  -->
+    <div th:replace="fragments/fragments.html :: navigation"></div>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDialog">Créer une
+        écurie</button>
+    <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
+
+    <div th:object="${team}" style="margin:30px;">
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <h1 th:text="*{name}"></h1>
+            </div>
+            <div class="col-2">
+                <h3 th:text="*{'Budget : ' + budget + '$'}"></h3>
+            </div>
+        </div>
+        <div style="margin-bottom:10px;" class="row justify-content-between">
+            <div class="col-3">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Piece's name" aria-label="search"
+                        aria-describedby="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-danger" type="button" id="search">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 btn-group" role="group" aria-label="select-car">
+                <button type="button" class="btn btn-danger">Pierre Gasly</button>
+                <button type="button" class="btn btn-outline-danger">Yuki Tsunoda</button>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <ul class="list-group">
+                    <li class="list-group-item" th:each="carPiece: ${carPieces}">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1"></h5>
+                            <small th:text="${'Usure :' + carPiece.wear + '%'}"></small>
+                        </div>
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1"></h5>
+                            <small th:text="${'Niveau :' + carPiece.level}"></small>
+                        </div>
+                        <div class="d-flex w-100 justify-content-between">
+                            <p class="mb-1"
+                                th:text="${'Réparation :' + carPiece.piece.baseRepairPrice * carPiece.level}">
+                            </p>
+                            <button type="submit" class="btn-sm btn-danger mb-1">Réparer</button>
+                        </div>
+                        <div class="d-flex w-100 justify-content-between">
+                            <p class="mb-1"
+                                th:text="${'Amélioration :' + carPiece.piece.baseUpgradePrice * carPiece.level}">
+                            </p>
+                            <button type="submit" class="btn-sm btn-danger">Améliorer</button>
+                            <!-- TODO ADD REPAIR AND UPGRADE TIME -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9">
+                <div class="card">
+                    <img width="100%" height="auto" th:src="@{/images/${team.name}.png}" th:alt="${car.name}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div th:each="team: ${teams}" style="margin:30px;">
 			<div class="row justify-content-between">
 			    <div class="col-3">
 			      <h1 th:text="${team.name}"></h1>
@@ -124,15 +129,16 @@
 				</div>
 		  	</div>
 		</div> -->
-		 
-        <div th:replace="fragments/fragments.html :: scripts"></div>
-       	<script>
-	       	var teamDialog = document.getElementById('teamDialog')
-	
-	       	teamDialog.addEventListener('show.bs.modal', function (event) {
-	       	  // Button that triggered the modal
-	       	  var button = event.relatedTarget
-	       	})
-       	</script>
-    </body>
+
+    <div th:replace="fragments/fragments.html :: scripts"></div>
+    <script>
+        var teamDialog = document.getElementById('teamDialog')
+
+        teamDialog.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+        })
+    </script>
+</body>
+
 </html>
