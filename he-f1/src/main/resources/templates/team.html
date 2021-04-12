@@ -9,8 +9,8 @@
         <!-- Replace fragment  -->
         <div th:replace="fragments/fragments.html :: navigation"></div>
          
-         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDialog">Créer une écurie</button>
-         <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDialog">Créer une écurie</button>
+        <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
 		
 		 <div th:object="${team}" style="margin:30px;">
 			<div class="row justify-content-between">

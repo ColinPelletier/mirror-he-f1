@@ -86,4 +86,9 @@ public class Team {
 		Team team = (Team) obj;
 		return this.id == team.id && this.name.equals(team.name);
 	}
+
+	public boolean validate() {
+		return (!this.name.isEmpty());
+	}
+
 }
