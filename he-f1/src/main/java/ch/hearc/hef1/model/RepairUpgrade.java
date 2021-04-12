@@ -15,37 +15,36 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="repair_upgrades")
+@Table(name = "repair_upgrades")
 public class RepairUpgrade {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column	
-	private int id;
-	
+	@Column
+	private long id;
+
 	@OneToOne(mappedBy = "repairUpgrade")
 	private CarPiece carPiece;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "repair_upgrade_id")
 	private User user;
-	
+
 	@Column
 	private boolean isRepair; // true : repair, false : upgrade
-	
+
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column
 	private Date startDate;
-	
+
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column
 	private Date endDate;
-	
+
 	/**
 	 * Default constructor
 	 */
-	public RepairUpgrade()
-	{
+	public RepairUpgrade() {
 		// empty
 	}
 
@@ -65,16 +64,16 @@ public class RepairUpgrade {
 		this.startDate = startDate;
 		this.endDate = endDate;
 	}
-	
+
 	/*
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -117,6 +116,5 @@ public class RepairUpgrade {
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
-	
-	
+
 }

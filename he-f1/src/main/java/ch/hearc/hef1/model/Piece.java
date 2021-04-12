@@ -16,7 +16,7 @@ public class Piece {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
+	private long id;
 
 	// fk category
 	@ManyToOne
@@ -71,11 +71,11 @@ public class Piece {
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

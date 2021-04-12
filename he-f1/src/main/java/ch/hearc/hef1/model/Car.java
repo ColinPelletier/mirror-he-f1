@@ -15,9 +15,9 @@ import javax.persistence.Table;
 public class Car {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
+	private long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "team_id")
@@ -37,7 +37,7 @@ public class Car {
 	 * Constructor
 	 * 
 	 * @param id
-	 * @param teamId
+	 * @param team
 	 * @param name
 	 */
 	public Car(int id, Team team, String name) {
@@ -50,11 +50,11 @@ public class Car {
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

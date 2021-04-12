@@ -12,20 +12,20 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="teams")
+@Table(name = "teams")
 public class Team {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private int id;
+	private long id;
 
 	@Column
 	private String name;
 
 	@Column
 	private double budget;
-	
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
 	private List<Car> cars;
 
@@ -53,11 +53,11 @@ public class Team {
 	 * Getters and Setters
 	 */
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -77,8 +77,13 @@ public class Team {
 		this.budget = budget;
 	}
 
-	public List<Car> getCars()
-	{
+	public List<Car> getCars() {
 		return cars;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Team team = (Team) obj;
+		return this.id == team.id && this.name.equals(team.name);
 	}
 }
