@@ -40,9 +40,9 @@ services:
       SPRING_DATASOURCE_PASSWORD: toor
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db/he_f1?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
     command: mvn clean spring-boot:run
-    networks:
-      - backend
-      - frontend
+    # networks:
+    #   - backend
+    #   - frontend
 
   # katalon-executor:
   #   container_name: katalon-executor
