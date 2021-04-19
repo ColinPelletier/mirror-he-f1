@@ -22,21 +22,24 @@ import java.time.LocalDateTime;
 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH-mm-ss");
 LocalDateTime now = LocalDateTime.now();
 String DATE = dtf.format(now);
-System.out.println("my date UwU = " + DATE);
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/signup')
+WebUI.navigateToUrl('http://localhost:8080/')
+
+WebUI.click(findTestObject('Object Repository/Page_Login/button_Menu'))
+
+WebUI.click(findTestObject('Object Repository/Page_Login/a_Sign in'))
+
+WebUI.click(findTestObject('Object Repository/Page_Login/a_Sign up for free'))
 
 WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Username_username'), DATE)
 
 WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Email_email'), DATE + '@gmail.com')
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Page_HE-F1/select_ManageurIngnieurMcanicien'), 'ENGINEER', true)
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'),
+	'ENGINEER', true)
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Page_HE-F1/input_Password_password'), 'HeCM15nHKBI=')
 
 WebUI.click(findTestObject('Object Repository/Page_HE-F1/button_Register'))
-
-
-
