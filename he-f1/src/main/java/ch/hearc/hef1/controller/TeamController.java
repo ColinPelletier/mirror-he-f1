@@ -121,12 +121,13 @@ public class TeamController {
 			team = teamRepository.save(team);
 
 			String carName = "TODO ADD CAR NAME IN FORM";
-			carService.createAndSaveTeamCars(team, carName);
+			List<Car> carList = carService.createAndSaveTeamCars(team, carName);
+
+			// redirect the user to his first car
+			return "redirect:/team/" + team.getId() + "/car/" + carList.get(0).getId();
 		} else {
 			return ("redirect:/signup");
 		}
-
-		return "redirect:/team";
 	}
 
 	@GetMapping("/team/test-display")

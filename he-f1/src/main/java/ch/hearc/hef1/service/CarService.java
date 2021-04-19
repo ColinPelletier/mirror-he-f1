@@ -38,7 +38,7 @@ public class CarService {
         return team.equals(car.getTeam());
     }
 
-    public void createAndSaveTeamCars(Team team, String carName) {
+    public List<Car> createAndSaveTeamCars(Team team, String carName) {
         List<Car> carList = new LinkedList<Car>();
 
         for (int i = 0; i < Team.NB_CARS_BY_TEAM; ++i) {
@@ -50,5 +50,7 @@ public class CarService {
 
         carList = carRepository.saveAll(carList);
         pieceService.createAndSaveCarPieces(carList);
+
+        return carList;
     }
 }
