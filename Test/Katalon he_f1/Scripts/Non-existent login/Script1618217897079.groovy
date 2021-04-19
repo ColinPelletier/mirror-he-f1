@@ -19,11 +19,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/login')
+WebUI.navigateToUrl('http://localhost:8080/')
 
-WebUI.setText(findTestObject('Object Repository/Page_Login/input_Username_username'), 'sebdonotexist')
+WebUI.click(findTestObject('Object Repository/Page_Login/button_Menu'))
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Login/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
+WebUI.click(findTestObject('Object Repository/Page_Login/a_Sign in'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Login/input_Username_username'), 'syhbdsyberadfbfdb')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Login/input_Password_password'), '+0qaDxgZuXfSPXlgVmWnFw==')
 
 WebUI.click(findTestObject('Object Repository/Page_Login/button_Sign In'))
 
