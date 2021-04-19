@@ -64,14 +64,14 @@
 
 
 
-                        <div class="d-flex w-100 justify-content-between">
+                        <div th:object="${car}" class="d-flex w-100 justify-content-between">
                             <p class="mb-1"
                                 th:text="${'Amélioration :' + carPiece.piece.baseUpgradePrice * carPiece.level}">
                             </p>
                             <p class="mb-1"
                                 th:text="${'Upgarde time :' + carPiece.piece.baseUpgradeTime * carPiece.level}">
                             </p>
-                            <form class="form-inline my-2 my-lg-0" th:action="@{'/car/update/' + ${carPiece.piece.id}}" method="post">
+                            <form class="form-inline my-2 my-lg-0" th:action="@{'/car/update/' + ${carPiece.piece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
                                 <input type="submit" class="btn-sm btn-danger" value="Upgarrde"/>
                             </form>
                         </div>

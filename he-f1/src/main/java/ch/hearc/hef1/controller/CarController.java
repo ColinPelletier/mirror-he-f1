@@ -16,6 +16,7 @@ import ch.hearc.hef1.service.CarService;
 
 @Controller
 public class CarController {
+    private static final String REDIRECT_ERROR = "redirect:/error";
 
     @Autowired
     CarService carService;
@@ -36,10 +37,25 @@ public class CarController {
         return "test-display";
     }
 
-    @PostMapping("/car/update/{strPieceId}")
-    public String updatePiece(@PathVariable String strPieceId, Map<String, Object> model) {
-        long carId = Long.parseLong(strPieceId);
-        System.out.println("piece id = " + carId);
+    @PostMapping("/car/update/{strPieceId}/{strTeamId}/{strCarId}")
+    public String updatePiece(@PathVariable String strPieceId, @PathVariable String strTeamId,
+            @PathVariable String strCarId, Map<String, Object> model) {
+
+        long pieceId;
+        int teamId;
+        int carId;
+
+        try {
+            pieceId = Long.parseLong(strPieceId);
+            teamId = Integer.parseInt(strTeamId);
+            carId = Integer.parseInt(strCarId);
+        } catch (NumberFormatException e) {
+            System.err.println("id must be an integer");
+            return REDIRECT_ERROR;
+        }
+
+        System.out.println("id piece = " + pieceId);
+
         // model.put("title", homeTitle);
 
         // // Put the todo list by the given author
@@ -49,6 +65,6 @@ public class CarController {
 
         // // Return the page "home.html"
         // return "todoByAuthor";
-        return ("redirect:/recruiting?recruited=true");
+        return ("redirect:/team/" + teamId + "/car/" + carId);
     }
 }
