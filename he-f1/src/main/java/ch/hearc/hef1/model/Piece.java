@@ -18,7 +18,7 @@ public class Piece {
 	@Column
 	private long id;
 
-	@ManyToOne
+	// @ManyToOne
 	// @JoinColumn(name = "piece_category")
 	private PieceCategory pieceCategory;
 

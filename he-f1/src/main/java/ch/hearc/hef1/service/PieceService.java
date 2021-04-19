@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
@@ -12,6 +13,7 @@ import ch.hearc.hef1.model.PieceCategory;
 import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.PieceRepository;
 
+@Service("pieceService")
 public class PieceService {
 
     @Autowired
