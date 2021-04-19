@@ -15,6 +15,7 @@ import javax.persistence.Table;
 @Table(name = "teams")
 public class Team {
 	public static int NB_CARS_BY_TEAM = 2;
+	public static long STARTING_BUDGET = 1000000;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,7 +26,7 @@ public class Team {
 	private String name;
 
 	@Column
-	private double budget;
+	private long budget;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
 	private List<Car> cars;
@@ -48,7 +49,7 @@ public class Team {
 	 * @param budget
 	 * @param carPicture
 	 */
-	public Team(int id, String name, double budget, String carPicture) {
+	public Team(long id, String name, long budget, String carPicture) {
 		this.id = id;
 		this.name = name;
 		this.budget = budget;
@@ -75,11 +76,11 @@ public class Team {
 		this.name = name;
 	}
 
-	public double getBudget() {
+	public long getBudget() {
 		return budget;
 	}
 
-	public void setBudget(double budget) {
+	public void setBudget(long budget) {
 		this.budget = budget;
 	}
 
