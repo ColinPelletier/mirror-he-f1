@@ -48,7 +48,7 @@ build:
 #     - echo "katalon test suite ok"
 #   only:
 # #    - master
-#     - ci-cd-tests
+#     - update-ci-cd
 #   tags:
 #     - alpine-docker
 # #    - ubuntu-colin
@@ -60,7 +60,7 @@ build:
 #     - echo "sonarqube ok"
 #   only:
 # #    - master
-#     - ci-cd-tests
+#     - update-ci-cd
 #   tags:
 #     - alpine-docker
 # #    - ubuntu-colin
@@ -75,7 +75,7 @@ deploy:
     - echo "deploy ok"
   only:
     #    - master
-    - ci-cd-tests
+    - update-ci-cd
   tags:
     # - alpine-docker
     - he-f1-prod
