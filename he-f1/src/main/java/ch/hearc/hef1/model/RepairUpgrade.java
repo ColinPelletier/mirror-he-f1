@@ -65,6 +65,13 @@ public class RepairUpgrade {
 		this.endDate = endDate;
 	}
 
+	public RepairUpgrade(CarPiece carPiece, User user, boolean isRepair, Date startDate, Date endDate) {
+		this.carPiece = carPiece;
+		this.user = user;
+		this.isRepair = isRepair;
+		this.startDate = startDate;
+		this.endDate = endDate;
+	}
 	/*
 	 * Getters and Setters
 	 */
