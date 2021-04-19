@@ -62,6 +62,34 @@ public class CarPiece {
 		this.level = level;
 	}
 
+	/**
+	 * Constructor for a CarPiece created directly from the backend, without id
+	 * value
+	 * 
+	 * @param piece
+	 * @param car
+	 * @param repairUpgrade
+	 * @param wear
+	 * @param level
+	 */
+	public CarPiece(Piece piece, Car car, RepairUpgrade repairUpgrade, double wear, double level) {
+		this.piece = piece;
+		this.car = car;
+		this.repairUpgrade = repairUpgrade;
+		this.wear = wear;
+		this.level = level;
+	}
+
+	/**
+	 * Constructor for CarPiece for a new car piece with default values
+	 * 
+	 * @param piece
+	 * @param car
+	 */
+	public CarPiece(Piece piece, Car car) {
+		this(piece, car, null, 0, 1);
+	}
+
 	/*
 	 * Getters and Setters
 	 */

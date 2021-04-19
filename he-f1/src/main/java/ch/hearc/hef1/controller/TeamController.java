@@ -5,29 +5,25 @@ import java.util.Map;
 import java.util.Optional;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Null;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 
-import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
 import ch.hearc.hef1.model.Team;
+import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.TeamRepository;
 import ch.hearc.hef1.service.CarService;
-import ch.hearc.hef1.service.TeamService;
 import ch.hearc.hef1.service.UserService;
 
 @Controller
@@ -118,13 +114,19 @@ public class TeamController {
 
 	@PostMapping("/team/create")
 	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors, Model model) {
-		// TODO check access
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User authenticatedUser = userService.findUserByUsername(auth.getName());
 
-		Team createdTeam = teamRepository.save(team);
+		if (authenticatedUser != null) {
+			team = teamRepository.save(team);
 
-		// TODO : create 2 cars and every pieces for these cars
+			String carName = "TODO ADD CAR NAME IN FORM";
+			carService.createAndSaveTeamCars(team, carName);
+		} else {
+			return ("redirect:/signup");
+		}
 
-		return "redirect:/team"; // redirect to /team controller method
+		return "redirect:/team";
 	}
 
 	@GetMapping("/team/test-display")
