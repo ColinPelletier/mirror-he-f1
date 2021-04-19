@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import javax.management.relation.Role;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +21,6 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-
-	/**
-	 * Select the login view to render by returning its name
-	 */
-	@GetMapping("/login")
-	public String login(Map<String, Object> model) {
-		model.put("author", new User());
-		return "login";
-	}
 
 	@GetMapping("/signup")
 	public String signup(Map<String, Object> model) {

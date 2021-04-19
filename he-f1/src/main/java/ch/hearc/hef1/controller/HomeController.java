@@ -6,9 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class NotFoundController {
-	@GetMapping("/notfound")
-	public String notfound(Map<String, Object> model) {
-		return "notfound";
-	}
+public class HomeController {
+
+    @GetMapping("/")
+    public String home(Map<String, Object> model) {
+        return "home";
+    }
 }

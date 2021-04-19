@@ -35,7 +35,7 @@ public class User {
 	@NotEmpty(message = "*Please provide an email")
 	private String email;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(optional = true, fetch = FetchType.LAZY)
 	@JoinColumn(name = "team_id")
 	private Team team;
 
