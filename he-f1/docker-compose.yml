@@ -9,12 +9,12 @@ services:
       #MYSQL_USER: root
       MYSQL_PASSWORD: toor
       MYSQL_ROOT_PASSWORD: toor
-    #volumes:
-    #  - db-data:/var/lib/mysql
+    volumes:
+      - db-data:/var/lib/mysql
     ports:
       - "3306:3306"
-    #networks:
-    #  - backend
+    networks:
+      - backend
 
   adminer:
     image: adminer
@@ -23,26 +23,26 @@ services:
       - mysql-db
     ports:
       - "8081:8081"
-  # networks:
-  #   - backend
-  #   - frontend
+    networks:
+      - backend
+      - frontend
 
-  # spring-app:
-  #   container_name: spring-app
-  #   build: .
-  #   restart: on-failure
-  #   ports:
-  #     - "8088:8080"
-  #   depends_on:
-  #     - mysql-db
-  #   environment:
-  #     SPRING_DATASOURCE_USERNAME: root
-  #     SPRING_DATASOURCE_PASSWORD: toor
-  #     SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db/he_f1?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
-  #   command: mvn clean spring-boot:run
-  #   networks:
-  #     - backend
-  #     - frontend
+  spring-app:
+    container_name: spring-app
+    build: .
+    restart: on-failure
+    ports:
+      - "8088:8080"
+    depends_on:
+      - mysql-db
+    environment:
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: toor
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db/he_f1?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+    command: mvn clean spring-boot:run
+    networks:
+      - backend
+      - frontend
 
   # katalon-executor:
   #   container_name: katalon-executor
@@ -54,7 +54,8 @@ services:
 
 volumes:
   db-data:
+
 # Networks to be created to facilitate communication between containers
-#networks:
-#  backend:
-#  frontend:
+networks:
+  backend:
+  frontend:

@@ -12,72 +12,58 @@ stages:
 
 before_script:
   - echo "Start CI/CD"
-  - echo "SOME_VAR = $SOME_VAR" # calls my custom variable
-  - echo $CI_JOB_STAGE # calls a predefined variable -  https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
-  - echo $CI_COMMIT_SHORT_SHA # calls another predefined variable
+  # - echo "SOME_VAR = $SOME_VAR" # calls my custom variable
+  # - echo $CI_JOB_STAGE # calls a predefined variable -  https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
+  # - echo $CI_COMMIT_SHORT_SHA # calls another predefined variable
 
 build:
   stage: build
   script:
     - echo "Build process"
-    - mvn -f "he-f1" package -Dmaven.test.skip=true
+    - cd he-f1
+    - mvn clean package -Dmaven.test.skip=true
     - echo "Build ok"
   only:
-    #    - master
-    - ci-cd-tests
+    - update-ci-cd
   tags:
     - alpine-docker
-#    - ubuntu-colin
 
-# unittest:
-#   stage: test
-#   script:
-#     - echo "start test"
-#     - echo "test ok"
-#   only:
-#     - master
-#   tags:
-#     - alpine-docker
-# #    - ubuntu-colin
+unittest:
+  stage: test
+  script:
+    - echo "start test"
+    - mvn clean package
+    - echo "test ok"
+  only:
+    - update-ci-cd
+  tags:
+    - alpine-docker
 
-# katalon_test_suite:
-#   stage: test
-#   script:
-#     - echo "start katalon test suite"
-#     - echo "katalon test suite ok"
-#   only:
-# #    - master
-#     - ci-cd-tests
-#   tags:
-#     - alpine-docker
-# #    - ubuntu-colin
+sonarqube:
+  stage: sonarqube
+  script:
+    - echo "start sonarqube stage"
+    - echo "sonarqube ok"
+  only:
+    - update-ci-cd
+  tags:
+    - alpine-docker
 
-# sonarqube:
-#   stage: sonarqube
-#   script:
-#     - echo "start sonarqube stage"
-#     - echo "sonarqube ok"
-#   only:
-# #    - master
-#     - ci-cd-tests
-#   tags:
-#     - alpine-docker
-# #    - ubuntu-colin
+deploy:
+  stage: deploy
+  before_script:
+    - echo "do some stuff before"
+  script:
+    - echo "deploy HE-F1"
+    - cd he-f1
+    - docker-compose down
+    - docker-compose up -d
+    - echo "deploy ok"
+  only:
+    - update-ci-cd
+  tags:
+    - he-f1-prod
+  when: manual
 
-# deploy_ssh:
-#   stage: deploy
-#   before_script:
-#     - echo "do some stuff before"
-#   script:
-#     - echo "deploy apps"
-#     - echo "deploy ok"
-#   only:
-# #    - master
-#     - ci-cd-tests
-#   tags:
-#     - alpine-docker
-# #    - ubuntu-colin
-#   when: manual
-
-# after_script:
-#   - echo "End CI/CD"
+after_script:
+  - echo "End CI/CD"
