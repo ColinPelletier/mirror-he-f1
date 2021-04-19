@@ -20,43 +20,43 @@ build:
   stage: build
   script:
     - echo "Build process"
-    - cd he-f1
-    - mvn clean package -Dmaven.test.skip=true
+    # - cd he-f1
+    # - mvn clean package -Dmaven.test.skip=true
     - echo "Build ok"
   only:
     - update-ci-cd
   tags:
     - alpine-docker
 
-unittest:
-  stage: test
-  script:
-    - echo "start test"
-    - echo "test ok"
-  only:
-    - update-ci-cd
-  tags:
-    - alpine-docker
+# unittest:
+#   stage: test
+#   script:
+#     - echo "start test"
+#     - echo "test ok"
+#   only:
+#     - update-ci-cd
+#   tags:
+#     - alpine-docker
 
-katalon_test_suite:
-  stage: test
-  script:
-    - echo "start katalon test suite"
-    - echo "katalon test suite ok"
-  only:
-    - update-ci-cd
-  tags:
-    - alpine-docker
+# katalon_test_suite:
+#   stage: test
+#   script:
+#     - echo "start katalon test suite"
+#     - echo "katalon test suite ok"
+#   only:
+#     - update-ci-cd
+#   tags:
+#     - alpine-docker
 
-sonarqube:
-  stage: sonarqube
-  script:
-    - echo "start sonarqube stage"
-    - echo "sonarqube ok"
-  only:
-    - update-ci-cd
-  tags:
-    - alpine-docker
+# sonarqube:
+#   stage: sonarqube
+#   script:
+#     - echo "start sonarqube stage"
+#     - echo "sonarqube ok"
+#   only:
+#     - update-ci-cd
+#   tags:
+#     - alpine-docker
 
 deploy:
   stage: deploy
