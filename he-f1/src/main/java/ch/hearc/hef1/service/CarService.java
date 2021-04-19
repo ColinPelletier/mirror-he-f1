@@ -12,7 +12,6 @@ import ch.hearc.hef1.model.Piece;
 import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.CarRepository;
-import ch.hearc.hef1.repository.PieceRepository;
 
 @Service("carService")
 public class CarService {

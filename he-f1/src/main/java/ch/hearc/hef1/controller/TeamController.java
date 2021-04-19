@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +26,6 @@ import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.TeamRepository;
-import ch.hearc.hef1.repository.UserRepository;
 import ch.hearc.hef1.service.CarService;
 import ch.hearc.hef1.service.UserService;
 import ch.hearc.hef1.tools.FileUploadUtil;
@@ -69,10 +67,10 @@ public class TeamController {
 			Team team = authenticatedUser.getTeam();
 			if (team != null) {
 				Car car = team.getCars().get(0);
-				return ("redirect:/team/" + team.getId() + "/car/" + car.getId());
+				return "redirect:/team/" + team.getId() + "/car/" + car.getId();
 			}
 		} else {
-			return ("redirect:/signup");
+			return "redirect:/signup";
 		}
 		model.put("teamToCreate", new Team());
 		return "team";
@@ -125,6 +123,7 @@ public class TeamController {
 
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User authenticatedUser = userService.findUserByUsername(auth.getName());
+
 		if (authenticatedUser != null) {
 			String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
 			team.setCarPicture(fileName);
