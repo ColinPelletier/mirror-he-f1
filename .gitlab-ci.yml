@@ -20,11 +20,12 @@ build:
   stage: build
   script:
     - echo "Build process"
-    - mvn -f "he-f1" package -Dmaven.test.skip=true
+    - cd he-f1
+    - mvn clean package -Dmaven.test.skip=true
     - echo "Build ok"
   only:
     #    - master
-    - ci-cd-tests
+    - update-ci-cd
   tags:
     - alpine-docker
 #    - ubuntu-colin
