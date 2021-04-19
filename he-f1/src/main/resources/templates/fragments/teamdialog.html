@@ -8,7 +8,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form th:action="@{/team/create}" method="post" th:object="${teamToCreate}">
+            <form th:action="@{/team/create}" method="post" th:object="${teamToCreate}" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-group">
                         <input type="hidden" value="" class="form-control" id="id" name="id" />
@@ -21,6 +21,14 @@
                         <label for="budget">Budget:</label>
                         <input th:field="*{budget}" value="" type="number" class="form-control" id="budget"
                             name="budget" />
+                    </div>
+
+                    <div class="custom-file mb-3">
+                        <label for="carPicture">Car picture:</label>
+                        <label class="custom-file-label" for="carPicture">Choose file...</label>
+                        <input type="file" name="image" accept="image/png, image/jpeg" class="custom-file-input"
+                            id="carPicture" required>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
                     </div>
                 </div>
                 <div class="modal-footer">

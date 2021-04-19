@@ -30,6 +30,9 @@ public class Team {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
 	private List<Car> cars;
 
+	@Column(nullable = true, length = 64)
+	private String carPicture;
+
 	/**
 	 * Default constructor
 	 */
@@ -43,11 +46,13 @@ public class Team {
 	 * @param id
 	 * @param name
 	 * @param budget
+	 * @param carPicture
 	 */
-	public Team(int id, String name, double budget) {
+	public Team(int id, String name, double budget, String carPicture) {
 		this.id = id;
 		this.name = name;
 		this.budget = budget;
+		this.carPicture = carPicture;
 	}
 
 	/*
@@ -80,6 +85,21 @@ public class Team {
 
 	public List<Car> getCars() {
 		return cars;
+	}
+
+	public String getCarPicture() {
+		return carPicture;
+	}
+
+	public String getCarImagePath() {
+		if (carPicture != null) {
+			return "/teams-car-picture/" + id + "/" + carPicture;
+		}
+		return null;
+	}
+
+	public void setCarPicture(String carPicture) {
+		this.carPicture = carPicture;
 	}
 
 	@Override

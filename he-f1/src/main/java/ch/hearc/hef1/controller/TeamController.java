@@ -1,5 +1,6 @@
 package ch.hearc.hef1.controller;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -11,11 +12,14 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
@@ -23,8 +27,10 @@ import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.TeamRepository;
+import ch.hearc.hef1.repository.UserRepository;
 import ch.hearc.hef1.service.CarService;
 import ch.hearc.hef1.service.UserService;
+import ch.hearc.hef1.tools.FileUploadUtil;
 
 @Controller
 public class TeamController {
@@ -113,21 +119,39 @@ public class TeamController {
 	}
 
 	@PostMapping("/team/create")
-	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors, Model model) {
+	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors,
+			@RequestParam("image") MultipartFile multipartFile) {
+		// TODO check access
+
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User authenticatedUser = userService.findUserByUsername(auth.getName());
-
 		if (authenticatedUser != null) {
+			String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+			team.setCarPicture(fileName);
+
 			team = teamRepository.save(team);
 
 			String carName = "TODO ADD CAR NAME IN FORM";
-			List<Car> carList = carService.createAndSaveTeamCars(team, carName);
+			carService.createAndSaveTeamCars(team, carName);
 
-			// redirect the user to his first car
-			return "redirect:/team/" + team.getId() + "/car/" + carList.get(0).getId();
-		} else {
-			return ("redirect:/signup");
+			// authenticatedUser.setTeam(team);
+			// userService.saveUser(authenticatedUser);
+
+			String uploadDir = "teams-car-picture/" + team.getId();
+
+			try {
+				FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+			} catch (IOException ioe) {
+				System.out.println("Unable to save file...");
+				System.out.println(ioe);
+				return REDIRECT_ERROR;
+			}
+
+			// TODO : create 2 cars and every pieces for these cars
+
+			return "redirect:/team"; // redirect to /team controller method
 		}
+		return REDIRECT_ERROR;
 	}
 
 	@GetMapping("/team/test-display")

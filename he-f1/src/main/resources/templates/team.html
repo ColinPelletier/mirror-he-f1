@@ -90,7 +90,7 @@
             </div>
             <div class="col-9">
                 <div class="card">
-                    <img width="100%" height="auto" th:src="@{/images/${team.name}.png}" th:alt="${car.name}">
+                    <img width="100%" height="auto" th:src="@{*{getCarImagePath()}}" th:alt="${car.name}" />
                 </div>
             </div>
         </div>
