@@ -28,8 +28,7 @@ public class CarPiece {
 	@JoinColumn(name = "car_id")
 	private Car car;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "repair_upgrade_id")
+	@OneToOne(mappedBy = "carPiece")
 	private RepairUpgrade repairUpgrade;
 
 	@Column

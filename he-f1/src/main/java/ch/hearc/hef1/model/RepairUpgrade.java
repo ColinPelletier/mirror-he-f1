@@ -2,8 +2,10 @@ package ch.hearc.hef1.model;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,11 +25,12 @@ public class RepairUpgrade {
 	@Column
 	private long id;
 
-	@OneToOne(mappedBy = "repairUpgrade")
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "car_piece_id")
 	private CarPiece carPiece;
 
 	@ManyToOne
-	@JoinColumn(name = "repair_upgrade_id")
+	@JoinColumn(name = "user_id")
 	private User user;
 
 	@Column
