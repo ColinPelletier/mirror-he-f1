@@ -11,4 +11,9 @@ public class NotFoundController {
 	public String notfound(Map<String, Object> model) {
 		return "notfound";
 	}
+
+	@GetMapping("/error")
+	public String badRequest(Map<String, Object> model) {
+		return "error";
+	}
 }

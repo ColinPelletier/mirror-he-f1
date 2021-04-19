@@ -27,6 +27,8 @@ import ch.hearc.hef1.service.UserService;
 @Controller
 public class UserController {
 
+	private static final String REDIRECT_ERROR = "redirect:/error";
+
 	@Autowired
 	private UserService userService;
 
@@ -62,7 +64,7 @@ public class UserController {
 			model.put("msg", "User has been registered successfully!");
 			model.put("user", new User());
 
-			return "login";
+			return ("redirect:/");
 		}
 	}
 
@@ -93,7 +95,7 @@ public class UserController {
 			userId = Long.parseLong(strUserId);
 		} catch (NumberFormatException e) {
 			System.err.println("id must be an integer");
-			return ("redirect:/recruiting?error=true");
+			return REDIRECT_ERROR;
 		}
 
 		Optional<User> user = userRepository.findById(userId);
@@ -109,8 +111,7 @@ public class UserController {
 			return ("redirect:/recruiting?recruited=true");
 
 		} else {
-			return ("redirect:/recruiting?error=true");
-			// return ("redirect:/notfound");
+			return REDIRECT_ERROR;
 		}
 	}
 

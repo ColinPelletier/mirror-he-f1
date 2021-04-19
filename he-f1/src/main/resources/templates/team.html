@@ -12,16 +12,22 @@
     <!-- Replace fragment  -->
     <div th:replace="fragments/fragments.html :: navigation"></div>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#teamDialog">Créer une
-        écurie</button>
-    <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
+    <div class="container mt-sm-3" th:if="${teamToCreate != null}">
+        <div class="alert alert-danger" role="alert">
+            You are not part of any team at the moment...
+        </div>
+        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#teamDialog">
+            Create a team
+        </button>
+        <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
+    </div>
 
-    <div th:object="${team}" style="margin:30px;">
+    <div th:if="${teamToCreate == null}" th:object="${team}" style="margin:30px;">
         <div class="row justify-content-between">
-            <div class="col-3">
+            <div class="col-9">
                 <h1 th:text="*{name}"></h1>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <h3 th:text="*{'Budget : ' + budget + '$'}"></h3>
             </div>
         </div>

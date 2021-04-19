@@ -3,7 +3,7 @@
     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
-    <title>Home - HE-F1</title>
+    <title>400 - Bad request - HE-F1</title>
 
     <head th:replace="fragments/fragments.html :: header"></head>
 </head>
@@ -13,11 +13,8 @@
     <div th:replace="fragments/fragments.html :: navigation"></div>
 
     <div class="container mt-sm-3">
-        <h1>HE-F1 - Home</h1>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vjdwQDXxrfY" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+        <div class="alert alert-danger" role="alert">
+            <h1>Error 400 : Bad request ...</h1>
         </div>
     </div>
 
