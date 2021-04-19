@@ -1,5 +1,8 @@
 package ch.hearc.hef1.controller;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -24,6 +27,7 @@ import ch.hearc.hef1.service.UserService;
 @Controller
 public class CarController {
     private static final String REDIRECT_ERROR = "redirect:/error";
+    static final long ONE_MINUTE = 60000;
 
     @Autowired
     CarPieceRepository carPieceRepository;
@@ -57,6 +61,8 @@ public class CarController {
         long pieceId;
         int teamId;
         int carId;
+        Date startDate = new Date();
+        Date endDate = new Date(startDate.getMinutes() * ONE_MINUTE + ONE_MINUTE);
 
         try {
             pieceId = Long.parseLong(strPieceId);
@@ -66,13 +72,19 @@ public class CarController {
             System.err.println("id must be an integer");
             return REDIRECT_ERROR;
         }
-
+        // Get car Piece
         Optional<CarPiece> carPiece = carPieceRepository.findById(pieceId);
 
+        // Get authenticated user
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        // User authenticatedUser = userService.findUserByUsername(auth.getName());
+        User authenticatedUser = userService.findUserByUsername(auth.getName());
 
-        // RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece, );
+        // Create and save repairUpgrade
+        if (carPiece.isPresent()) {
+            RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
+                    endDate);
+        }
+
         // CarPiece carPiece, User user, boolean isRepair, Date startDate, Date endDate
 
         System.out.println("id piece = " + pieceId);
