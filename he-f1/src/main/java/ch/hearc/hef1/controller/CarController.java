@@ -22,6 +22,7 @@ import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.service.CarService;
+import ch.hearc.hef1.service.RepairUpgradeService;
 import ch.hearc.hef1.service.UserService;
 
 @Controller
@@ -34,6 +35,9 @@ public class CarController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    RepairUpgradeService repairUpgradeService;
 
     @Autowired
     CarService carService;
@@ -81,13 +85,15 @@ public class CarController {
 
         // Create and save repairUpgrade
         if (carPiece.isPresent()) {
+            System.out.println("id piece ======================================================== " + pieceId);
+            System.out.println(
+                    "id piece level ===================================================" + carPiece.get().getLevel());
             RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
                     endDate);
+            repairUpgradeService.saveRepairUpgrade(repairUpgrade);
         }
 
         // CarPiece carPiece, User user, boolean isRepair, Date startDate, Date endDate
-
-        System.out.println("id piece = " + pieceId);
 
         // Team createdTeam = teamRepository.save(team);
 
