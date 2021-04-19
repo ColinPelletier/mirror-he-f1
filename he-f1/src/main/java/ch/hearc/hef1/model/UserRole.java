@@ -2,7 +2,9 @@ package ch.hearc.hef1.model;
 
 public enum UserRole {
 
-    MANAGER("Manager"), ENGINEER("Engineer"), MECHANICIAN("Mechanician");
+    MANAGER("Manager"), //
+    ENGINEER("Engineer"), //
+    MECHANICIAN("Mechanician");
 
     private String description;
 

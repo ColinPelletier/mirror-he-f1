@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "teams")
 public class Team {
+	public static int NB_CARS_BY_TEAM = 2;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

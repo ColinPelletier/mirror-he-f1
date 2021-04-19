@@ -18,9 +18,8 @@ public class Piece {
 	@Column
 	private long id;
 
-	// fk category
-	@ManyToOne
-	@JoinColumn(name = "piece_category")
+	// @ManyToOne
+	// @JoinColumn(name = "piece_category")
 	private PieceCategory pieceCategory;
 
 	@Column
@@ -58,7 +57,23 @@ public class Piece {
 	 */
 	public Piece(int id, PieceCategory pieceCategory, String name, double baseRepairPrice, double baseRepairTime,
 			double baseUpgradePrice, double baseUpgradeTime) {
+		this(pieceCategory, name, baseRepairPrice, baseRepairTime, baseUpgradePrice, baseUpgradeTime);
 		this.id = id;
+	}
+
+	/**
+	 * Constuctor for Piece objects created directly in the backend and not get from
+	 * the DB
+	 * 
+	 * @param pieceCategory
+	 * @param name
+	 * @param baseRepairPrice
+	 * @param baseRepairTime
+	 * @param baseUpgradePrice
+	 * @param baseUpgradeTime
+	 */
+	public Piece(PieceCategory pieceCategory, String name, double baseRepairPrice, double baseRepairTime,
+			double baseUpgradePrice, double baseUpgradeTime) {
 		this.pieceCategory = pieceCategory;
 		this.name = name;
 		this.baseRepairPrice = baseRepairPrice;
