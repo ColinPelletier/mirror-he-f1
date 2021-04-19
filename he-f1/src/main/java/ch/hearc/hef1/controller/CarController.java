@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,9 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
 import ch.hearc.hef1.model.RepairUpgrade;
+import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.service.CarService;
+import ch.hearc.hef1.service.UserService;
 
 @Controller
 public class CarController {
@@ -23,6 +27,9 @@ public class CarController {
 
     @Autowired
     CarPieceRepository carPieceRepository;
+
+    @Autowired
+    UserService userService;
 
     @Autowired
     CarService carService;
@@ -61,6 +68,10 @@ public class CarController {
         }
 
         Optional<CarPiece> carPiece = carPieceRepository.findById(pieceId);
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        // User authenticatedUser = userService.findUserByUsername(auth.getName());
+
         // RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece, );
         // CarPiece carPiece, User user, boolean isRepair, Date startDate, Date endDate
 
