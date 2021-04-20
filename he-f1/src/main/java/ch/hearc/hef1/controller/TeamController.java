@@ -59,8 +59,6 @@ public class TeamController {
 		 * model will then be available in the PostMapping method an could easily be
 		 * updated in the DB
 		 */
-		// TODO check access
-
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User authenticatedUser = userService.findUserByUsername(auth.getName());
 
@@ -80,47 +78,53 @@ public class TeamController {
 	@GetMapping("/team/{strTeamId}/car/{strCarId}")
 	public String teamCar(@PathVariable String strTeamId, @PathVariable String strCarId, Map<String, Object> model) {
 		// TODO : check if the user is a member of this team
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User authenticatedUser = userService.findUserByUsername(auth.getName());
 
-		// Check id validity
-		long teamId;
-		long carId;
+		if (authenticatedUser != null) {
 
-		try {
-			teamId = Long.parseLong(strTeamId);
-			carId = Long.parseLong(strCarId);
-		} catch (NumberFormatException e) {
-			System.err.println("id must be an integer");
-			return REDIRECT_ERROR;
-		}
+			// Check id validity
+			long teamId;
+			long carId;
 
-		Optional<Team> team = teamRepository.findById(teamId);
-		Optional<Car> car = carRepository.findById(carId);
-
-		// check wether the teams owns this car
-		if (team.isPresent() && car.isPresent()) {
-			if (carService.isTeamOwner(car.get(), team.get())) {
-				List<CarPiece> carPieces = carService.findCarPieces(car.get());
-
-				// model.put("teamToCreate", new Team());
-				model.put("team", team.get());
-				model.put("car", car.get());
-				model.put("carPieces", carPieces);
-			} else {
-				System.err.println("Car " + carId + " is not owned by team " + teamId);
+			try {
+				teamId = Long.parseLong(strTeamId);
+				carId = Long.parseLong(strCarId);
+			} catch (NumberFormatException e) {
+				System.err.println("id must be an integer");
 				return REDIRECT_ERROR;
 			}
-		} else {
-			System.err.println("Invalid id for car or team");
-			return REDIRECT_ERROR;
-		}
 
-		return "team";
+			Optional<Team> team = teamRepository.findById(teamId);
+			Optional<Car> car = carRepository.findById(carId);
+
+			// check wether the teams owns this car
+			if (team.isPresent() && car.isPresent()) {
+				if (carService.isTeamOwner(car.get(), team.get())) {
+					List<CarPiece> carPieces = carService.findCarPieces(car.get());
+
+					// model.put("teamToCreate", new Team());
+					model.put("team", team.get());
+					model.put("car", car.get());
+					model.put("carPieces", carPieces);
+				} else {
+					System.err.println("Car " + carId + " is not owned by team " + teamId);
+					return REDIRECT_ERROR;
+				}
+			} else {
+				System.err.println("Invalid id for car or team");
+				return REDIRECT_ERROR;
+			}
+
+			return "team";
+		}
+		System.err.println("User need to be authenticated");
+		return REDIRECT_ERROR;
 	}
 
 	@PostMapping("/team/create")
 	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors,
 			@RequestParam("image") MultipartFile multipartFile) {
-		// TODO check access
 
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User authenticatedUser = userService.findUserByUsername(auth.getName());
@@ -137,83 +141,13 @@ public class TeamController {
 				String carName = "TODO ADD CAR NAME IN FORM";
 				carService.createAndSaveTeamCars(team, carName);
 
-				// authenticatedUser.setTeam(team);
-				// userService.saveUser(authenticatedUser);
+				authenticatedUser.setTeam(team);
+				userService.updateUser(authenticatedUser);
 
 				return "redirect:/team"; // redirect to /team controller method
 			}
 		}
+		System.err.println("User need to be authenticated");
 		return REDIRECT_ERROR;
 	}
-
-	@GetMapping("/team/test-display")
-	public String testTeam(Map<String, Object> model) {
-		/*
-		 * To create a team : Create an empty object and pass it to the form. In the
-		 * form, map this object attributes with the corresponding form properties. The
-		 * model will then be available in the PostMapping method an could easily be
-		 * updated in the DB
-		 */
-		// TODO check access
-		model.put("teamToCreate", new Team());
-
-		model.put("teams", teamRepository.findAll());
-
-		return "test-display";
-	}
-
-	@GetMapping("/team/test-form")
-	public String testForm(Map<String, Object> model) {
-		// TODO check access
-		/*
-		 * To create a team : Create an empty object and pass it to the form. In the
-		 * form, map this object attributes with the corresponding form properties. The
-		 * model will then be available in the PostMapping method an could easily be
-		 * updated in the DB
-		 */
-
-		model.put("teamToCreate", new Team());
-
-		model.put("teams", teamRepository.findAll());
-
-		return "test-form";
-	}
-
-	// @GetMapping("/team")
-	// public String team(Map<String, Object> model) {
-	//
-	// Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	// User user = userService.findUserByEmail(auth.getName());
-	// Optional<Team> team = teamRepository.findById((long) user.getTeam().getId());
-	//
-	// if(team.isPresent()) {
-	// model.put("title", team.get().getName());
-	//
-	// // Put the todo list by the given author
-	// model.put("teams", team);
-	//
-	// // Return the page "home.html"
-	// return "team";
-	// }
-	// else {
-	// return ("redirect:/notfound");
-	// }
-	//
-	//
-	//
-	// }
-
-	// @PostMapping("/createteam")
-	// public String saveTeam(@Validated @ModelAttribute Team team, BindingResult
-	// errors, Model model,
-	// RedirectAttributes redirAttrs) {
-
-	// if (!errors.hasErrors()) {
-	// if (team.validate())
-	// else
-	// teamRepository.save(team);
-	// throw new RuntimeException("The team is not complete ! Please fill all the
-	// fields");
-	// }
-	// }return((errors.hasErrors())?"team":"redirect:/");
 }

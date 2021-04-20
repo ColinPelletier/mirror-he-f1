@@ -49,7 +49,7 @@ public class Team {
 	 * @param budget
 	 * @param carPicture
 	 */
-	public Team(long id, String name, long budget, String carPicture) {
+	public Team(int id, String name, long budget, String carPicture) {
 		this.id = id;
 		this.name = name;
 		this.budget = budget;
@@ -106,7 +106,7 @@ public class Team {
 	@Override
 	public boolean equals(Object obj) {
 		Team team = (Team) obj;
-		return this.id == team.id && this.name.equals(team.name);
+		return this.id == team.getId() && this.name.equals(team.getName());
 	}
 
 	public boolean validate() {
