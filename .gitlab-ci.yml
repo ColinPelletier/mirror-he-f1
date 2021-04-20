@@ -45,12 +45,14 @@ sonarqube:
   script:
     - echo "start sonarqube stage"
     - cd he-f1
+    - docker-compose down
+    - docker-compose up -d
     - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
     - echo "sonarqube ok"
   only:
     - dev
   tags:
-    - alpine-docker
+    - he-f1-prod
 
 # deploy:
 #   stage: deploy
