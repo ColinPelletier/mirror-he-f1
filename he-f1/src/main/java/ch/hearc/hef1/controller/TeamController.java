@@ -80,13 +80,10 @@ public class TeamController {
 		// TODO : check if the user is a member of this team
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User authenticatedUser = userService.findUserByUsername(auth.getName());
-
 		if (authenticatedUser != null) {
-
 			// Check id validity
 			long teamId;
 			long carId;
-
 			try {
 				teamId = Long.parseLong(strTeamId);
 				carId = Long.parseLong(strCarId);
@@ -94,7 +91,6 @@ public class TeamController {
 				System.err.println("id must be an integer");
 				return REDIRECT_ERROR;
 			}
-
 			Optional<Team> team = teamRepository.findById(teamId);
 			Optional<Car> car = carRepository.findById(carId);
 
@@ -102,7 +98,6 @@ public class TeamController {
 			if (team.isPresent() && car.isPresent()) {
 				if (carService.isTeamOwner(car.get(), team.get())) {
 					List<CarPiece> carPieces = carService.findCarPieces(car.get());
-
 					// model.put("teamToCreate", new Team());
 					model.put("team", team.get());
 					model.put("car", car.get());

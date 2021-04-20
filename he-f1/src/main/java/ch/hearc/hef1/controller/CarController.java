@@ -89,12 +89,16 @@ public class CarController {
         // Get authenticated user
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User authenticatedUser = userService.findUserByUsername(auth.getName());
-
+        System.out.println("=========================================================================== 1");
+        System.out.println("pieceId = " + pieceId);
+        System.out.println("teamId = " + teamId);
+        System.out.println("carId = " + carId);
+        System.out.println("carPiece = " + carPiece.isPresent());
         // Create and save repairUpgrade
         if (carPiece.isPresent()) {
             // Get price
             // Piece piece = pieceRepository.
-
+            System.out.println("=========================================================================== 2");
             RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
                     endDate);
             repairUpgradeService.saveRepairUpgrade(repairUpgrade);
