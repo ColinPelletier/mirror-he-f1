@@ -1,5 +1,6 @@
 package ch.hearc.hef1.controller;
 
+import java.lang.StackWalker.Option;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -19,10 +20,12 @@ import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
 import ch.hearc.hef1.model.Piece;
 import ch.hearc.hef1.model.RepairUpgrade;
+import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.PieceRepository;
+import ch.hearc.hef1.repository.TeamRepository;
 import ch.hearc.hef1.service.CarService;
 import ch.hearc.hef1.service.RepairUpgradeService;
 import ch.hearc.hef1.service.UserService;
@@ -37,6 +40,9 @@ public class CarController {
 
     @Autowired
     PieceRepository pieceRepository;
+
+    @Autowired
+    TeamRepository teamRepository;
 
     @Autowired
     UserService userService;
@@ -68,40 +74,38 @@ public class CarController {
             @PathVariable String strCarId, Map<String, Object> model) {
 
         long pieceId;
-        int teamId;
-        int carId;
-        // float upgradePrice = 0;
+        long teamId;
+        long carId;
+        double upgradePrice = 0;
 
         Date startDate = new Date();
         Date endDate = new Date(startDate.getMinutes() * ONE_MINUTE + ONE_MINUTE);
 
         try {
             pieceId = Long.parseLong(strPieceId);
-            teamId = Integer.parseInt(strTeamId);
-            carId = Integer.parseInt(strCarId);
+            teamId = Long.parseLong(strTeamId);
+            carId = Long.parseLong(strCarId);
         } catch (NumberFormatException e) {
             System.err.println("id must be an integer");
             return REDIRECT_ERROR;
         }
         // Get car Piece
         Optional<CarPiece> carPiece = carPieceRepository.findById(pieceId);
+        Optional<Team> team = teamRepository.findById((long) teamId);
 
         // Get authenticated user
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User authenticatedUser = userService.findUserByUsername(auth.getName());
-        System.out.println("=========================================================================== 1");
-        System.out.println("pieceId = " + pieceId);
-        System.out.println("teamId = " + teamId);
-        System.out.println("carId = " + carId);
-        System.out.println("carPiece = " + carPiece.isPresent());
+
         // Create and save repairUpgrade
-        if (carPiece.isPresent()) {
+        if (carPiece.isPresent() && team.isPresent()) {
             // Get price
-            // Piece piece = pieceRepository.
-            System.out.println("=========================================================================== 2");
-            RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
-                    endDate);
-            repairUpgradeService.saveRepairUpgrade(repairUpgrade);
+            upgradePrice = carPiece.get().getPiece().getBaseUpgradePrice();
+            if (team.get().getBudget() - upgradePrice > 0) {
+                RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
+                        endDate);
+                repairUpgradeService.saveRepairUpgrade(repairUpgrade);
+            }
         }
 
         // CarPiece carPiece, User user, boolean isRepair, Date startDate, Date endDate
