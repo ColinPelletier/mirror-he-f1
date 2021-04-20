@@ -71,8 +71,8 @@
                             <p class="mb-1"
                                 th:text="${'Upgarde time :' + carPiece.piece.baseUpgradeTime * carPiece.level}">
                             </p>
-                            <form class="form-inline my-2 my-lg-0" th:action="@{'/car/update/' + ${carPiece.piece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
-                                <input type="submit" class="btn-sm btn-danger" value="Upgarrde"/>
+                            <form class="form-inline my-2 my-lg-0" th:action="@{'/car/upgrade/' + ${carPiece.piece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
+                                <input type="submit" class="btn-sm btn-danger" value="Upgrade"/>
                             </form>
                         </div>
                         <!-- <form class="form-inline my-2 my-lg-0" th:object="${todo}" th:action="@{/todoByAuthor}" method="get">

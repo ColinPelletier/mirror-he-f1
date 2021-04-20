@@ -17,10 +17,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
+import ch.hearc.hef1.model.Piece;
 import ch.hearc.hef1.model.RepairUpgrade;
 import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.CarRepository;
+import ch.hearc.hef1.repository.PieceRepository;
 import ch.hearc.hef1.service.CarService;
 import ch.hearc.hef1.service.RepairUpgradeService;
 import ch.hearc.hef1.service.UserService;
@@ -32,6 +34,9 @@ public class CarController {
 
     @Autowired
     CarPieceRepository carPieceRepository;
+
+    @Autowired
+    PieceRepository pieceRepository;
 
     @Autowired
     UserService userService;
@@ -58,13 +63,15 @@ public class CarController {
         return "test-display";
     }
 
-    @PostMapping("/car/update/{strPieceId}/{strTeamId}/{strCarId}")
-    public String updatePiece(@PathVariable String strPieceId, @PathVariable String strTeamId,
+    @PostMapping("/car/upgrade/{strPieceId}/{strTeamId}/{strCarId}")
+    public String upgradePiece(@PathVariable String strPieceId, @PathVariable String strTeamId,
             @PathVariable String strCarId, Map<String, Object> model) {
 
         long pieceId;
         int teamId;
         int carId;
+        // float upgradePrice = 0;
+
         Date startDate = new Date();
         Date endDate = new Date(startDate.getMinutes() * ONE_MINUTE + ONE_MINUTE);
 
@@ -85,9 +92,9 @@ public class CarController {
 
         // Create and save repairUpgrade
         if (carPiece.isPresent()) {
-            System.out.println("id piece ======================================================== " + pieceId);
-            System.out.println(
-                    "id piece level ===================================================" + carPiece.get().getLevel());
+            // Get price
+            // Piece piece = pieceRepository.
+
             RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
                     endDate);
             repairUpgradeService.saveRepairUpgrade(repairUpgrade);
