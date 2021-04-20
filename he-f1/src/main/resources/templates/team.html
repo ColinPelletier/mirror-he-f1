@@ -31,29 +31,59 @@
                 <h3 th:text="*{'Budget : ' + budget + '$'}"></h3>
             </div>
         </div>
-        <div style="margin-bottom:10px;" class="row justify-content-between">
-            <div class="col-3">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Piece's name" aria-label="search"
-                        aria-describedby="search">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-danger" type="button" id="search">Search</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 btn-group" role="group" aria-label="select-car">
-                <button type="button" class="btn btn-danger">Pierre Gasly</button>
-                <button type="button" class="btn btn-outline-danger">Yuki Tsunoda</button>
-            </div>
-        </div>
         <!-- Pieces list -->
         <div class="row justify-content-between">
             <div class="col-3">
+                <div class="accordion" id="accordionExample">
+                    <div th:each="carPiece: ${carPieces}" class="card">
+                        <div class="card-header" th:id="${carPiece.piece.id}">
+                            <h2 class="mb-0">
+                                <button class="btn btn-block text-left" type="button" data-bs-toggle="collapse"
+                                    th:data-bs-target="'#collapse' + ${carPiece.piece.id}" aria-expanded="true"
+                                    th:aria-controls="'collapse' + ${carPiece.piece.id}"
+                                    th:text="${carPiece.piece.name}">
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div th:id="'collapse' + ${carPiece.piece.id}" class="collapse"
+                            th:aria-labelledby="${carPiece.piece.id}" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"></h5>
+                                    <small th:text="${'Usure   :' + carPiece.wear + '%'}"></small>
+                                </div>
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1"></h5>
+                                    <small th:text="${'Level  :' + carPiece.level}"></small>
+                                </div>
+
+                                <div class="d-flex w-100 justify-content-between">
+                                    <p class="mb-1"
+                                        th:text="${'Repair   :' + carPiece.piece.baseRepairPrice * carPiece.level + '$'}">
+                                    </p>
+                                    <p class="mb-1"
+                                        th:text="${'Repair time :' + carPiece.piece.baseRepairTime * carPiece.level}">
+                                    </p>
+                                    <button type="submit" class="btn-sm btn-danger mb-1">Repair</button>
+                                </div>
+
+                                <div th:object="${car}" class="d-flex w-100 justify-content-between">
+                                    <p class="mb-1"
+                                        th:text="${'Upgrade :' + carPiece.piece.baseUpgradePrice * carPiece.level + '$'}">
+                                    </p>
+                                    <button type="submit" class="btn-sm btn-danger">Upgrade</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
                 <ul class="list-group">
                     <li class="list-group-item" th:each="carPiece: ${carPieces}">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1"
-                                th:text="${carPiece.piece.name}">
+                            <h5 class="mb-1" th:text="${carPiece.piece.name}">
                             </h5>
                         </div>
                         <div class="d-flex w-100 justify-content-between">
@@ -64,7 +94,7 @@
                             <h5 class="mb-1"></h5>
                             <small th:text="${'Level  :' + carPiece.level}"></small>
                         </div>
-                        
+
                         <div class="d-flex w-100 justify-content-between">
                             <p class="mb-1"
                                 th:text="${'Repair   :' + carPiece.piece.baseRepairPrice * carPiece.level + '$'}">
@@ -81,15 +111,22 @@
                             </p>
                             <button type="submit" class="btn-sm btn-danger">Upgrade</button>
                         </div>
-                        <!-- <form class="form-inline my-2 my-lg-0" th:object="${todo}" th:action="@{/todoByAuthor}" method="get">
+                        <form class="form-inline my-2 my-lg-0" th:object="${todo}" th:action="@{/todoByAuthor}" method="get">
                             <input type="text" name="selectedAuthor" class="form-control" />
                             <input type="submit" class="btn btn-outline-success my-2 my-sm-0 mt-1" value="Rechercher par auteur"/>
-                        </form> -->
+                        </form>
                     </li>
                 </ul>
+            -->
             </div>
             <div class="col-9">
-                <div class="card">
+                <div class="row justify-content-end">
+                    <div class="flex col-4 btn-group" role="group" aria-label="select-car" style="margin-bottom:10px;">
+                        <button type="button" class="btn btn-danger">Pierre Gasly</button>
+                        <button type="button" class="btn btn-outline-danger">Yuki Tsunoda</button>
+                    </div>
+                </div>
+                <div class="card col-12">
                     <img width="100%" height="auto" th:src="@{*{getCarImagePath()}}" th:alt="${car.name}" />
                 </div>
             </div>
