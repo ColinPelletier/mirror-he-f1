@@ -44,6 +44,7 @@ sonarqube:
   stage: sonarqube
   script:
     - echo "start sonarqube stage"
+    - cd he-f1
     - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
     - echo "sonarqube ok"
   only:
