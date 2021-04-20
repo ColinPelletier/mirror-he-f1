@@ -26,6 +26,12 @@ public class Team {
 	private String name;
 
 	@Column
+	private String driver1; // driver 1 name
+
+	@Column
+	private String driver2; // driver 2 name
+
+	@Column
 	private long budget;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
@@ -49,9 +55,11 @@ public class Team {
 	 * @param budget
 	 * @param carPicture
 	 */
-	public Team(int id, String name, long budget, String carPicture) {
+	public Team(int id, String name, String driver1, String driver2, long budget, String carPicture) {
 		this.id = id;
 		this.name = name;
+		this.driver1 = driver1;
+		this.driver2 = driver2;
 		this.budget = budget;
 		this.carPicture = carPicture;
 	}
@@ -72,8 +80,24 @@ public class Team {
 		return name;
 	}
 
+	public String getDriver1() {
+		return driver1;
+	}
+
+	public String getDriver2() {
+		return driver2;
+	}
+
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void setDriver1(String driver1) {
+		this.driver1 = driver1;
+	}
+
+	public void setDriver2(String driver2) {
+		this.driver2 = driver2;
 	}
 
 	public long getBudget() {

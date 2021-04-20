@@ -103,7 +103,6 @@ public class TeamController {
 				if (carService.isTeamOwner(car.get(), team.get())) {
 					List<CarPiece> carPieces = carService.findCarPieces(car.get());
 
-					// model.put("teamToCreate", new Team());
 					model.put("team", team.get());
 					model.put("car", car.get());
 					model.put("carPieces", carPieces);
@@ -124,7 +123,7 @@ public class TeamController {
 
 	@PostMapping("/team/create")
 	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors,
-			@RequestParam("image") MultipartFile multipartFile) {
+			@RequestParam("image") MultipartFile multipartFile, @RequestParam("carName") String carName) {
 
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User authenticatedUser = userService.findUserByUsername(auth.getName());
@@ -138,7 +137,6 @@ public class TeamController {
 			if (fileUploaded) {
 				team = teamRepository.save(team);
 
-				String carName = "TODO ADD CAR NAME IN FORM";
 				carService.createAndSaveTeamCars(team, carName);
 
 				authenticatedUser.setTeam(team);
