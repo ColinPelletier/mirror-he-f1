@@ -29,7 +29,7 @@
             <div class="col-9">
                 <h1 th:text="*{name}"></h1>
             </div>
-            <div class="col-3">
+            <div class="col-3 text-right">
                 <h3 th:text="*{'Budget : ' + budget + '$'}"></h3>
             </div>
         </div>
@@ -74,8 +74,10 @@
                                     <p class="mb-1"
                                         th:text="${'Upgrade :' + carPiece.piece.baseUpgradePrice * carPiece.level + '$'}">
                                     </p>
-                                    <form class="form-inline my-2 my-lg-0" th:action="@{'/car/upgrade/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
-                                        <input type="submit" class="btn-sm btn-danger" value="Upgrade"/>
+                                    <form class="form-inline my-2 my-lg-0"
+                                        th:action="@{'/car/upgrade/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}"
+                                        method="post">
+                                        <input type="submit" class="btn-sm btn-danger" value="Upgrade" />
                                     </form>
                                 </div>
                             </div>
@@ -86,23 +88,23 @@
 
             <!-- Car switch buttons -->
             <div class="col-9">
-                <div class="row justify-content-end">
-                    <div class="flex col-4 btn-group" role="group" aria-label="select-car" style="margin-bottom:10px;">
+                <div class="row justify-content-end" style="padding-right:15px;">
+                    <div class="flex" style="margin-bottom:10px;">
 
                         <!-- On car 1 view -->
                         <form th:if="${carId1 == car.id}" th:action="@{${carUrl2}}" method="get">
                             <button class="btn btn-danger" th:text="*{driver1}" disabled></button>
-                            <button type="submit" class="btn btn-outline-danger"  th:text="*{driver2}"></button>
+                            <button type="submit" class="btn btn-outline-danger" th:text="*{driver2}"></button>
                         </form>
 
                         <!-- On car 2 view -->
                         <form th:if="${carId2 == car.id}" th:action="@{${carUrl1}}" method="get">
                             <button type="submit" class="btn btn-outline-danger" th:text="*{driver1}"></button>
-                            <button class="btn btn-danger"  th:text="*{driver2}" disabled></button>
+                            <button class="btn btn-danger" th:text="*{driver2}" disabled></button>
                         </form>
                     </div>
                 </div>
-                <div class="card col-12">
+                <div class="card">
                     <img width="100%" height="auto" th:src="@{*{getCarImagePath()}}" th:alt="${car.name}" />
                 </div>
             </div>
