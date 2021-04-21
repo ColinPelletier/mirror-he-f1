@@ -43,6 +43,13 @@ public class TeamService {
         return false;
     }
 
+    /**
+     * Create urls to switch between team cars. The carId attributes are used to
+     * know on which page the user is : the first or the second car of the team.
+     * 
+     * @param team
+     * @param model
+     */
     public void setCarsUrlsInModel(Team team, Map<String, Object> model) {
         List<Car> teamCars = carRepository.findByTeam(team);
 
