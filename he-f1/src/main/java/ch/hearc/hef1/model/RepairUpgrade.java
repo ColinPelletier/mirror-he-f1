@@ -25,7 +25,7 @@ public class RepairUpgrade {
 	@Column
 	private long id;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne()
 	@JoinColumn(name = "car_piece_id")
 	private CarPiece carPiece;
 

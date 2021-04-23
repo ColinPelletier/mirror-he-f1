@@ -62,6 +62,7 @@ public class CarController {
         // TODO check access
         long carId = Long.parseLong(strCarId);
         Car car = carRepository.findById(carId).get();
+
         List<CarPiece> carPieces = carService.findCarPieces(car);
 
         model.put("model", car);
@@ -69,10 +70,6 @@ public class CarController {
 
         return "test-display";
     }
-
-    // private void checkUpgradePiece() {
-    // List<RepairUpgrade> listRepairUpgrades = repairUpgradeService.
-    // }
 
     @PostMapping("/car/upgrade/{strPieceId}/{strTeamId}/{strCarId}")
     public String upgradePiece(@PathVariable String strPieceId, @PathVariable String strTeamId,
@@ -107,8 +104,7 @@ public class CarController {
         // Create and save repairUpgrade
         if (carPiece.isPresent() && team.isPresent()) {
             // Get price
-            upgradePrice = (long) (carPiece.get().getPiece().getBaseUpgradePrice()
-                    + carPiece.get().getPiece().getBaseUpgradePrice() * carPiece.get().getLevel());
+            upgradePrice = (long) (carPiece.get().getPiece().getBaseUpgradePrice() * carPiece.get().getLevel());
 
             // Get end date
             double timeInHour = carPiece.get().getPiece().getBaseUpgradeTime() * carPiece.get().getLevel();
@@ -119,23 +115,11 @@ public class CarController {
             if (team.get().getBudget() - upgradePrice > 0) {
                 RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
                         endDate);
-                // team.get().setBudget(team.get().getBudget() - upgradePrice);
+                team.get().setBudget(team.get().getBudget() - upgradePrice);
+                teamRepository.save(team.get());
                 repairUpgradeService.saveRepairUpgrade(repairUpgrade);
             }
         }
-
-        // CarPiece carPiece, User user, boolean isRepair, Date startDate, Date endDate
-
-        // Team createdTeam = teamRepository.save(team);
-
-        // model.put("title", homeTitle);
-        // // Put the todo list by the given author
-        // model.put("todos", todo.getAllTodosByAuthor(strAuthor));
-        // model.put("author", strAuthor);
-        // model.put("totalTime", todo.getTotalTimeByAuthor(strAuthor));
-
-        // // Return the page "home.html"
-        // return "todoByAuthor";
         return ("redirect:/team/" + teamId + "/car/" + carId);
     }
 }
