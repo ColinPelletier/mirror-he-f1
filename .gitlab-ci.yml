@@ -40,33 +40,33 @@ before_script:
 #   tags:
 #     - alpine-docker
 
-sonarqube:
-  stage: sonarqube
-  script:
-    - echo "start sonarqube stage"
-    - cd he-f1
-    - /opt/apache-maven-3.6.3/bin/mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-    - echo "sonarqube ok"
-  only:
-    - dev
-  tags:
-    - he-f1-prod
-
-# deploy:
-#   stage: deploy
-#   before_script:
-#     - echo "do some stuff before"
+# sonarqube:
+#   stage: sonarqube
 #   script:
-#     - echo "deploy HE-F1"
+#     - echo "start sonarqube stage"
 #     - cd he-f1
-#     - docker-compose down
-#     - docker-compose up -d
-#     - echo "deploy ok"
+#     - /opt/apache-maven-3.6.3/bin/mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+#     - echo "sonarqube ok"
 #   only:
-#     - update-ci-cd
+#     - dev
 #   tags:
 #     - he-f1-prod
-#   when: manual
+
+deploy:
+  stage: deploy
+  before_script:
+    - echo "do some stuff before"
+  script:
+    - echo "deploy HE-F1"
+    - cd he-f1
+    - docker-compose down
+    - docker-compose up -d
+    - echo "deploy ok"
+  only:
+    - update-ci-cd
+  tags:
+    - he-f1-prod
+  when: manual
 
 after_script:
   - echo "End CI/CD"

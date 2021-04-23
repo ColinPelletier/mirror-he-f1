@@ -79,7 +79,7 @@ public class UserController {
 			model.put("users", userRepository.findAll());
 		}
 
-		List<Enum> roles = new ArrayList<Enum>(EnumSet.allOf(UserRole.class));
+		List<UserRole> roles = new ArrayList<UserRole>(EnumSet.allOf(UserRole.class));
 		model.put("roles", roles);
 
 		return "recruiting";
