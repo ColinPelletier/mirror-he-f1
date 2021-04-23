@@ -3,17 +3,13 @@ package ch.hearc.hef1.controller;
 import java.util.List;
 import java.util.Map;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import ch.hearc.hef1.model.GP;
 import ch.hearc.hef1.model.Team;
-import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.service.GPService;
 import ch.hearc.hef1.service.TeamService;
 
@@ -28,9 +24,14 @@ public class GPController {
     private TeamService teamService;
 
     @GetMapping("/grand-prix")
-    public String getGPs(Map<String, Object> model) {
+    public String getGPs(@RequestParam(value = "selectedName", required = false) String strName,
+            Map<String, Object> model) {
 
-        model.put("gps", gpService.findAll());
+        if (strName != null) {
+            model.put("gps", gpService.findByNameContaining(strName));
+        } else {
+            model.put("gps", gpService.findAll());
+        }
 
         return "grand-prix";
     }

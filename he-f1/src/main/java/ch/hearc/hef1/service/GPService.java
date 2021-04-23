@@ -35,7 +35,11 @@ public class GPService {
     private static int DNF_RATE = 10;
 
     public List<GP> findAll() {
-        return gpRepository.findAll();
+        return gpRepository.findAllByOrderByDateAsc();
+    }
+
+    public List<GP> findByNameContaining(String name) {
+        return gpRepository.findByNameContaining(name);
     }
 
     /**
