@@ -16,6 +16,7 @@ import javax.persistence.Table;
 public class Team {
 	public static int NB_CARS_BY_TEAM = 2;
 	public static long STARTING_BUDGET = 1000000;
+	public static int STARTING_POINTS = 0;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

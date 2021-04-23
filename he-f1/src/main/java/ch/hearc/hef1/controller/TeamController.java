@@ -131,6 +131,7 @@ public class TeamController {
 		if (authenticatedUser != null) {
 			if (authenticatedUser.getRole().equals(UserRole.MANAGER)) {
 				team.setBudget(Team.STARTING_BUDGET);
+				team.setPoints(Team.STARTING_POINTS);
 				team = teamRepository.save(team);
 
 				boolean fileUploaded = teamService.uploadCarImage(team, multipartFile);
