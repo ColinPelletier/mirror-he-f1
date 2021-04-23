@@ -107,8 +107,7 @@ public class CarController {
 
             // Get end date
             double timeInHour = carPiece.get().getPiece().getBaseRepairTime() * carPiece.get().getLevel();
-            Date endDate = new Date(t + (int) (timeInHour * ONE_MINUTE)); // TODO: * 60 for an hour
-                                                                          // =======================================================================
+            Date endDate = new Date(t + (int) (timeInHour * ONE_MINUTE * 60));
 
             // If carPiece is weared and team have enought budget, repair the carPiece
             if (carPiece.get().getWear() > 0 && team.get().getBudget() - repairPrice > 0) {
@@ -159,8 +158,7 @@ public class CarController {
 
             // Get end date
             double timeInHour = carPiece.get().getPiece().getBaseUpgradeTime() * carPiece.get().getLevel();
-            Date endDate = new Date(t + (int) (timeInHour * ONE_MINUTE)); // TODO: * 60 for an hour
-                                                                          // =======================================================================
+            Date endDate = new Date(t + (int) (timeInHour * ONE_MINUTE * 60));
 
             // If team have enought budget, upgrade the carpiece
             if (team.get().getBudget() - upgradePrice > 0) {

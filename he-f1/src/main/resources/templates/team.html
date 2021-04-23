@@ -51,30 +51,43 @@
                             <div class="card-body">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1"></h5>
-                                    <small th:text="${'Usure   :' + carPiece.wear + '%'}"></small>
+                                    <small th:text="${'Usure: ' + carPiece.wear + '%'}"></small>
                                 </div>
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1"></h5>
-                                    <small th:text="${'Level  :' + carPiece.level}"></small>
+                                    <small th:text="${'Level: ' + carPiece.level}"></small>
                                 </div>
 
                                 <div class="d-flex w-100 justify-content-between">
-                                    <p class="mb-1"
-                                        th:text="${'Repair   :' + carPiece.piece.baseRepairPrice * carPiece.level + '$'}">
-                                    </p>
-                                    <p class="mb-1"
-                                        th:text="${'Repair time :' + carPiece.piece.baseRepairTime * carPiece.level}">
-                                    </p>
-                                    <form class="form-inline my-2 my-lg-0" th:action="@{'/car/repair/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
+                                    <div class="col">
+                                        <p class="mb-1"
+                                            th:text="${'Repair: ' + carPiece.piece.baseRepairPrice * carPiece.level + '$'}">
+                                        </p>
+                                        <p class="mb-1"
+                                            th:text="${'Repair time: ' + carPiece.piece.baseRepairTime * carPiece.level}">
+                                        </p>
+                                        <p th:if="${carPiece.repairUpgrade != null && carPiece.repairUpgrade.isRepair}" class="mb-1"
+                                            th:text="${'Repair completed to: ' + #dates.format(carPiece.repairUpgrade.endDate, 'HH:mm dd-MM-yyyy')}">
+                                        </p>
+                                    </div>
+                                    <form th:if="${carPiece.repairUpgrade == null}" class="form-inline my-2 my-lg-0" th:action="@{'/car/repair/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
                                         <input type="submit" class="btn-sm btn-danger" value="Repair"/>
                                     </form>
                                 </div>
 
                                 <div th:object="${car}" class="d-flex w-100 justify-content-between">
-                                    <p class="mb-1"
-                                        th:text="${'Upgrade :' + carPiece.piece.baseUpgradePrice * carPiece.level + '$'}">
-                                    </p>
-                                    <form class="form-inline my-2 my-lg-0" th:action="@{'/car/upgrade/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
+                                    <div class="col">
+                                        <p class="mb-1"
+                                            th:text="${'Upgrade: ' + carPiece.piece.baseUpgradePrice * carPiece.level + '$'}">
+                                        </p>
+                                        <p class="mb-1"
+                                            th:text="${'Upgrade time: ' + carPiece.piece.baseUpgradeTime * carPiece.level}">
+                                        </p>
+                                        <p th:if="${carPiece.repairUpgrade != null && !carPiece.repairUpgrade.isRepair}" class="mb-1"
+                                            th:text="${'Upgarde completed to: ' + #dates.format(carPiece.repairUpgrade.endDate, 'HH:mm dd-MM-yyyy')}">
+                                        </p>
+                                    </div>
+                                    <form th:if="${carPiece.repairUpgrade == null}" class="form-inline my-2 my-lg-0" th:action="@{'/car/upgrade/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
                                         <input type="submit" class="btn-sm btn-danger" value="Upgrade"/>
                                     </form>
                                 </div>
