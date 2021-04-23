@@ -1,5 +1,6 @@
 package ch.hearc.hef1.controller;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -22,6 +23,7 @@ import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
 import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
+import ch.hearc.hef1.model.UserRole;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.TeamRepository;
 import ch.hearc.hef1.service.CarService;
@@ -98,10 +100,12 @@ public class TeamController {
 			if (team.isPresent() && car.isPresent()) {
 				if (carService.isTeamOwner(car.get(), team.get())) {
 					List<CarPiece> carPieces = carService.findCarPieces(car.get());
-					// model.put("teamToCreate", new Team());
+
 					model.put("team", team.get());
 					model.put("car", car.get());
 					model.put("carPieces", carPieces);
+
+					teamService.setCarsUrlsInModel(team.get(), model);
 				} else {
 					System.err.println("Car " + carId + " is not owned by team " + teamId);
 					return REDIRECT_ERROR;
@@ -119,30 +123,34 @@ public class TeamController {
 
 	@PostMapping("/team/create")
 	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors,
-			@RequestParam("image") MultipartFile multipartFile) {
+			@RequestParam("image") MultipartFile multipartFile, @RequestParam("carName") String carName) {
 
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User authenticatedUser = userService.findUserByUsername(auth.getName());
 
 		if (authenticatedUser != null) {
-
-			team.setBudget(Team.STARTING_BUDGET);
-			team = teamRepository.save(team);
-
-			boolean fileUploaded = teamService.uploadCarImage(team, multipartFile);
-			if (fileUploaded) {
+			if (authenticatedUser.getRole().equals(UserRole.MANAGER)) {
+				team.setBudget(Team.STARTING_BUDGET);
+				team.setPoints(Team.STARTING_POINTS);
 				team = teamRepository.save(team);
 
-				String carName = "TODO ADD CAR NAME IN FORM";
-				carService.createAndSaveTeamCars(team, carName);
+				boolean fileUploaded = teamService.uploadCarImage(team, multipartFile);
+				if (fileUploaded) {
+					team = teamRepository.save(team);
 
-				authenticatedUser.setTeam(team);
-				userService.updateUser(authenticatedUser);
+					carService.createAndSaveTeamCars(team, carName);
 
-				return "redirect:/team"; // redirect to /team controller method
+					authenticatedUser.setTeam(team);
+					userService.updateUser(authenticatedUser);
+
+					return "redirect:/team"; // redirect to /team controller method
+				}
+			} else {
+				System.err.println("Only managers can create teams");
 			}
+		} else {
+			System.err.println("User need to be authenticated");
 		}
-		System.err.println("User need to be authenticated");
 		return REDIRECT_ERROR;
 	}
 }

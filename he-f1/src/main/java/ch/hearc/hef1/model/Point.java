@@ -23,7 +23,7 @@ public class Point {
 	private int nbPoints;
 
 	@Column
-	private double money;
+	private int money;
 
 	/**
 	 * Default constructor
@@ -38,7 +38,7 @@ public class Point {
 	 * @param nbPoints
 	 * @param money
 	 */
-	public Point(int id, int position, int nbPoints, double money) {
+	public Point(int id, int position, int nbPoints, int money) {
 		this.id = id;
 		this.position = position;
 		this.nbPoints = nbPoints;
@@ -73,11 +73,11 @@ public class Point {
 		this.nbPoints = nbPoints;
 	}
 
-	public double getMoney() {
+	public int getMoney() {
 		return money;
 	}
 
-	public void setMoney(double money) {
+	public void setMoney(int money) {
 		this.money = money;
 	}
 

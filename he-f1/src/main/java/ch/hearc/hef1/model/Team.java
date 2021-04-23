@@ -16,6 +16,7 @@ import javax.persistence.Table;
 public class Team {
 	public static int NB_CARS_BY_TEAM = 2;
 	public static long STARTING_BUDGET = 1000000;
+	public static int STARTING_POINTS = 0;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,7 +27,16 @@ public class Team {
 	private String name;
 
 	@Column
+	private String driver1; // driver 1 name
+
+	@Column
+	private String driver2; // driver 2 name
+
+	@Column
 	private long budget;
+
+	@Column
+	private int points;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
 	private List<Car> cars;
@@ -46,14 +56,20 @@ public class Team {
 	 * 
 	 * @param id
 	 * @param name
+	 * @param driver1
+	 * @param driver2
 	 * @param budget
 	 * @param carPicture
+	 * @param points
 	 */
-	public Team(int id, String name, long budget, String carPicture) {
+	public Team(int id, String name, String driver1, String driver2, long budget, String carPicture, int points) {
 		this.id = id;
 		this.name = name;
+		this.driver1 = driver1;
+		this.driver2 = driver2;
 		this.budget = budget;
 		this.carPicture = carPicture;
+		this.points = points;
 	}
 
 	/*
@@ -76,12 +92,44 @@ public class Team {
 		this.name = name;
 	}
 
+	public String getDriver1() {
+		return driver1;
+	}
+
+	public void setDriver1(String driver1) {
+		this.driver1 = driver1;
+	}
+
+	public String getDriver2() {
+		return driver2;
+	}
+
+	public void setDriver2(String driver2) {
+		this.driver2 = driver2;
+	}
+
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	public void addPoints(int points) {
+		this.points += points;
+	}
+
 	public long getBudget() {
 		return budget;
 	}
 
 	public void setBudget(long budget) {
 		this.budget = budget;
+	}
+
+	public void addMoney(long money) {
+		this.budget += money;
 	}
 
 	public List<Car> getCars() {
@@ -92,6 +140,10 @@ public class Team {
 		return carPicture;
 	}
 
+	public void setCarPicture(String carPicture) {
+		this.carPicture = carPicture;
+	}
+
 	public String getCarImagePath() {
 		if (carPicture != null) {
 			return "/teams-car-picture/" + id + "/" + carPicture;
@@ -99,18 +151,9 @@ public class Team {
 		return null;
 	}
 
-	public void setCarPicture(String carPicture) {
-		this.carPicture = carPicture;
-	}
-
 	@Override
 	public boolean equals(Object obj) {
 		Team team = (Team) obj;
 		return this.id == team.getId() && this.name.equals(team.getName());
 	}
-
-	public boolean validate() {
-		return (!this.name.isEmpty());
-	}
-
 }
