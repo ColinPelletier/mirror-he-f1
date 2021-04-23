@@ -3,6 +3,7 @@ package ch.hearc.hef1.controller;
 import java.lang.StackWalker.Option;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -69,6 +70,10 @@ public class CarController {
         return "test-display";
     }
 
+    // private void checkUpgradePiece() {
+    // List<RepairUpgrade> listRepairUpgrades = repairUpgradeService.
+    // }
+
     @PostMapping("/car/upgrade/{strPieceId}/{strTeamId}/{strCarId}")
     public String upgradePiece(@PathVariable String strPieceId, @PathVariable String strTeamId,
             @PathVariable String strCarId, Map<String, Object> model) {
@@ -76,10 +81,12 @@ public class CarController {
         long pieceId;
         long teamId;
         long carId;
-        double upgradePrice = 0;
+        long upgradePrice = 0;
+
+        Calendar date = Calendar.getInstance();
+        long t = date.getTimeInMillis();
 
         Date startDate = new Date();
-        Date endDate = new Date(startDate.getMinutes() * ONE_MINUTE + ONE_MINUTE);
 
         try {
             pieceId = Long.parseLong(strPieceId);
@@ -100,10 +107,19 @@ public class CarController {
         // Create and save repairUpgrade
         if (carPiece.isPresent() && team.isPresent()) {
             // Get price
-            upgradePrice = carPiece.get().getPiece().getBaseUpgradePrice();
+            upgradePrice = (long) (carPiece.get().getPiece().getBaseUpgradePrice()
+                    + carPiece.get().getPiece().getBaseUpgradePrice() * carPiece.get().getLevel());
+
+            // Get end date
+            double timeInHour = carPiece.get().getPiece().getBaseUpgradeTime() * carPiece.get().getLevel();
+            Date endDate = new Date(t + (int) (timeInHour * ONE_MINUTE)); // TODO: * 60 for an hour
+                                                                          // =======================================================================
+
+            // If team have enought budget, upgrade the carpiece
             if (team.get().getBudget() - upgradePrice > 0) {
                 RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, false, startDate,
                         endDate);
+                // team.get().setBudget(team.get().getBudget() - upgradePrice);
                 repairUpgradeService.saveRepairUpgrade(repairUpgrade);
             }
         }
