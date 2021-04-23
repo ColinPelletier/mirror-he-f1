@@ -53,4 +53,14 @@ public class CarService {
 
         return carList;
     }
+
+    public float computeCarEfficiency(Car car) {
+        float efficiency = 0f;
+
+        for (CarPiece carPiece : carPieceRepository.findByCar(car)) {
+            efficiency += carPiece.getLevel() * (100 - carPiece.getWear());
+        }
+
+        return efficiency;
+    }
 }

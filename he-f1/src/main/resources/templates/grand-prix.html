@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Grand Prix - HE-F1</title>
+
+    <head th:replace="fragments/fragments.html :: header"></head>
+</head>
+
+<body>
+    <!-- Menu -->
+    <div th:replace="fragments/fragments.html :: navigation"></div>
+
+    <!-- Display team properties -->
+    <div class="container mt-sm-3">
+        <h1>Grands Prix</h1>
+        <div th:object="${gps}" style="margin:30px;">
+            <div class="row justify-content-center">
+                <div th:each="gp : ${gps}" class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" th:src="@{/images/gp-thumbnail.jpg}" alt="thumbnail">
+                        <div class="card-body">
+                            <h5 th:text="${gp.name}" class="card-title"></h5>
+                            <h6 th:text="${gp.country}" class="card-subtitle mb-2 text-muted"></h6>
+                            <p th:text="${gp.date}" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include scripts -->
+    <div th:replace="fragments/fragments.html :: scripts"></div>
+</body>
+
+</html>

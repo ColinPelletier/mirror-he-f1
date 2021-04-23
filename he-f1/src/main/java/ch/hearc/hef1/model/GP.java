@@ -15,6 +15,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name = "grand_prix")
 public class GP {
 
+	public static int NB_TEAMS_IN_GP = 10;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column

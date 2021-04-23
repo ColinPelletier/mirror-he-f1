@@ -12,11 +12,29 @@
 
 <!--  *************** fragment de navigation *************** -->
 <div th:fragment="navigation">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">
             <img height="50" width="auto" th:src="@{/images/f1-logo.png}" alt="Logo">
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/grand-prix">Grands Prix</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item active">
+                    <a class="nav-link" href="/team">Manage your team</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item active">
+                    <a class="nav-link" href="/recruiting">Recruit a member</a>
+                </li>
+            </ul>
 
+
+            <!--
         <div class="dropdown mr-auto">
             <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,11 +49,21 @@
                     <input class="dropdown-item" type="submit" value="Sign out" />
                 </form>
             </div>
-        </div>
+        </div>-->
 
-        <span class="navbar-text">
-            <h1 sec:authorize="isAuthenticated()" th:inline="text">[[${#httpServletRequest.remoteUser}]]</h1>
-        </span>
+            <button style="float:right;margin-right:30px;" sec:authorize="isAnonymous()" class="btn btn-danger"
+                type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">Sign in</button>
+
+            <div class="row align-items-center" style="float:right;margin-right:30px;"
+                sec:authorize="isAuthenticated()">
+
+                <span class="navbar-text">
+                    <h1 th:inline="text">[[${#httpServletRequest.remoteUser}]]</h1>
+                </span>
+                <form style="margin-left:10px;" th:action="@{/logout}" method="post">
+                    <input class="btn btn-danger" type="submit" value="Sign out" />
+                </form>
+            </div>
     </nav>
 
     <th:block th:replace="fragments/logindialog.html :: loginDialog"></th:block>
