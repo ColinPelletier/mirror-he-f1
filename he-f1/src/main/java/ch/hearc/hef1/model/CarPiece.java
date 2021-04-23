@@ -133,7 +133,7 @@ public class CarPiece {
 		this.wear = wear;
 	}
 
-	public double getLevel() {
+	public int getLevel() {
 		return level;
 	}
 

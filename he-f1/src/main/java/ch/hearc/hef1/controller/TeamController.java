@@ -1,9 +1,11 @@
 package ch.hearc.hef1.controller;
 
 import java.util.LinkedList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -21,12 +23,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
+import ch.hearc.hef1.model.RepairUpgrade;
 import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
+import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.model.UserRole;
 import ch.hearc.hef1.repository.CarRepository;
+import ch.hearc.hef1.repository.RepairUpgradeRepository;
 import ch.hearc.hef1.repository.TeamRepository;
 import ch.hearc.hef1.service.CarService;
+import ch.hearc.hef1.service.RepairUpgradeService;
 import ch.hearc.hef1.service.TeamService;
 import ch.hearc.hef1.service.UserService;
 
@@ -43,6 +49,15 @@ public class TeamController {
 
 	@Autowired
 	UserService userService;
+
+	@Autowired
+	RepairUpgradeRepository repairUpgradeRepository;
+
+	@Autowired
+	RepairUpgradeService repairUpgradeService;
+
+	@Autowired
+	CarPieceRepository carPieceRepository;
 
 	@Autowired
 	CarRepository carRepository;
@@ -96,6 +111,8 @@ public class TeamController {
 			Optional<Team> team = teamRepository.findById(teamId);
 			Optional<Car> car = carRepository.findById(carId);
 
+			checkRepairUpgradePiece(authenticatedUser);
+
 			// check wether the teams owns this car
 			if (team.isPresent() && car.isPresent()) {
 				if (carService.isTeamOwner(car.get(), team.get())) {
@@ -119,6 +136,28 @@ public class TeamController {
 		}
 		System.err.println("User need to be authenticated");
 		return REDIRECT_ERROR;
+	}
+
+	private void checkRepairUpgradePiece(User authenticatedUser) {
+		// Get RepairUpgrade list
+		List<RepairUpgrade> listRepairUpgrades = repairUpgradeService.findUserRepairUpgrade(authenticatedUser);
+		Date now = new Date();
+
+		// check if repairUpgrade finished
+		for (RepairUpgrade repairUpgrade : listRepairUpgrades) {
+			if (repairUpgrade.getEndDate().compareTo(now) < 0) {
+				CarPiece carPiece = repairUpgrade.getCarPiece();
+				if (repairUpgrade.isRepair()) {
+					// Upgrade car piece
+					carPiece.setLevel(carPiece.getLevel() + 1);
+				} else {
+					// Repair car piece
+					carPiece.setWear(0);
+				}
+				carPieceRepository.save(carPiece);
+				repairUpgradeRepository.delete(repairUpgrade);
+			}
+		}
 	}
 
 	@PostMapping("/team/create")
