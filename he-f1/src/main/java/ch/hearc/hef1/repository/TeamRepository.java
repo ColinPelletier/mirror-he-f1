@@ -18,7 +18,7 @@ public interface TeamRepository extends JpaRepository<Team, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "SELECT * FROM team ORDER BY RAND() LIMIT :nbTeams", nativeQuery = true)
-    public List<Team> findRandom(@Param("nbTeams") int nbTeams);
+    @Query(value = "SELECT * FROM teams where id!=:teamId ORDER BY RAND() LIMIT :nbTeams", nativeQuery = true)
+    public List<Team> findRandom(@Param("nbTeams") int nbTeams, @Param("teamId") long callingTeam);
 
 }

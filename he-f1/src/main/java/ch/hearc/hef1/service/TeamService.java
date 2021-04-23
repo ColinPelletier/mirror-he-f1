@@ -78,7 +78,7 @@ public class TeamService {
         if (authenticatedUser != null) {
 
             Team userTeam = authenticatedUser.getTeam();
-            List<Team> randomTeams = teamRepository.findRandom(nbTeams - 1);
+            List<Team> randomTeams = teamRepository.findRandom(nbTeams - 1, userTeam.getId());
 
             randomTeams.add(userTeam);
 

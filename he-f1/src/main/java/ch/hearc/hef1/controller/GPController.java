@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.hef1.model.GP;
 import ch.hearc.hef1.model.Team;
+import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.service.GPService;
 import ch.hearc.hef1.service.TeamService;
 
@@ -34,13 +35,13 @@ public class GPController {
         return "grand-prix";
     }
 
-    @PostMapping("/grand-prix/simulating")
-    public String simulateGP(@Valid @ModelAttribute GP gp) {
-
+    // @PostMapping("/grand-prix/simulating")
+    // public String simulateGP(@Valid @ModelAttribute GP gp) {
+    @GetMapping("/grand-prix/simulating")
+    public String simulateGP() {
         List<Team> teams = teamService.getRandomTeams(GP.NB_TEAMS_IN_GP);
 
         if (teams != null) {
-
             gpService.simulateGP(teams);
 
             return "grand-prix";

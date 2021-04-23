@@ -1,9 +1,8 @@
 package ch.hearc.hef1.service;
 
 import java.util.Comparator;
-import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -17,7 +16,6 @@ import ch.hearc.hef1.model.Point;
 import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.repository.GPRepository;
 import ch.hearc.hef1.repository.TeamRepository;
-import ch.hearc.hef1.tools.MapUtil;
 
 @Service("gpService")
 public class GPService {
@@ -40,51 +38,38 @@ public class GPService {
         return gpRepository.findAll();
     }
 
+    /**
+     * Simulate a GP within all teams. - Compute car efficiency - Add random
+     * penalities to add more suspense - Attribute points and rewards to teams
+     * according to their cars results
+     * 
+     * @param teams
+     */
     public void simulateGP(List<Team> teams) {
-        Map<Car, Float> carsEfficiency = new HashMap<Car, Float>();
         Random rnd = new Random();
 
-        for (Team team : teams) {
-            for (Car car : team.getCars()) {
-                if (DNF_RATE > rnd.nextInt(100)) {
-                    // DNF = Do Not Finish
-                    carsEfficiency.put(car, 0f);
-                } else {
-                    carsEfficiency.put(car, carService.computeCarEfficiency(car));
-                }
-            }
-        }
+        List<Car> cars = teams.stream().flatMap(t -> t.getCars().stream()).collect(Collectors.toList());
 
-        var points = pointService.getPoints(); // points sorted by position
+        List<Point> points = pointService.getPoints();
 
-        Function<Car, Float> carEfficiency = c => rnd.nextInt(100) < DNF_RATE ? 0 : carService.computeEfficiency(c);
+        // add a random DNF penalty (DNF = Do Not Finish = so 0 efficiency)
+        Function<Car, Float> carEfficiency = car -> rnd.nextInt(100) < DNF_RATE ? 0f
+                : carService.computeCarEfficiency(car);
 
-        List<Car> cars = carsEfficiency.stream().sorted(Comparator.compare(carEfficiency, Float::compare)).collect(Collectors.toList());
+        // sort cars by efficiency.
+        cars = cars.stream().sorted(Comparator.comparing(carEfficiency, Float::compare)).collect(Collectors.toList());
 
         int position = cars.size();
 
-        foreach(Cars car : cars)
-        {
-            Point point = position.get(position - 1);
-            car.getTeam().addPoints(point.getPoints);
-            car.getTeam().addMoney(point.geetMoney);
+        for (Car car : cars) {
+            Point point = points.get(position - 1);
+            Team team = car.getTeam();
+
+            team.addPoints(point.getNbPoints());
+            team.addMoney(point.getMoney());
+
+            teamRepository.save(team);
+            --position;
         }
-
-        // MapUtil.sortByValue(carsEfficiency);
-        // int index = carsEfficiency.size();
-
-        // for (Map.Entry<Car, Float> entry : carsEfficiency.entrySet()) {
-
-        //     if (index <= 10) {
-        //         Team team = entry.getKey().getTeam();
-        //         Point point = pointService.getByPosition(index);
-        //         team.addPoints(point.getNbPoints());
-        //         team.addMoney(point.getMoney());
-
-        //         teamRepository.save(team);
-        //     }
-
-        //     index--;
-        // }
     }
 }
