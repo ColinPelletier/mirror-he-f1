@@ -42,11 +42,11 @@
             </thead>
             <tbody>
                 <tr th:each="user: ${users}">
-                    <th th:text="${user.id}" scope="row"></th>
-                    <td th:text="${user.username}"></td>
-                    <td th:text="${user.team != null ? user.team.name : 'Free agent'}"></td>
-                    <td th:text="${user.role.description}"></td>
-                    <td>
+                    <th class="align-middle" th:text="${user.id}" scope="row"></th>
+                    <td class="align-middle" th:text="${user.username}"></td>
+                    <td class="align-middle" th:text="${user.team != null ? user.team.name : 'Free agent'}"></td>
+                    <td class="align-middle" th:text="${user.role.description}"></td>
+                    <td class="align-middle">
                         <form th:action="@{'/recruit/' + ${user.id}}" method="post">
                             <input type="submit" class="btn btn-outline-danger my-2 my-sm-0 mt-1" value="Recruit" />
                         </form>
