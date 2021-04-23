@@ -65,7 +65,9 @@
                                     <p class="mb-1"
                                         th:text="${'Repair time :' + carPiece.piece.baseRepairTime * carPiece.level}">
                                     </p>
-                                    <button type="submit" class="btn-sm btn-danger mb-1">Repair</button>
+                                    <form class="form-inline my-2 my-lg-0" th:action="@{'/car/repair/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
+                                        <input type="submit" class="btn-sm btn-danger" value="Repair"/>
+                                    </form>
                                 </div>
 
                                 <div th:object="${car}" class="d-flex w-100 justify-content-between">

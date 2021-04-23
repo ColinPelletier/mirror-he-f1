@@ -139,20 +139,19 @@ public class TeamController {
 		List<RepairUpgrade> listRepairUpgrades = repairUpgradeService.findUserRepairUpgrade(authenticatedUser);
 		Date now = new Date();
 
-		listRepairUpgrades.stream().filter(ru -> ru.getEndDate().getSeconds() < now.getSeconds())
-				.forEach(ur -> System.out.println(
-						"======================================= yoyoy yoyo ==================================================="));
-
 		// Sort list to get finished repairUpgrade
 		List<RepairUpgrade> listFinishedRepairUpgrades = listRepairUpgrades.stream()
 				.filter(ru -> ru.getEndDate().getSeconds() < now.getSeconds()).collect(Collectors.toList());
 
 		for (RepairUpgrade repairUpgrade : listFinishedRepairUpgrades) {
-			// Upgrade car piece
 			CarPiece carPiece = repairUpgrade.getCarPiece();
-			carPiece.setLevel(carPiece.getLevel() + 1);
+			if (repairUpgrade.isRepair()) {
+				// Upgrade car piece
+				carPiece.setLevel(carPiece.getLevel() + 1);
+			} else {
+				carPiece.setWear(0);
+			}
 			carPieceRepository.save(carPiece);
-
 			repairUpgradeRepository.delete(repairUpgrade);
 		}
 	}

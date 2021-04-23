@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.hef1.model.Car;
 import ch.hearc.hef1.model.CarPiece;
-import ch.hearc.hef1.model.Piece;
 import ch.hearc.hef1.model.RepairUpgrade;
 import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
@@ -69,6 +68,58 @@ public class CarController {
         model.put("carPieces", carPieces);
 
         return "test-display";
+    }
+
+    @PostMapping("/car/repair/{strPieceId}/{strTeamId}/{strCarId}")
+    public String repairPiece(@PathVariable String strPieceId, @PathVariable String strTeamId,
+            @PathVariable String strCarId, Map<String, Object> model) {
+
+        long pieceId;
+        long teamId;
+        long carId;
+        long repairPrice = 0;
+
+        Calendar date = Calendar.getInstance();
+        long t = date.getTimeInMillis();
+
+        Date startDate = new Date();
+
+        try {
+            pieceId = Long.parseLong(strPieceId);
+            teamId = Long.parseLong(strTeamId);
+            carId = Long.parseLong(strCarId);
+        } catch (NumberFormatException e) {
+            System.err.println("id must be an integer");
+            return REDIRECT_ERROR;
+        }
+        // Get car Piece
+        Optional<CarPiece> carPiece = carPieceRepository.findById(pieceId);
+        Optional<Team> team = teamRepository.findById((long) teamId);
+
+        // Get authenticated user
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User authenticatedUser = userService.findUserByUsername(auth.getName());
+
+        // Create and save repairUpgrade
+        if (carPiece.isPresent() && team.isPresent()) {
+            // Get price
+            repairPrice = (long) (carPiece.get().getPiece().getBaseRepairPrice() * carPiece.get().getLevel());
+
+            // Get end date
+            double timeInHour = carPiece.get().getPiece().getBaseRepairTime() * carPiece.get().getLevel();
+            Date endDate = new Date(t + (int) (timeInHour * ONE_MINUTE)); // TODO: * 60 for an hour
+                                                                          // =======================================================================
+
+            // If carPiece is weared and team have enought budget, repair the carPiece
+            if (carPiece.get().getWear() > 0 && team.get().getBudget() - repairPrice > 0) {
+                RepairUpgrade repairUpgrade = new RepairUpgrade(carPiece.get(), authenticatedUser, true, startDate,
+                        endDate);
+                team.get().setBudget(team.get().getBudget() - repairPrice);
+                teamRepository.save(team.get());
+                repairUpgradeService.saveRepairUpgrade(repairUpgrade);
+            }
+        }
+        return ("redirect:/team/" + teamId + "/car/" + carId);
     }
 
     @PostMapping("/car/upgrade/{strPieceId}/{strTeamId}/{strCarId}")
