@@ -19,6 +19,7 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Message</th>
                     <th scope="col">Team</th>
                     <th scope="col">Actions</th>
@@ -27,6 +28,7 @@
             <tbody>
                 <tr th:each="notification: ${notifications}">
                     <th class="align-middle" th:text="${notification.id}" scope="row"></th>
+                    <td class="align-middle" th:text="${#dates.format(notification.date, 'dd-MM-yyyy HH:mm')}"></td>
                     <td class="align-middle" th:text="${notification.message}"></td>
                     <td class="align-middle" th:text="${notification.team.name}"></td>
                     <td class="align-middle">
