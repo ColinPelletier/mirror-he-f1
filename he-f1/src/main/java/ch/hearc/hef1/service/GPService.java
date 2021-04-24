@@ -1,5 +1,6 @@
 package ch.hearc.hef1.service;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
@@ -7,6 +8,10 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import ch.hearc.hef1.model.Car;
@@ -39,6 +44,33 @@ public class GPService {
 
     public List<GP> findByNameContaining(String name) {
         return gpRepository.findByNameContaining(name);
+    }
+
+    public Page<GP> findPaginated(Pageable pageable, String strName) {
+        int pageSize = pageable.getPageSize();
+        int currentPage = pageable.getPageNumber();
+        int startItem = currentPage * pageSize;
+
+        List<GP> gps;
+
+        if (strName != null) {
+            gps = findByNameContaining(strName);
+        } else {
+            gps = findAll();
+        }
+
+        List<GP> list;
+
+        if (gps.size() < startItem) {
+            list = Collections.emptyList();
+        } else {
+            int toIndex = Math.min(startItem + pageSize, gps.size());
+            list = gps.subList(startItem, toIndex);
+        }
+
+        Page<GP> bookPage = new PageImpl<GP>(list, PageRequest.of(currentPage, pageSize), gps.size());
+
+        return bookPage;
     }
 
     /**

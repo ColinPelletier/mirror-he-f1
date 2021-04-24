@@ -29,7 +29,7 @@
 
         <div th:object="${gps}">
             <div class="row justify-content-center">
-                <div th:each="gp : ${gps}" class="col-4">
+                <div th:each="gp : ${gps.content}" class="col-4">
                     <div class="card" style="margin-bottom:30px;">
                         <img class="card-img-top" th:src="@{/images/gp-thumbnail.jpg}" alt="thumbnail">
                         <div class="card-body">
@@ -48,6 +48,25 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <nav th:if="${gps.totalPages > 0}" aria-label="pagination">
+                    <ul class="pagination">
+                        <li th:if="${currentPage > 1}" class="page-item"><a class="page-link"
+                                th:href="@{/grand-prix(size=${gps.size}, page=${currentPage - 1}, selectedName=${search})}"><span
+                                    aria-hidden="true">&laquo;</span></a>
+                        </li>
+                        <li th:each="pageNumber : ${pageNumbers}"
+                            th:class="${pageNumber==gps.number + 1} ? 'page-item active' : 'page-item'"><a
+                                th:href="@{/grand-prix(size=${gps.size}, page=${pageNumber}, selectedName=${search})}"
+                                th:text=${pageNumber} class="page-link"></a>
+                        </li>
+                        <li th:if="${currentPage < gps.totalPages}" class="page-item"><a class="page-link"
+                                th:href="@{/grand-prix(size=${gps.size}, page=${currentPage + 1}, selectedName=${search})}"><span
+                                    aria-hidden="true">&raquo;</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 
@@ -56,3 +75,29 @@
 </body>
 
 </html>
+<style>
+    .pagination>li>a {
+        background-color: white;
+        color: #dc3545;
+    }
+
+    .pagination>li>a:focus,
+    .pagination>li>a:hover,
+    .pagination>li>span:focus,
+    .pagination>li>span:hover {
+        color: #5a5a5a;
+        background-color: #eee;
+        border-color: #ddd;
+    }
+
+    .pagination>.active>a {
+        color: white;
+        background-color: #dc3545 !Important;
+        border: solid 1px #dc3545 !Important;
+    }
+
+    .pagination>.active>a:hover {
+        background-color: #dc3545 !Important;
+        border: solid 1px #dc3545;
+    }
+</style>
