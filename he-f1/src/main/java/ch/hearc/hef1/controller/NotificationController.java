@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import ch.hearc.hef1.model.Notification;
 import ch.hearc.hef1.model.User;
-import ch.hearc.hef1.model.UserRole;
 import ch.hearc.hef1.repository.NotificationRepository;
 import ch.hearc.hef1.service.UserService;
 
