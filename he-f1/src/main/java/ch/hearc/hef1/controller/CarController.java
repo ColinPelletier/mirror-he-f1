@@ -51,20 +51,6 @@ public class CarController {
     @Autowired
     CarRepository carRepository;
 
-    @GetMapping("/car/{strCarId}/pieces")
-    public String carPieces(@PathVariable String strCarId, Map<String, Object> model) {
-        // TODO check access
-        long carId = Long.parseLong(strCarId);
-        Car car = carRepository.findById(carId).get();
-
-        List<CarPiece> carPieces = carService.findCarPieces(car);
-
-        model.put("model", car);
-        model.put("carPieces", carPieces);
-
-        return "test-display";
-    }
-
     @PostMapping("/car/repair/{strPieceId}/{strTeamId}/{strCarId}")
     public String repairPiece(@PathVariable String strPieceId, @PathVariable String strTeamId,
             @PathVariable String strCarId, Map<String, Object> model) {
