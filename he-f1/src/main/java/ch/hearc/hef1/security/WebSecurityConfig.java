@@ -22,11 +22,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	private final String USERS_QUERY = "select username, password, 'true' as enabled from user where username=?";
-	// private final String ROLES_QUERY = "select u.email, r.role from user u inner
-	// join user_role ur on (u.id = ur.user_id) inner join role r on
-	// (ur.role_id=r.id) where u.email=?";
-	// private final String ROLES_QUERY = "select u.username, ur.role from user u
-	// join role ur on u.role = ur.id where u.username=?";
 	private final String ROLES_QUERY = "select username, role from user where username=?";
 
 	/**
@@ -41,24 +36,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/", "/home").permitAll().antMatchers("/form").authenticated()
-				// .antMatchers("/todoByDate").permitAll()
-				.and().formLogin().loginPage("/login").permitAll().and().formLogin().loginPage("/login")
+		http.authorizeRequests().antMatchers("/", "/home").permitAll().antMatchers("/form").authenticated().and()
+				.formLogin().loginPage("/login").permitAll().and().formLogin().loginPage("/login")
 				.failureUrl("/login-error").defaultSuccessUrl("/").usernameParameter("username")
 				.passwordParameter("password").and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 				.logoutSuccessUrl("/").and().rememberMe();
 	}
-	// protected void configure(HttpSecurity http) throws Exception {
-	// http.authorizeRequests()
-	// .antMatchers("/insert", "/form").hasRole("ADMIN")
-	// .anyRequest().authenticated()
-	// .and()
-	// .formLogin().permitAll()
-	// .and()
-	// .logout().permitAll()
-	// .and()
-	// .exceptionHandling().accessDeniedPage("/403")
-	// ;
-	// }
-
 }

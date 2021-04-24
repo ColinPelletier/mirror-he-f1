@@ -88,7 +88,6 @@ public class TeamController {
 
 	@GetMapping("/team/{strTeamId}/car/{strCarId}")
 	public String teamCar(@PathVariable String strTeamId, @PathVariable String strCarId, Map<String, Object> model) {
-		// TODO : check if the user is a member of this team
 		User authenticatedUser = userService.getAuthenticatedUser();
 
 		if (userService.isAuthenticated(authenticatedUser)) {
@@ -108,22 +107,26 @@ public class TeamController {
 
 			// check wether the teams owns this car
 			if (team.isPresent() && car.isPresent()) {
-				if (carService.isTeamOwner(car.get(), team.get())) {
-					List<CarPiece> carPieces = carService.findCarPieces(car.get());
+				if (team.get() == authenticatedUser.getTeam()) {
+					if (carService.isTeamOwner(car.get(), team.get())) {
+						List<CarPiece> carPieces = carService.findCarPieces(car.get());
 
-					model.put("team", team.get());
-					model.put("car", car.get());
-					model.put("carPieces", carPieces);
-					model.put("userRole", authenticatedUser.getRole().toString());
+						model.put("team", team.get());
+						model.put("car", car.get());
+						model.put("carPieces", carPieces);
+						model.put("userRole", authenticatedUser.getRole().toString());
 
-					teamService.setCarsUrlsInModel(team.get(), model);
+						teamService.setCarsUrlsInModel(team.get(), model);
+					} else {
+						throw new RuntimeException("Car " + carId + " is not owned by team " + teamId + ".");
+					}
 				} else {
-					throw new RuntimeException("Car " + carId + " is not owned by team " + teamId + ".");
+					throw new RuntimeException(
+							"User " + authenticatedUser.getUsername() + " is not a member of team " + teamId + ".");
 				}
 			} else {
 				throw new RuntimeException("Invalid id for car or team.");
 			}
-
 			return "team";
 		}
 		throw new RuntimeException("User need to be authenticated.");
