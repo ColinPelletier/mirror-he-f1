@@ -1,20 +1,22 @@
 package ch.hearc.hef1.service;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import ch.hearc.hef1.model.Car;
+import ch.hearc.hef1.model.GP;
 import ch.hearc.hef1.model.Team;
+import ch.hearc.hef1.model.TeamGP;
 import ch.hearc.hef1.model.User;
 import ch.hearc.hef1.repository.CarRepository;
+import ch.hearc.hef1.repository.TeamGPRepository;
 import ch.hearc.hef1.repository.TeamRepository;
 import ch.hearc.hef1.tools.FileUploadUtil;
 
@@ -26,6 +28,9 @@ public class TeamService {
 
     @Autowired
     TeamRepository teamRepository;
+
+    @Autowired
+    TeamGPRepository teamGPRepository;
 
     @Autowired
     UserService userService;
@@ -71,11 +76,9 @@ public class TeamService {
     }
 
     public List<Team> getRandomTeams(int nbTeams) {
+        User authenticatedUser = userService.getAuthenticatedUser();
 
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User authenticatedUser = userService.findUserByUsername(auth.getName());
-
-        if (authenticatedUser != null) {
+        if (userService.isAuthenticated(authenticatedUser)) {
 
             Team userTeam = authenticatedUser.getTeam();
             List<Team> randomTeams = teamRepository.findRandom(nbTeams - 1, userTeam.getId());
@@ -86,6 +89,31 @@ public class TeamService {
         }
 
         return null;
+    }
+
+    public boolean checkParticipation(GP gp) {
+        User authenticatedUser = userService.getAuthenticatedUser();
+
+        if (userService.isAuthenticated(authenticatedUser)) {
+
+            Team userTeam = authenticatedUser.getTeam();
+            List<TeamGP> teamGPs = teamGPRepository.findByTeam(userTeam);
+
+            if (gp.getDate().after(new Date())) {
+                if (!containsTeamGP(teamGPs, gp.getId(), userTeam.getId())) {
+                    TeamGP teamGP = new TeamGP(userTeam, gp);
+                    teamGPRepository.save(teamGP);
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    private boolean containsTeamGP(final List<TeamGP> list, final long gpId, final long teamId) {
+        return list.stream().filter(o -> o.getGP().getId() == gpId && o.getTeam().getId() == teamId).findFirst()
+                .isPresent();
     }
 
 }

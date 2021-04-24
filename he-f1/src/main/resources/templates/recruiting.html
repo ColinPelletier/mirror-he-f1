@@ -47,7 +47,8 @@
                     <td class="align-middle" th:text="${user.team != null ? user.team.name : 'Free agent'}"></td>
                     <td class="align-middle" th:text="${user.role.description}"></td>
                     <td class="align-middle">
-                        <form th:action="@{'/recruit/' + ${user.id}}" method="post">
+                        <form th:if="${authenticatedUserRole == 'Manager'}" th:action="@{'/recruit/' + ${user.id}}"
+                            method="post">
                             <input type="submit" class="btn btn-outline-danger my-2 my-sm-0 mt-1" value="Recruit" />
                         </form>
                     </td>

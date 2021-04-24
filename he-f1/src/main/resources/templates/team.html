@@ -17,7 +17,8 @@
         <div class="alert alert-danger" role="alert">
             You are not part of any team at the moment...
         </div>
-        <button type="button" class="btn btn-danger btn-block" data-bs-toggle="modal" data-bs-target="#teamDialog">
+        <button th:if="${authenticatedUserRole == 'Manager'}" type="button" class="btn btn-danger btn-block"
+            data-bs-toggle="modal" data-bs-target="#teamDialog">
             Create a team
         </button>
         <th:block th:replace="fragments/teamdialog.html :: teamDialog"></th:block>
@@ -69,7 +70,8 @@
                                         <p class="mb-1"
                                             th:text="${'Repair time: ' + carPiece.piece.baseRepairTime * carPiece.level}">
                                         </p>
-                                        <p th:if="${carPiece.repairUpgrade != null && carPiece.repairUpgrade.isRepair}" class="mb-1"
+                                        <p th:if="${carPiece.repairUpgrade != null && carPiece.repairUpgrade.isRepair}"
+                                            class="mb-1"
                                             th:text="${'Repair completed to: ' + #dates.format(carPiece.repairUpgrade.endDate, 'HH:mm dd-MM-yyyy')}">
                                         </p>
                                     </div>
@@ -86,7 +88,8 @@
                                         <p class="mb-1"
                                             th:text="${'Upgrade time: ' + carPiece.piece.baseUpgradeTime * carPiece.level}">
                                         </p>
-                                        <p th:if="${carPiece.repairUpgrade != null && !carPiece.repairUpgrade.isRepair}" class="mb-1"
+                                        <p th:if="${carPiece.repairUpgrade != null && !carPiece.repairUpgrade.isRepair}"
+                                            class="mb-1"
                                             th:text="${'Upgarde completed to: ' + #dates.format(carPiece.repairUpgrade.endDate, 'HH:mm dd-MM-yyyy')}">
                                         </p>
                                     </div>

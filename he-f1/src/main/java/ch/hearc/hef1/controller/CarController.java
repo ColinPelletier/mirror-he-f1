@@ -1,8 +1,5 @@
 package ch.hearc.hef1.controller;
 
-import java.lang.StackWalker.Option;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -10,8 +7,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,7 +28,6 @@ import ch.hearc.hef1.service.UserService;
 
 @Controller
 public class CarController {
-    private static final String REDIRECT_ERROR = "redirect:/error";
     static final long ONE_MINUTE = 60000;
 
     @Autowired
@@ -90,16 +84,14 @@ public class CarController {
             teamId = Long.parseLong(strTeamId);
             carId = Long.parseLong(strCarId);
         } catch (NumberFormatException e) {
-            System.err.println("id must be an integer");
-            return REDIRECT_ERROR;
+            throw new RuntimeException("IDs must be an integer.");
         }
         // Get car Piece
         Optional<CarPiece> carPiece = carPieceRepository.findById(pieceId);
         Optional<Team> team = teamRepository.findById((long) teamId);
 
         // Get authenticated user
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User authenticatedUser = userService.findUserByUsername(auth.getName());
+        User authenticatedUser = userService.getAuthenticatedUser();
 
         // Create and save repairUpgrade
         if (carPiece.isPresent() && team.isPresent() && authenticatedUser.getRole() == UserRole.MECHANICIAN) {
@@ -141,16 +133,14 @@ public class CarController {
             teamId = Long.parseLong(strTeamId);
             carId = Long.parseLong(strCarId);
         } catch (NumberFormatException e) {
-            System.err.println("id must be an integer");
-            return REDIRECT_ERROR;
+            throw new RuntimeException("IDs must be an integer.");
         }
         // Get car Piece
         Optional<CarPiece> carPiece = carPieceRepository.findById(pieceId);
         Optional<Team> team = teamRepository.findById((long) teamId);
 
         // Get authenticated user
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User authenticatedUser = userService.findUserByUsername(auth.getName());
+        User authenticatedUser = userService.getAuthenticatedUser();
 
         // Create and save repairUpgrade
         if (carPiece.isPresent() && team.isPresent() && authenticatedUser.getRole() == UserRole.ENGINEER) {

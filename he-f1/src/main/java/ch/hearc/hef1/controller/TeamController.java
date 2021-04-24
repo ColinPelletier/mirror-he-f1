@@ -1,17 +1,13 @@
 package ch.hearc.hef1.controller;
 
-import java.util.LinkedList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +22,8 @@ import ch.hearc.hef1.model.CarPiece;
 import ch.hearc.hef1.model.RepairUpgrade;
 import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
-import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.model.UserRole;
+import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.RepairUpgradeRepository;
 import ch.hearc.hef1.repository.TeamRepository;
@@ -38,9 +34,6 @@ import ch.hearc.hef1.service.UserService;
 
 @Controller
 public class TeamController {
-	// private TeamService teamService;
-	private static final String REDIRECT_ERROR = "redirect:/error";
-
 	@Autowired
 	TeamRepository teamRepository;
 
@@ -76,10 +69,9 @@ public class TeamController {
 		 * model will then be available in the PostMapping method an could easily be
 		 * updated in the DB
 		 */
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		User authenticatedUser = userService.findUserByUsername(auth.getName());
+		User authenticatedUser = userService.getAuthenticatedUser();
 
-		if (authenticatedUser != null) {
+		if (userService.isAuthenticated(authenticatedUser)) {
 			Team team = authenticatedUser.getTeam();
 			if (team != null) {
 				Car car = team.getCars().get(0);
@@ -89,15 +81,16 @@ public class TeamController {
 			return "redirect:/signup";
 		}
 		model.put("teamToCreate", new Team());
+		model.put("authenticatedUserRole", userService.getAuthenticatedUserRole().getDescription());
 		return "team";
 	}
 
 	@GetMapping("/team/{strTeamId}/car/{strCarId}")
 	public String teamCar(@PathVariable String strTeamId, @PathVariable String strCarId, Map<String, Object> model) {
 		// TODO : check if the user is a member of this team
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		User authenticatedUser = userService.findUserByUsername(auth.getName());
-		if (authenticatedUser != null) {
+		User authenticatedUser = userService.getAuthenticatedUser();
+
+		if (userService.isAuthenticated(authenticatedUser)) {
 			// Check id validity
 			long teamId;
 			long carId;
@@ -105,8 +98,7 @@ public class TeamController {
 				teamId = Long.parseLong(strTeamId);
 				carId = Long.parseLong(strCarId);
 			} catch (NumberFormatException e) {
-				System.err.println("id must be an integer");
-				return REDIRECT_ERROR;
+				throw new RuntimeException("IDs must be integers.");
 			}
 			Optional<Team> team = teamRepository.findById(teamId);
 			Optional<Car> car = carRepository.findById(carId);
@@ -125,18 +117,15 @@ public class TeamController {
 
 					teamService.setCarsUrlsInModel(team.get(), model);
 				} else {
-					System.err.println("Car " + carId + " is not owned by team " + teamId);
-					return REDIRECT_ERROR;
+					throw new RuntimeException("Car " + carId + " is not owned by team " + teamId + ".");
 				}
 			} else {
-				System.err.println("Invalid id for car or team");
-				return REDIRECT_ERROR;
+				throw new RuntimeException("Invalid id for car or team.");
 			}
 
 			return "team";
 		}
-		System.err.println("User need to be authenticated");
-		return REDIRECT_ERROR;
+		throw new RuntimeException("User need to be authenticated.");
 	}
 
 	private void checkRepairUpgradePiece(User authenticatedUser) {
@@ -165,10 +154,9 @@ public class TeamController {
 	public String createTeam(@Valid @ModelAttribute Team team, BindingResult errors,
 			@RequestParam("image") MultipartFile multipartFile, @RequestParam("carName") String carName) {
 
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		User authenticatedUser = userService.findUserByUsername(auth.getName());
+		User authenticatedUser = userService.getAuthenticatedUser();
 
-		if (authenticatedUser != null) {
+		if (userService.isAuthenticated(authenticatedUser)) {
 			if (authenticatedUser.getRole().equals(UserRole.MANAGER)) {
 				team.setBudget(Team.STARTING_BUDGET);
 				team.setPoints(Team.STARTING_POINTS);
@@ -186,11 +174,9 @@ public class TeamController {
 					return "redirect:/team"; // redirect to /team controller method
 				}
 			} else {
-				System.err.println("Only managers can create teams");
+				throw new RuntimeException("Only managers can create teams.");
 			}
-		} else {
-			System.err.println("User need to be authenticated");
 		}
-		return REDIRECT_ERROR;
+		throw new RuntimeException("User needs to be authenticated.");
 	}
 }

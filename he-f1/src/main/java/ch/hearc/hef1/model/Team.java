@@ -41,6 +41,9 @@ public class Team {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
 	private List<Car> cars;
 
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "team")
+	private List<Notification> notifications;
+
 	@Column(nullable = true, length = 64)
 	private String carPicture;
 
@@ -134,6 +137,10 @@ public class Team {
 
 	public List<Car> getCars() {
 		return cars;
+	}
+
+	public List<Notification> getNotifications() {
+		return notifications;
 	}
 
 	public String getCarPicture() {

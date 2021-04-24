@@ -26,10 +26,13 @@
                     <a class="nav-link" href="/grand-prix">Grands Prix</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item active">
-                    <a class="nav-link" href="/team">Manage your team</a>
+                    <a class="nav-link" href="/team">Your team</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item active">
                     <a class="nav-link" href="/recruiting">Recruit a member</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item active">
+                    <a class="nav-link" href="/notifications">Your notifications</a>
                 </li>
             </ul>
 

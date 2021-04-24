@@ -15,7 +15,18 @@
     <div class="container mt-sm-3">
         <div class="alert alert-danger" role="alert">
             <h1>Error 400 : Bad request ...</h1>
-            <p>ADD ERROR MESSAGE !!!!!!!!!!!!!</p>
+            <table>
+                <tr>
+                    <td>Path : </td>
+                    <td th:text="${path}" />
+                </tr>
+                <tr>
+                    <td>Message : </td>
+                    <td th:text="${message}" />
+                </tr>
+                <tr>
+            </table>
+
         </div>
     </div>
 

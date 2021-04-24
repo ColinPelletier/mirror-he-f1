@@ -44,9 +44,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/", "/home").permitAll().antMatchers("/form").authenticated()
 				// .antMatchers("/todoByDate").permitAll()
 				.and().formLogin().loginPage("/login").permitAll().and().formLogin().loginPage("/login")
-				.failureUrl("/error").defaultSuccessUrl("/").usernameParameter("username").passwordParameter("password")
-				.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/").and()
-				.rememberMe();
+				.failureUrl("/login-error").defaultSuccessUrl("/").usernameParameter("username")
+				.passwordParameter("password").and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+				.logoutSuccessUrl("/").and().rememberMe();
 	}
 	// protected void configure(HttpSecurity http) throws Exception {
 	// http.authorizeRequests()

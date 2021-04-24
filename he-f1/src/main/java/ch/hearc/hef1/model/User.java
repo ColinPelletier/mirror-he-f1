@@ -50,6 +50,9 @@ public class User {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 	private List<RepairUpgrade> repairUpgrades;
 
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+	private List<Notification> notifications;
+
 	public long getId() {
 		return id;
 	}
@@ -100,5 +103,9 @@ public class User {
 
 	public List<RepairUpgrade> getRepairUpgrades() {
 		return repairUpgrades;
+	}
+
+	public List<Notification> getNotifications() {
+		return notifications;
 	}
 }

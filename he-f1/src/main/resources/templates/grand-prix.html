@@ -35,7 +35,15 @@
                         <div class="card-body">
                             <h5 th:text="${gp.name}" class="card-title"></h5>
                             <h6 th:text="${gp.country}" class="card-subtitle mb-2 text-muted"></h6>
-                            <p th:text="${gp.date}" class="card-text"></p>
+                            <p th:text="${#dates.format(gp.date, 'dd-MM-yyyy HH:mm')}" class="card-text"></p>
+                            <form th:action="@{/grand-prix/simulating}" th:object="${gp}" method="post">
+                                <input type="hidden" th:value="*{id}" id="id" name="id" />
+                                <input type="hidden" th:value="*{date}" id="date" name="date" />
+                                <input type="hidden" th:value="*{name}" id="name" name="name" />
+                                <input type="hidden" th:value="*{country}" id="country" name="country" />
+                                <button th:if="${gp.date.after(#dates.createNow())}" sec:authorize="isAuthenticated()"
+                                    type="submit" class="btn btn-outline-danger btn-block">Let's race !</button>
+                            </form>
                         </div>
                     </div>
                 </div>
