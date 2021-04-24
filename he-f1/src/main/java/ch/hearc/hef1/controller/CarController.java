@@ -22,6 +22,7 @@ import ch.hearc.hef1.model.CarPiece;
 import ch.hearc.hef1.model.RepairUpgrade;
 import ch.hearc.hef1.model.Team;
 import ch.hearc.hef1.model.User;
+import ch.hearc.hef1.model.UserRole;
 import ch.hearc.hef1.repository.CarPieceRepository;
 import ch.hearc.hef1.repository.CarRepository;
 import ch.hearc.hef1.repository.PieceRepository;
@@ -101,7 +102,7 @@ public class CarController {
         User authenticatedUser = userService.findUserByUsername(auth.getName());
 
         // Create and save repairUpgrade
-        if (carPiece.isPresent() && team.isPresent()) {
+        if (carPiece.isPresent() && team.isPresent() && authenticatedUser.getRole() == UserRole.MECHANICIAN) {
             // Get price
             repairPrice = (long) (carPiece.get().getPiece().getBaseRepairPrice() * carPiece.get().getLevel());
 
@@ -152,7 +153,7 @@ public class CarController {
         User authenticatedUser = userService.findUserByUsername(auth.getName());
 
         // Create and save repairUpgrade
-        if (carPiece.isPresent() && team.isPresent()) {
+        if (carPiece.isPresent() && team.isPresent() && authenticatedUser.getRole() == UserRole.ENGINEER) {
             // Get price
             upgradePrice = (long) (carPiece.get().getPiece().getBaseUpgradePrice() * carPiece.get().getLevel());
 

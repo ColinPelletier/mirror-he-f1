@@ -73,7 +73,7 @@
                                             th:text="${'Repair completed to: ' + #dates.format(carPiece.repairUpgrade.endDate, 'HH:mm dd-MM-yyyy')}">
                                         </p>
                                     </div>
-                                    <form th:if="${carPiece.repairUpgrade == null}" class="form-inline my-2 my-lg-0" th:action="@{'/car/repair/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
+                                    <form th:if="${carPiece.repairUpgrade == null && carPiece.wear != 0.0 && userRole == 'MECHANICIAN'}" class="form-inline my-2 my-lg-0" th:action="@{'/car/repair/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
                                         <input type="submit" class="btn-sm btn-danger" value="Repair"/>
                                     </form>
                                 </div>
@@ -90,7 +90,7 @@
                                             th:text="${'Upgarde completed to: ' + #dates.format(carPiece.repairUpgrade.endDate, 'HH:mm dd-MM-yyyy')}">
                                         </p>
                                     </div>
-                                    <form th:if="${carPiece.repairUpgrade == null}" class="form-inline my-2 my-lg-0" th:action="@{'/car/upgrade/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
+                                    <form th:if="${carPiece.repairUpgrade == null && userRole == 'ENGINEER'}" class="form-inline my-2 my-lg-0" th:action="@{'/car/upgrade/' + ${carPiece.id} + '/' + ${team.id} + '/' + ${car.id}}" method="post">
                                         <input type="submit" class="btn-sm btn-danger" value="Upgrade"/>
                                     </form>
                                 </div>

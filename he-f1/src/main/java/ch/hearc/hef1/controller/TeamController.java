@@ -121,6 +121,7 @@ public class TeamController {
 					model.put("team", team.get());
 					model.put("car", car.get());
 					model.put("carPieces", carPieces);
+					model.put("userRole", authenticatedUser.getRole().toString());
 
 					teamService.setCarsUrlsInModel(team.get(), model);
 				} else {
