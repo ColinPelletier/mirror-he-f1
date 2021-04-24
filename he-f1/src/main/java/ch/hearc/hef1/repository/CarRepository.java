@@ -12,6 +12,4 @@ import ch.hearc.hef1.model.Team;
 public interface CarRepository extends JpaRepository<Car, Long> {
 
     public List<Car> findByTeam(Team team);
-    // Returns no car if the team doesn't own this car
-    // public Optional<Car> findByTeam(Team team);
 }

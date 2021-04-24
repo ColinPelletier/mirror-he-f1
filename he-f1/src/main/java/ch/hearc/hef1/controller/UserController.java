@@ -117,8 +117,6 @@ public class UserController {
 							userService.getAuthenticatedUser().getTeam(), user.get());
 
 					notificationRepository.save(notification);
-					// user.get().setTeam(userService.getAuthenticatedUser().getTeam());
-					// userService.updateUser(user.get());
 					model.put("msg", "User has been recruited successfully!");
 
 					return ("redirect:/recruiting?recruited=true");

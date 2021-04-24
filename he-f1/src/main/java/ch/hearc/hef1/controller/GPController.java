@@ -44,8 +44,6 @@ public class GPController {
         return "grand-prix";
     }
 
-    // @GetMapping("/grand-prix/simulating")
-    // public String simulateGP() {
     @PostMapping("/grand-prix/simulating")
     public String simulateGP(@Valid @ModelAttribute GP gp, BindingResult errors) {
         if (gp != null) {
@@ -71,5 +69,4 @@ public class GPController {
 
         throw new RuntimeException("Unable to simulate grand prix. Please sign in.");
     }
-
 }

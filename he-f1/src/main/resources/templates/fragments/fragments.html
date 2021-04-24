@@ -29,30 +29,9 @@
                     <a class="nav-link" href="/team">Your team</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item active">
-                    <a class="nav-link" href="/recruiting">Recruit a member</a>
-                </li>
-                <li sec:authorize="isAuthenticated()" class="nav-item active">
                     <a class="nav-link" href="/notifications">Your notifications</a>
                 </li>
             </ul>
-
-
-            <!--
-        <div class="dropdown mr-auto">
-            <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a sec:authorize="isAnonymous()" class="dropdown-item" type="button" data-bs-toggle="modal"
-                    data-bs-target="#loginDialog">Sign in</a>
-                <a sec:authorize="isAuthenticated()" class="dropdown-item" href="/team">Manage your team</a>
-                <a sec:authorize="isAuthenticated()" class="dropdown-item" href="/recruiting">Recruit a member</a>
-                <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post">
-                    <input class="dropdown-item" type="submit" value="Sign out" />
-                </form>
-            </div>
-        </div>-->
 
             <button style="float:right;margin-right:30px;" sec:authorize="isAnonymous()" class="btn btn-danger"
                 type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">Sign in</button>
