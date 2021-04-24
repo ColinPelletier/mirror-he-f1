@@ -55,10 +55,11 @@ public class UserController {
 	@PostMapping("/signup")
 	public String createUser(@Valid User user, BindingResult bindingResult, Map<String, Object> model) {
 
-		User userExists = userService.findUserByEmail(user.getEmail());
+		User userEmailExists = userService.findUserByEmail(user.getEmail());
+		User userUserExists = userService.findUserByUsername(user.getUsername());
 		model.put("roles", UserRole.values());
 
-		if (userExists != null) {
+		if (userEmailExists != null || userUserExists != null) {
 			throw new RuntimeException("User allready exist.");
 		}
 

@@ -80,6 +80,7 @@ public class TeamController {
 		} else {
 			return "redirect:/signup";
 		}
+
 		model.put("teamToCreate", new Team());
 		model.put("authenticatedUserRole", userService.getAuthenticatedUserRole().getDescription());
 		return "team";
