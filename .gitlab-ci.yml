@@ -28,17 +28,17 @@ before_script:
 #   tags:
 #     - alpine-docker
 
-# unittest:
-#   stage: test
-#   script:
-#     - echo "start test"
-#     - cd he-f1
-#     - mvn clean package
-#     - echo "test ok"
-#   only:
-#     - update-ci-cd
-#   tags:
-#     - alpine-docker
+unittest:
+  stage: test
+  script:
+    - echo "start test"
+    - cd he-f1
+    - mvn clean package
+    - echo "test ok"
+  only:
+    - add-docker-params
+  tags:
+    - alpine-docker
 
 # sonarqube:
 #   stage: sonarqube
@@ -52,21 +52,21 @@ before_script:
 #   tags:
 #     - he-f1-prod
 
-deploy:
-  stage: deploy
-  before_script:
-    - echo "do some stuff before"
-  script:
-    - echo "deploy HE-F1"
-    - cd he-f1
-    - docker-compose down
-    - docker-compose up -d
-    - echo "deploy ok"
-  only:
-    - update-ci-cd
-  tags:
-    - he-f1-prod
-  when: manual
+# deploy:
+#   stage: deploy
+#   before_script:
+#     - echo "do some stuff before"
+#   script:
+#     - echo "deploy HE-F1"
+#     - cd he-f1
+#     - docker-compose down
+#     - docker-compose up -d
+#     - echo "deploy ok"
+#   only:
+#     - update-ci-cd
+#   tags:
+#     - he-f1-prod
+#   when: manual
 
 after_script:
   - echo "End CI/CD"
