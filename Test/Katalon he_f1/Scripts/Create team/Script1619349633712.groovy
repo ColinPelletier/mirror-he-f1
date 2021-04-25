@@ -64,5 +64,3 @@ WebUI.setText(findTestObject('Object Repository/Page_Team - HE-F1/input_Driver 2
 
 WebUI.setText(findTestObject('Object Repository/Page_Team - HE-F1/input_Car name_carName'), 'carname' + DATE)
 
-WebUI.click(findTestObject('Object Repository/Page_Team - HE-F1/input_Close_btn btn-danger float-right'))
-
