@@ -1,56 +1,56 @@
-#image: ubuntu
-image: maven:latest
+##image: ubuntu
+#image: maven:latest
+#
+#variables:
+#  SOME_VAR: "some value"
+#
+#stages:
+#  - build
+#  - test
+#  - sonarqube
+#  - deploy
+#
+#before_script:
+#  - echo "Start CI/CD"
+#  # - echo "SOME_VAR = $SOME_VAR" # calls my custom variable
+#  # - echo $CI_JOB_STAGE # calls a predefined variable -  https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
+#  # - echo $CI_COMMIT_SHORT_SHA # calls another predefined variable
+#
+#build:
+#  stage: build
+#  script:
+#    - echo "Build process"
+#    - cd he-f1
+#    - mvn clean package -Dmaven.test.skip=true
+#    - echo "Build ok"
+#  only:
+#    - add-docker-params
+#  tags:
+#    - alpine-docker
+#
+#unittest:
+#  stage: test
+#  script:
+#    - echo "start test"
+#    - cd he-f1
+#    - mvn clean package
+#    - echo "test ok"
+#  only:
+#    - add-docker-params
+#  tags:
+#    - alpine-docker
 
-variables:
-  SOME_VAR: "some value"
-
-stages:
-  - build
-  - test
-  - sonarqube
-  - deploy
-
-before_script:
-  - echo "Start CI/CD"
-  # - echo "SOME_VAR = $SOME_VAR" # calls my custom variable
-  # - echo $CI_JOB_STAGE # calls a predefined variable -  https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
-  # - echo $CI_COMMIT_SHORT_SHA # calls another predefined variable
-
-# build:
-#   stage: build
+# sonarqube:
+#   stage: sonarqube
 #   script:
-#     - echo "Build process"
+#     - echo "start sonarqube stage"
 #     - cd he-f1
-#     - mvn clean package -Dmaven.test.skip=true
-#     - echo "Build ok"
+#     - /opt/apache-maven-3.6.3/bin/mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+#     - echo "sonarqube ok"
 #   only:
-#     - update-ci-cd
+#     - dev
 #   tags:
-#     - alpine-docker
-
-# unittest:
-#   stage: test
-#   script:
-#     - echo "start test"
-#     - cd he-f1
-#     - mvn clean package
-#     - echo "test ok"
-#   only:
-#     - update-ci-cd
-#   tags:
-#     - alpine-docker
-
-sonarqube:
-  stage: sonarqube
-  script:
-    - echo "start sonarqube stage"
-    - cd he-f1
-    - /opt/apache-maven-3.6.3/bin/mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-    - echo "sonarqube ok"
-  only:
-    - dev
-  tags:
-    - he-f1-prod
+#     - he-f1-prod
 
 # deploy:
 #   stage: deploy
