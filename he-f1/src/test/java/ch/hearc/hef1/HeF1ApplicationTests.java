@@ -8,6 +8,7 @@ class HeF1ApplicationTests {
 
 	@Test
 	void contextLoads() {
+		new TeamRepositoryTest().testFindTeamByName();
 	}
 
 }
