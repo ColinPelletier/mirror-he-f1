@@ -38,7 +38,7 @@ unittest:
   only:
     - add-docker-params
   tags:
-    - he-f1-prod
+    - alpine-docker
 
 # sonarqube:
 #   stage: sonarqube

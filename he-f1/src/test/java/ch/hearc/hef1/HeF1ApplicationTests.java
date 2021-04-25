@@ -8,6 +8,10 @@ class HeF1ApplicationTests {
 
 	@Test
 	void contextLoads() {
+	}
+
+	@Test
+	void simpleTest() {
 		new TestAssertTrue().testAssertTrue();
 	}
 
