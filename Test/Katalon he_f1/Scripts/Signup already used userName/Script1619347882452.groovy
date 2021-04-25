@@ -23,11 +23,16 @@ WebUI.navigateToUrl('http://localhost:8080/')
 
 WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in_1'))
 
-WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'))
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/a_Sign up for free'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'), 'seb')
+WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Username_username'), 'seb')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Home - HE-F1/input_Password_password'), 'xUJzFrauW3tHsoKBEbc+CkNRGGZUImdZ')
+WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Email_email'), 'sebAlreadyUsedUserName@gmail.com')
 
-WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in'))
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'), 
+    'ENGINEER', true)
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_HE-F1/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
+
+WebUI.click(findTestObject('Object Repository/Page_HE-F1/button_Register'))
 
