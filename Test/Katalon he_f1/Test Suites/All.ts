@@ -65,4 +65,46 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Signup</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>8e4102b7-c37a-4b4c-87dc-5eb234536bb8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Logout</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c73c5b04-19e5-4fe8-8c36-bd347c56634c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Test user advanced research</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>559fe4d4-efc8-4e67-87cf-11e572f1d65b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Recruit seb2 from seb</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>74516c67-1575-4a68-a5c7-655afb26e1a8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Accept seb invitation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4328585b-193d-4cc6-a95b-ba7918163aaf</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Repair car piece</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f0af9ccf-2200-4d65-879b-09bd50ff45a3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Upgarde car piece</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0d8ad8d4-c104-4d5e-9f9d-b0439e218a84</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Join GP</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

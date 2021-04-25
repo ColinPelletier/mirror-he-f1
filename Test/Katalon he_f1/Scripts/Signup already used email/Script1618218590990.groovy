@@ -17,24 +17,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/')
 
-WebUI.click(findTestObject('Object Repository/Page_Login/button_Menu'))
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in_1'))
 
-WebUI.click(findTestObject('Object Repository/Page_Login/a_Sign in'))
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/a_Sign up for free'))
 
-WebUI.click(findTestObject('Object Repository/Page_Login/a_Sign up for free'))
-
-WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Username_username'), 'seb')
+WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Username_username'), 'sebAlreadyUsedEmail')
 
 WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Email_email'), 'seb@gmail.com')
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'),
-	'ENGINEER', true)
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'), 
+    'ENGINEER', true)
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Page_HE-F1/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
 
 WebUI.click(findTestObject('Object Repository/Page_HE-F1/button_Register'))
+

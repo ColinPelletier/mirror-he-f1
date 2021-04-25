@@ -23,11 +23,13 @@ WebUI.navigateToUrl('http://localhost:8080/')
 
 WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in_1'))
 
-WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'))
+WebUI.setText(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'), 'seb2')
 
-WebUI.setText(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'), 'seb')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Home - HE-F1/input_Password_password'), 'xUJzFrauW3tHsoKBEbc+CkNRGGZUImdZ')
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Home - HE-F1/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
 
 WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in'))
+
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/a_Your notifications'))
+
+WebUI.click(findTestObject('Object Repository/Page_Notifications - HE-F1/input_name_btn btn-outline-success my-2 my-_3d16f2'))
 

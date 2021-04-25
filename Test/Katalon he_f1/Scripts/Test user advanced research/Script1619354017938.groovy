@@ -23,11 +23,27 @@ WebUI.navigateToUrl('http://localhost:8080/')
 
 WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in_1'))
 
-WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'))
+WebUI.setText(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'), 'sebM')
 
-WebUI.setText(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'), 'seb')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Home - HE-F1/input_Password_password'), 'xUJzFrauW3tHsoKBEbc+CkNRGGZUImdZ')
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Home - HE-F1/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
 
 WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in'))
+
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/a_Your team'))
+
+WebUI.click(findTestObject('Object Repository/Page_Team - HE-F1/button_Recruit a member'))
+
+WebUI.click(findTestObject('Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec'), 
+    'ENGINEER', true)
+
+WebUI.click(findTestObject('Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58'))
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec'), 
+    'MECHANICIAN', true)
+
+WebUI.click(findTestObject('Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58'))
+
+WebUI.click(findTestObject('Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58'))
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Signup already used userName</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d8ec96a4-8f3b-4237-8506-7a6f4ca58a50</testCaseGuid>
+</TestCaseEntity>

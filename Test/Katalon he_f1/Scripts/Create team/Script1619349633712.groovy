@@ -38,9 +38,31 @@ WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Username_userna
 WebUI.setText(findTestObject('Object Repository/Page_HE-F1/input_Email_email'), DATE + '@gmail.com')
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'), 
-    'ENGINEER', true)
+    'MANAGER', true)
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Page_HE-F1/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
 
 WebUI.click(findTestObject('Object Repository/Page_HE-F1/button_Register'))
+
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in_1'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Home - HE-F1/input_Username_username'), DATE)
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Home - HE-F1/input_Password_password'), 'RigbBhfdqOBGNlJIWM1ClA==')
+
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/button_Sign in'))
+
+WebUI.click(findTestObject('Object Repository/Page_Home - HE-F1/a_Your team'))
+
+WebUI.click(findTestObject('Object Repository/Page_Team - HE-F1/button_Create a team'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Team - HE-F1/input_Name_name'), DATE)
+
+WebUI.setText(findTestObject('Object Repository/Page_Team - HE-F1/input_Driver 1 name_driver1'), 'driver1' + DATE)
+
+WebUI.setText(findTestObject('Object Repository/Page_Team - HE-F1/input_Driver 2 name_driver2'), 'driver2' + DATE)
+
+WebUI.setText(findTestObject('Object Repository/Page_Team - HE-F1/input_Car name_carName'), 'carname' + DATE)
+
+WebUI.click(findTestObject('Object Repository/Page_Team - HE-F1/input_Close_btn btn-danger float-right'))
 
