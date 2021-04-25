@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-public class TeamRepositoryTest {
+public class TestAssertTrue {
 
     @Test
-    public void testFindTeamByName() {
+    public void testAssertTrue() {
         Assertions.assertTrue(true);
     }
 }
