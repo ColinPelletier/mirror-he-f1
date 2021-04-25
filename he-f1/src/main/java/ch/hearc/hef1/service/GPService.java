@@ -68,9 +68,9 @@ public class GPService {
             list = gps.subList(startItem, toIndex);
         }
 
-        Page<GP> bookPage = new PageImpl<GP>(list, PageRequest.of(currentPage, pageSize), gps.size());
+        Page<GP> gpsPage = new PageImpl<GP>(list, PageRequest.of(currentPage, pageSize), gps.size());
 
-        return bookPage;
+        return gpsPage;
     }
 
     /**
