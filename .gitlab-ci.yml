@@ -29,7 +29,7 @@ unittest:
   script:
     - echo "start test"
     - cd he-f1
-    - mvn clean package
+    - mvn test
     - echo "test ok"
   only:
     - dev
