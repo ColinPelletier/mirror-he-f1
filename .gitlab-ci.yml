@@ -20,7 +20,7 @@ build:
     - mvn clean package -Dmaven.test.skip=true
     - echo "Build ok"
   only:
-    - add-docker-params
+    - dev
   tags:
     - alpine-docker
 
@@ -32,7 +32,7 @@ unittest:
     - mvn clean package
     - echo "test ok"
   only:
-    - add-docker-params
+    - dev
   tags:
     - alpine-docker
 
@@ -59,7 +59,7 @@ deploy:
     - docker-compose up -d
     - echo "deploy ok"
   only:
-    - update-ci-cd
+    - dev
   tags:
     - he-f1-prod
   when: manual
