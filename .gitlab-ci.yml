@@ -29,7 +29,7 @@ unittest:
   script:
     - echo "start test"
     # remove sql related bugs
-    - cd he-f1 && rm ./he-f1/src/main/resources/data.sql
+    - cd he-f1 && rm ./src/main/resources/data.sql
     - mvn test
     - echo "test ok"
   only:
