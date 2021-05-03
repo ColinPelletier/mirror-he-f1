@@ -1,0 +1,78 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+All,Chrome 90.0.4430.85,,,2021-04-25 12:53:50,2021-04-25 12:54:49,59.919s,FAILED
+,,,,,,,
+Test Cases/Bad login,Chrome 90.0.4430.85,,,2021-04-25 12:53:51,2021-04-25 12:53:59,7.345s,PASSED
+"openBrowser("""")",Chrome 90.0.4430.85,,,2021-04-25 12:53:52,2021-04-25 12:53:54,2.301s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 90.0.4430.85,,,2021-04-25 12:53:54,2021-04-25 12:53:56,1.584s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:53:56,2021-04-25 12:53:56,0.520s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/input_Username_username""))",Chrome 90.0.4430.85,,,2021-04-25 12:53:56,2021-04-25 12:53:57,0.703s,PASSED
+"setText(findTestObject(""Object Repository/Page_Home - HE-F1/input_Username_username""), ""seb"")",Chrome 90.0.4430.85,,,2021-04-25 12:53:57,2021-04-25 12:53:57,0.680s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Home - HE-F1/input_Password_password""), ""xUJzFrauW3tHsoKBEbc+CkNRGGZUImdZ"")",Chrome 90.0.4430.85,,,2021-04-25 12:53:57,2021-04-25 12:53:58,0.477s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign In (1)""))",Chrome 90.0.4430.85,,,2021-04-25 12:53:58,2021-04-25 12:53:59,0.591s,PASSED
+,,,,,,,
+Test Cases/Non-existent login,Chrome 90.0.4430.85,,,2021-04-25 12:53:59,2021-04-25 12:54:06,7.921s,FAILED
+"openBrowser("""")",Chrome 90.0.4430.85,,,2021-04-25 12:53:59,2021-04-25 12:54:01,2.360s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:01,2021-04-25 12:54:03,1.450s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:03,2021-04-25 12:54:03,0.409s,PASSED
+"setText(findTestObject(""Object Repository/Page_Home - HE-F1/input_Username_username""), ""donotexist"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:03,2021-04-25 12:54:04,0.946s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Home - HE-F1/input_Password_password""), ""KsoqBxogrplJGgASp6qDOdpLx37a1ymW"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:04,2021-04-25 12:54:05,0.427s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:05,2021-04-25 12:54:06,1.921s,FAILED
+,,,,,,,
+Test Cases/Good login,Chrome 90.0.4430.85,,,2021-04-25 12:54:07,2021-04-25 12:54:15,8.330s,FAILED
+"openBrowser("""")",Chrome 90.0.4430.85,,,2021-04-25 12:54:07,2021-04-25 12:54:09,2.317s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:09,2021-04-25 12:54:11,1.626s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:11,2021-04-25 12:54:11,0.435s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/div_Username""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:11,2021-04-25 12:54:12,0.706s,PASSED
+"setText(findTestObject(""Object Repository/Page_Home - HE-F1/input_Username_username""), ""seb"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:12,2021-04-25 12:54:13,0.680s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Home - HE-F1/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 90.0.4430.85,,,2021-04-25 12:54:13,2021-04-25 12:54:13,0.415s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:13,2021-04-25 12:54:15,1.657s,FAILED
+,,,,,,,
+Test Cases/Signup already used email,Chrome 90.0.4430.85,,,2021-04-25 12:54:15,2021-04-25 12:54:23,8.222s,PASSED
+"openBrowser("""")",Chrome 90.0.4430.85,,,2021-04-25 12:54:15,2021-04-25 12:54:18,2.272s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:18,2021-04-25 12:54:19,0.927s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:19,2021-04-25 12:54:19,0.417s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/a_Sign up for free""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:19,2021-04-25 12:54:20,0.783s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Username_username""), ""sebAlreadyUsedEmail"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:20,2021-04-25 12:54:20,0.707s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Email_email""), ""seb@gmail.com"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:20,2021-04-25 12:54:21,0.727s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b""), ""ENGINEER"", true)",Chrome 90.0.4430.85,,,2021-04-25 12:54:21,2021-04-25 12:54:22,1.040s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_HE-F1/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 90.0.4430.85,,,2021-04-25 12:54:22,2021-04-25 12:54:23,0.423s,PASSED
+"click(findTestObject(""Object Repository/Page_HE-F1/button_Register""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:23,2021-04-25 12:54:23,0.459s,PASSED
+,,,,,,,
+Test Cases/Signup bad email,Chrome 90.0.4430.85,,,2021-04-25 12:54:23,2021-04-25 12:54:32,8.710s,PASSED
+"openBrowser("""")",Chrome 90.0.4430.85,,,2021-04-25 12:54:24,2021-04-25 12:54:26,2.305s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:26,2021-04-25 12:54:27,1.523s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:27,2021-04-25 12:54:28,0.394s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/a_Sign up for free""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:28,2021-04-25 12:54:29,0.827s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Username_username""), ""seb"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:29,2021-04-25 12:54:29,0.665s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Email_email""), ""just seb"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:29,2021-04-25 12:54:30,0.675s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b""), ""ENGINEER"", true)",Chrome 90.0.4430.85,,,2021-04-25 12:54:30,2021-04-25 12:54:31,1.072s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_HE-F1/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 90.0.4430.85,,,2021-04-25 12:54:31,2021-04-25 12:54:31,0.427s,PASSED
+"click(findTestObject(""Object Repository/Page_HE-F1/button_Register""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:31,2021-04-25 12:54:32,0.373s,PASSED
+,,,,,,,
+Test Cases/Signup bad password,Chrome 90.0.4430.85,,,2021-04-25 12:54:32,2021-04-25 12:54:40,8.304s,PASSED
+"dtf = DateTimeFormatter.ofPattern(""yyyy/MM/dd-HH-mm-ss"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:32,2021-04-25 12:54:32,0.013s,PASSED
+now = LocalDateTime.now(),Chrome 90.0.4430.85,,,2021-04-25 12:54:32,2021-04-25 12:54:32,0.015s,PASSED
+DATE = dtf.format(now),Chrome 90.0.4430.85,,,2021-04-25 12:54:32,2021-04-25 12:54:32,0.001s,PASSED
+"openBrowser("""")",Chrome 90.0.4430.85,,,2021-04-25 12:54:32,2021-04-25 12:54:35,2.325s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:35,2021-04-25 12:54:36,0.912s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:36,2021-04-25 12:54:36,0.461s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/a_Sign up for free""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:36,2021-04-25 12:54:37,0.812s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Username_username""), DATE)",Chrome 90.0.4430.85,,,2021-04-25 12:54:37,2021-04-25 12:54:38,0.708s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Email_email""), DATE + ""@gmail.com"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:38,2021-04-25 12:54:38,0.695s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b""), ""ENGINEER"", true)",Chrome 90.0.4430.85,,,2021-04-25 12:54:38,2021-04-25 12:54:39,0.999s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_HE-F1/input_Password_password""), ""HeCM15nHKBI="")",Chrome 90.0.4430.85,,,2021-04-25 12:54:39,2021-04-25 12:54:40,0.406s,PASSED
+"click(findTestObject(""Object Repository/Page_HE-F1/button_Register""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:40,2021-04-25 12:54:40,0.390s,PASSED
+,,,,,,,
+Test Cases/Signup,Chrome 90.0.4430.85,,,2021-04-25 12:54:40,2021-04-25 12:54:49,9.386s,PASSED
+"dtf = DateTimeFormatter.ofPattern(""yyyy/MM/dd-HH-mm-ss"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:41,2021-04-25 12:54:41,0.001s,PASSED
+now = LocalDateTime.now(),Chrome 90.0.4430.85,,,2021-04-25 12:54:41,2021-04-25 12:54:41,0.001s,PASSED
+DATE = dtf.format(now),Chrome 90.0.4430.85,,,2021-04-25 12:54:41,2021-04-25 12:54:41,0.000s,PASSED
+"openBrowser("""")",Chrome 90.0.4430.85,,,2021-04-25 12:54:41,2021-04-25 12:54:43,2.366s,PASSED
+"navigateToUrl(""http://localhost:8080/"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:43,2021-04-25 12:54:45,1.581s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/button_Sign in""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:45,2021-04-25 12:54:45,0.405s,PASSED
+"click(findTestObject(""Object Repository/Page_Home - HE-F1/a_Sign up for free""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:45,2021-04-25 12:54:46,0.782s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Username_username""), DATE)",Chrome 90.0.4430.85,,,2021-04-25 12:54:46,2021-04-25 12:54:46,0.703s,PASSED
+"setText(findTestObject(""Object Repository/Page_HE-F1/input_Email_email""), DATE + ""@gmail.com"")",Chrome 90.0.4430.85,,,2021-04-25 12:54:46,2021-04-25 12:54:47,0.693s,PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b""), ""ENGINEER"", true)",Chrome 90.0.4430.85,,,2021-04-25 12:54:47,2021-04-25 12:54:48,1.018s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_HE-F1/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 90.0.4430.85,,,2021-04-25 12:54:48,2021-04-25 12:54:49,0.411s,PASSED
+"click(findTestObject(""Object Repository/Page_HE-F1/button_Register""))",Chrome 90.0.4430.85,,,2021-04-25 12:54:49,2021-04-25 12:54:49,0.885s,PASSED

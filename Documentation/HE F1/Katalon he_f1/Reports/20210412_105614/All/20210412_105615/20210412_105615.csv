@@ -1,0 +1,16 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+All,Chrome 89.0.4389.114,,,2021-04-12 10:56:22,2021-04-12 10:56:34,12.257s,PASSED
+,,,,,,,
+Test Cases/Bad login,Chrome 89.0.4389.114,,,2021-04-12 10:56:23,2021-04-12 10:56:29,5.382s,PASSED
+"openBrowser("""")",Chrome 89.0.4389.114,,,2021-04-12 10:56:24,2021-04-12 10:56:26,2.166s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 89.0.4389.114,,,2021-04-12 10:56:26,2021-04-12 10:56:27,1.118s,PASSED
+"setText(findTestObject(""Object Repository/Page_Login/input_Username_username""), ""seb"")",Chrome 89.0.4389.114,,,2021-04-12 10:56:27,2021-04-12 10:56:28,0.783s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Login/input_Password_password""), ""HeCM15nHKBI="")",Chrome 89.0.4389.114,,,2021-04-12 10:56:28,2021-04-12 10:56:28,0.430s,PASSED
+"click(findTestObject(""Object Repository/Page_Login/button_Sign In""))",Chrome 89.0.4389.114,,,2021-04-12 10:56:28,2021-04-12 10:56:29,0.508s,PASSED
+,,,,,,,
+Test Cases/Good login,Chrome 89.0.4389.114,,,2021-04-12 10:56:29,2021-04-12 10:56:34,5.140s,PASSED
+"openBrowser("""")",Chrome 89.0.4389.114,,,2021-04-12 10:56:29,2021-04-12 10:56:31,2.118s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 89.0.4389.114,,,2021-04-12 10:56:31,2021-04-12 10:56:32,0.977s,PASSED
+"setText(findTestObject(""Object Repository/Page_Login/input_Username_username""), ""seb"")",Chrome 89.0.4389.114,,,2021-04-12 10:56:32,2021-04-12 10:56:33,0.826s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Login/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 89.0.4389.114,,,2021-04-12 10:56:33,2021-04-12 10:56:34,0.398s,PASSED
+"click(findTestObject(""Object Repository/Page_Login/button_Sign In""))",Chrome 89.0.4389.114,,,2021-04-12 10:56:34,2021-04-12 10:56:34,0.488s,PASSED

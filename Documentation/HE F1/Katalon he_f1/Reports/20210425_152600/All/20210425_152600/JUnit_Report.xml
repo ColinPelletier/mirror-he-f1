@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="All" time="119.779" tests="14" failures="1" skips="0" errors="0">
+   <testsuite name="All" tests="14" failures="1" errors="0" time="119.779" skips="0" timestamp="2021-04-25 15:26:18" hostname="sebas - DESKTOP-47AGURN" id="Test Suites/All">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_152600\\All\\20210425_152600"/>
+         <property name="logFiles" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_152600\\All\\20210425_152600\\execution0.log"/>
+         <property name="attachments" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_152600\\All\\20210425_152600\\1619357288714.png"/>
+         <property name="hostName" value="sebas - DESKTOP-47AGURN"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="7.9.1.208"/>
+         <property name="browser" value="Chrome 90.0.4430.85"/>
+         <property name="hostAddress" value="172.16.128.196"/>
+         <property name="sessionId" value="8c313d33a0b6d678174884a5ddad9fa4"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/Bad login" time="8.351" classname="Test Cases/Bad login" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:26:20 - [TEST_CASE][PASSED] - Test Cases/Bad login: Test Cases/Bad login
+
+2021-04-25 15:26:21 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:26:21 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:26:21 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:26:21 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:26:24 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:26:24 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:25 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:25 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:26 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:26 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username")): Object: 'Object Repository/Page_Home - HE-F1/input_Username_username' is clicked on
+
+2021-04-25 15:26:27 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/input_Username_username' is clicked on
+
+2021-04-25 15:26:27 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:26:27 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:26:27 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "xUJzFrauW3tHsoKBEbc+CkNRGGZUImdZ"): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:26:28 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:26:28 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:26:29 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Non-existent login" time="6.72" classname="Test Cases/Non-existent login" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:26:29 - [TEST_CASE][PASSED] - Test Cases/Non-existent login: Test Cases/Non-existent login
+
+2021-04-25 15:26:29 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:26:29 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:26:30 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:26:30 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:26:30 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:26:32 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:26:32 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:33 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:33 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:33 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:33 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "DONOTEXIST"): Text 'DONOTEXIST' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:26:34 - [MESSAGE][PASSED] - Text 'DONOTEXIST' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:26:34 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "zHjooWdMq5ELqzqGAnqt5Q=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:26:35 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:26:35 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:26:35 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Good login" time="7.15" classname="Test Cases/Good login" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:26:35 - [TEST_CASE][PASSED] - Test Cases/Good login: Test Cases/Good login
+
+2021-04-25 15:26:36 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:26:36 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:26:37 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:26:37 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:26:37 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:26:38 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:26:38 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:40 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:40 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:40 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:40 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:26:41 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:26:41 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:26:42 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:26:42 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:26:43 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup already used email" time="8.85" classname="Test Cases/Signup already used email" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:26:43 - [TEST_CASE][PASSED] - Test Cases/Signup already used email: Test Cases/Signup already used email
+
+2021-04-25 15:26:43 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:26:43 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:26:44 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:26:44 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:26:44 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:26:45 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:26:45 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:47 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:47 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:47 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:47 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:26:48 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:26:48 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), "sebAlreadyUsedEmail"): Text 'sebAlreadyUsedEmail' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:26:49 - [MESSAGE][PASSED] - Text 'sebAlreadyUsedEmail' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:26:49 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), "seb@gmail.com"): Text 'seb@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:26:50 - [MESSAGE][PASSED] - Text 'seb@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:26:50 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:26:51 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:26:51 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:26:51 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:26:51 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 15:26:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup bad email" time="8.085" classname="Test Cases/Signup bad email" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:26:51 - [TEST_CASE][PASSED] - Test Cases/Signup bad email: Test Cases/Signup bad email
+
+2021-04-25 15:26:52 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:26:52 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:26:53 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:26:53 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:26:53 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:26:54 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:26:54 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:55 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:26:55 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:26:56 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:26:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:26:56 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:26:57 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:26:57 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), "just seb"): Text 'just seb' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:26:58 - [MESSAGE][PASSED] - Text 'just seb' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:26:58 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:26:59 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:26:59 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:26:59 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:26:59 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 15:27:00 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup bad password" time="9.108" classname="Test Cases/Signup bad password" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:27:00 - [TEST_CASE][PASSED] - Test Cases/Signup bad password: Test Cases/Signup bad password
+
+2021-04-25 15:27:00 - [TEST_STEP][PASSED] - dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH-mm-ss"): null
+
+2021-04-25 15:27:00 - [TEST_STEP][PASSED] - now = LocalDateTime.now(): null
+
+2021-04-25 15:27:00 - [TEST_STEP][PASSED] - DATE = dtf.format(now): null
+
+2021-04-25 15:27:00 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:27:00 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:27:01 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:27:01 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:27:01 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:27:03 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:27:03 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:04 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:05 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:05 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:27:05 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:27:05 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), DATE): Text '2021/04/25-15-27-00' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:27:06 - [MESSAGE][PASSED] - Text '2021/04/25-15-27-00' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:27:06 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), DATE + "@gmail.com"): Text '2021/04/25-15-27-00@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:27:07 - [MESSAGE][PASSED] - Text '2021/04/25-15-27-00@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:27:07 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:27:08 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:27:08 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "HeCM15nHKBI="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:27:08 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:27:08 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 15:27:09 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup" time="8.83" classname="Test Cases/Signup" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:27:09 - [TEST_CASE][PASSED] - Test Cases/Signup: Test Cases/Signup
+
+2021-04-25 15:27:09 - [TEST_STEP][PASSED] - dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH-mm-ss"): null
+
+2021-04-25 15:27:09 - [TEST_STEP][PASSED] - now = LocalDateTime.now(): null
+
+2021-04-25 15:27:09 - [TEST_STEP][PASSED] - DATE = dtf.format(now): null
+
+2021-04-25 15:27:09 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:27:09 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:27:10 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:27:10 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:27:10 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:27:12 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:27:12 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:13 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:13 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:13 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:13 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:27:14 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 15:27:14 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), DATE): Text '2021/04/25-15-27-09' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:27:15 - [MESSAGE][PASSED] - Text '2021/04/25-15-27-09' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 15:27:15 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), DATE + "@gmail.com"): Text '2021/04/25-15-27-09@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:27:15 - [MESSAGE][PASSED] - Text '2021/04/25-15-27-09@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 15:27:15 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:27:16 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 15:27:16 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:27:17 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 15:27:17 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 15:27:18 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Logout" time="6.759" classname="Test Cases/Logout" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:27:18 - [TEST_CASE][PASSED] - Test Cases/Logout: Test Cases/Logout
+
+2021-04-25 15:27:18 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:27:18 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:27:19 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:27:19 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:27:19 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:27:20 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:27:20 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:21 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:21 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:22 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:22 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:23 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:23 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:23 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:23 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:24 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:24 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/input_seb_btn btn-danger")): Object: 'Object Repository/Page_Home - HE-F1/input_seb_btn btn-danger' is clicked on
+
+2021-04-25 15:27:24 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/input_seb_btn btn-danger' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Test user advanced research" time="11.227" classname="Test Cases/Test user advanced research" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:27:24 - [TEST_CASE][PASSED] - Test Cases/Test user advanced research: Test Cases/Test user advanced research
+
+2021-04-25 15:27:25 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:27:25 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:27:25 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:27:25 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:27:25 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:27:27 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:27:27 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:28 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:28 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:28 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:28 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "sebM"): Text 'sebM' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:29 - [MESSAGE][PASSED] - Text 'sebM' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:29 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:30 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:30 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:30 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:30 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Your team")): Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:27:31 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:27:31 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Team - HE-F1/button_Recruit a member")): Object: 'Object Repository/Page_Team - HE-F1/button_Recruit a member' is clicked on
+
+2021-04-25 15:27:31 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Team - HE-F1/button_Recruit a member' is clicked on
+
+2021-04-25 15:27:31 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58")): Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on
+
+2021-04-25 15:27:32 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on
+
+2021-04-25 15:27:32 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec'  using regular expression
+
+2021-04-25 15:27:33 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec'  using regular expression
+
+2021-04-25 15:27:33 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58")): Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on
+
+2021-04-25 15:27:34 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on
+
+2021-04-25 15:27:34 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec"), "MECHANICIAN", true): All options with value 'MECHANICIAN' are selected in object 'Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec'  using regular expression
+
+2021-04-25 15:27:35 - [MESSAGE][PASSED] - All options with value 'MECHANICIAN' are selected in object 'Object Repository/Page_Recruiting - HE-F1/select_Manager                    Engineer _6b4bec'  using regular expression
+
+2021-04-25 15:27:35 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58")): Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on
+
+2021-04-25 15:27:35 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on
+
+2021-04-25 15:27:35 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58")): Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on
+
+2021-04-25 15:27:36 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Recruiting - HE-F1/input_Recruiting_btn btn-outline-danger my-_4a3d58' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Recruit seb2 from seb" time="7.62" classname="Test Cases/Recruit seb2 from seb" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:27:36 - [TEST_CASE][PASSED] - Test Cases/Recruit seb2 from seb: Test Cases/Recruit seb2 from seb
+
+2021-04-25 15:27:36 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:27:36 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:27:37 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:27:37 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:27:37 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:27:38 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:27:38 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:39 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:39 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:39 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:39 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:40 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:40 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:41 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:41 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:41 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:41 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Your team")): Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:27:42 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:27:42 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Team - HE-F1/button_Recruit a member")): Object: 'Object Repository/Page_Team - HE-F1/button_Recruit a member' is clicked on
+
+2021-04-25 15:27:43 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Team - HE-F1/button_Recruit a member' is clicked on
+
+2021-04-25 15:27:43 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Recruiting - HE-F1/input_Manager_btn btn-outline-danger my-2 m_c1590f")): Object: 'Object Repository/Page_Recruiting - HE-F1/input_Manager_btn btn-outline-danger my-2 m_c1590f' is clicked on
+
+2021-04-25 15:27:43 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Recruiting - HE-F1/input_Manager_btn btn-outline-danger my-2 m_c1590f' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Accept seb invitation" time="7.284" classname="Test Cases/Accept seb invitation" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:27:43 - [TEST_CASE][PASSED] - Test Cases/Accept seb invitation: Test Cases/Accept seb invitation
+
+2021-04-25 15:27:43 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:27:43 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:27:44 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:27:44 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:27:44 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:27:46 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:27:46 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:47 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:47 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:47 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:47 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "seb2"): Text 'seb2' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:48 - [MESSAGE][PASSED] - Text 'seb2' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:48 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:49 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:49 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:49 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:49 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Your notifications")): Object: 'Object Repository/Page_Home - HE-F1/a_Your notifications' is clicked on
+
+2021-04-25 15:27:50 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Your notifications' is clicked on
+
+2021-04-25 15:27:50 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Notifications - HE-F1/input_name_btn btn-outline-success my-2 my-_3d16f2")): Object: 'Object Repository/Page_Notifications - HE-F1/input_name_btn btn-outline-success my-2 my-_3d16f2' is clicked on
+
+2021-04-25 15:27:50 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Notifications - HE-F1/input_name_btn btn-outline-success my-2 my-_3d16f2' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Repair car piece" time="9.387" classname="Test Cases/Repair car piece" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:27:50 - [TEST_CASE][PASSED] - Test Cases/Repair car piece: Test Cases/Repair car piece
+
+2021-04-25 15:27:51 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:27:51 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:27:52 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:27:52 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:27:52 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:27:53 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:27:53 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:55 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:27:55 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:27:56 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "sebMec"): Text 'sebMec' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:57 - [MESSAGE][PASSED] - Text 'sebMec' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:27:57 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:57 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:27:57 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:58 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:27:58 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Your team")): Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:27:58 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:27:58 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Team - HE-F1/button_Front wing")): Object: 'Object Repository/Page_Team - HE-F1/button_Front wing' is clicked on
+
+2021-04-25 15:27:59 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Team - HE-F1/button_Front wing' is clicked on
+
+2021-04-25 15:27:59 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Team - HE-F1/button_Rear wing")): Object: 'Object Repository/Page_Team - HE-F1/button_Rear wing' is clicked on
+
+2021-04-25 15:27:59 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Team - HE-F1/button_Rear wing' is clicked on
+
+2021-04-25 15:27:59 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Team - HE-F1/input_Level 2_btn-sm btn-danger")): Object: 'Object Repository/Page_Team - HE-F1/input_Level 2_btn-sm btn-danger' is clicked on
+
+2021-04-25 15:28:00 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Team - HE-F1/input_Level 2_btn-sm btn-danger' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Upgarde car piece" time="8.638" classname="Test Cases/Upgarde car piece" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Upgarde car piece FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Upgarde car piece.run(Upgarde car piece:36)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619357160414.run(TempTestSuite1619357160414.groovy:39)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.16.128.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54781}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e61f048c0f3618c1f99274583d75cf83
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more
+"/>
+         <system-out><![CDATA[2021-04-25 15:28:00 - [TEST_CASE][FAILED] - Test Cases/Upgarde car piece: Test Cases/Upgarde car piece FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Upgarde car piece.run(Upgarde car piece:36)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619357160414.run(TempTestSuite1619357160414.groovy:39)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.16.128.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54781}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e61f048c0f3618c1f99274583d75cf83
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more
+
+
+2021-04-25 15:28:00 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:28:00 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:28:01 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:28:01 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:28:01 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:28:03 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:28:03 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:28:04 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:28:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:28:05 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:28:05 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "sebE"): Text 'sebE' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:28:06 - [MESSAGE][PASSED] - Text 'sebE' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:28:06 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:28:06 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:28:06 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:28:07 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:28:07 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Your team")): Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:28:07 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Your team' is clicked on
+
+2021-04-25 15:28:07 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Team - HE-F1/button_MGU-H")): Object: 'Object Repository/Page_Team - HE-F1/button_MGU-H' is clicked on
+
+2021-04-25 15:28:08 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Team - HE-F1/button_MGU-H' is clicked on
+
+2021-04-25 15:28:08 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger")): Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Upgarde car piece.run(Upgarde car piece:36)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619357160414.run(TempTestSuite1619357160414.groovy:39)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.16.128.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54781}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e61f048c0f3618c1f99274583d75cf83
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Script1619352676525.run(Script1619352676525.groovy:36)
+	... 13 more
+)
+
+2021-04-25 15:28:08 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Upgarde car piece.run(Upgarde car piece:36)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619357160414.run(TempTestSuite1619357160414.groovy:39)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.16.128.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54781}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e61f048c0f3618c1f99274583d75cf83
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Script1619352676525.run(Script1619352676525.groovy:36)
+	... 13 more
+)
+[[ATTACHMENT|D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_152600\\All\\20210425_152600\\1619357288714.png]]]]></system-out>
+         <system-err><![CDATA[2021-04-25 15:28:00 - [TEST_CASE][FAILED] - Test Cases/Upgarde car piece: Test Cases/Upgarde car piece FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Upgarde car piece.run(Upgarde car piece:36)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619357160414.run(TempTestSuite1619357160414.groovy:39)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.16.128.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54781}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e61f048c0f3618c1f99274583d75cf83
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Join GP" time="8.331" classname="Test Cases/Join GP" status="PASSED">
+         <system-out><![CDATA[2021-04-25 15:28:08 - [TEST_CASE][PASSED] - Test Cases/Join GP: Test Cases/Join GP
+
+2021-04-25 15:28:09 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 15:28:09 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 15:28:10 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 15:28:10 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 15:28:10 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 15:28:11 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 15:28:11 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:28:12 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 15:28:12 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in_1")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:28:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in_1' is clicked on
+
+2021-04-25 15:28:12 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "sebM"): Text 'sebM' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:28:13 - [MESSAGE][PASSED] - Text 'sebM' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 15:28:13 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:28:14 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 15:28:14 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:28:15 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 15:28:15 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Grands Prix")): Object: 'Object Repository/Page_Home - HE-F1/a_Grands Prix' is clicked on
+
+2021-04-25 15:28:15 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Grands Prix' is clicked on
+
+2021-04-25 15:28:15 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Grand Prix - HE-F1/button_Lets race")): Object: 'Object Repository/Page_Grand Prix - HE-F1/button_Lets race' is clicked on
+
+2021-04-25 15:28:17 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Grand Prix - HE-F1/button_Lets race' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-04-25 15:26:18 - [TEST_SUITE][FAILED] - All: Test Cases/Upgarde car piece FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Upgarde car piece.run(Upgarde car piece:36)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619357160414.run(TempTestSuite1619357160414.groovy:39)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.16.128.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54781}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e61f048c0f3618c1f99274583d75cf83
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more]]></system-out>
+      <system-err><![CDATA[2021-04-25 15:26:18 - [TEST_SUITE][FAILED] - All: Test Cases/Upgarde car piece FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Team - HE-F1/input_Level 1_btn-sm btn-danger'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Upgarde car piece.run(Upgarde car piece:36)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619357160414.run(TempTestSuite1619357160414.groovy:39)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.16.128.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54781}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e61f048c0f3618c1f99274583d75cf83
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more]]></system-err>
+   </testsuite>
+</testsuites>

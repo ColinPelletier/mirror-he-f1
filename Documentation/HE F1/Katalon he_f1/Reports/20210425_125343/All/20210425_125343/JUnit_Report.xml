@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="All" time="61.276" tests="7" failures="2" skips="0" errors="0">
+   <testsuite name="All" tests="7" failures="2" errors="0" time="61.276" skips="0" timestamp="2021-04-25 12:53:50" hostname="sebas - DESKTOP-47AGURN.mshome.net" id="Test Suites/All">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_125343\\All\\20210425_125343"/>
+         <property name="logFiles" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_125343\\All\\20210425_125343\\execution0.log"/>
+         <property name="attachments" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_125343\\All\\20210425_125343\\1619348046501.png, D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_125343\\All\\20210425_125343\\1619348055044.png"/>
+         <property name="hostName" value="sebas - DESKTOP-47AGURN.mshome.net"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="7.9.1.208"/>
+         <property name="browser" value="Chrome 90.0.4430.85"/>
+         <property name="hostAddress" value="172.30.64.1"/>
+         <property name="sessionId" value="f0d410fd02a5b1f2bf2264c3f2a1ff7a"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/Bad login" time="7.345" classname="Test Cases/Bad login" status="PASSED">
+         <system-out><![CDATA[2021-04-25 12:53:51 - [TEST_CASE][PASSED] - Test Cases/Bad login: Test Cases/Bad login
+
+2021-04-25 12:53:52 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 12:53:52 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 12:53:52 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 12:53:52 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 12:53:54 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 12:53:54 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:53:56 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:53:56 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:53:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:53:56 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username")): Object: 'Object Repository/Page_Home - HE-F1/input_Username_username' is clicked on
+
+2021-04-25 12:53:57 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/input_Username_username' is clicked on
+
+2021-04-25 12:53:57 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 12:53:57 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 12:53:57 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "xUJzFrauW3tHsoKBEbc+CkNRGGZUImdZ"): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 12:53:58 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 12:53:58 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign In (1)")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign In (1)' is clicked on
+
+2021-04-25 12:53:59 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign In (1)' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Non-existent login" time="7.921" classname="Test Cases/Non-existent login" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Non-existent login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Non-existent login.run(Non-existent login:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button style=&quot;float:right;margin-right:30px;&quot; class=&quot;btn btn-danger&quot; type=&quot;button&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#loginDialog&quot;>...&lt;/button> is not clickable at point (1100, 38). Other element would receive the click: &lt;div id=&quot;loginDialog&quot; class=&quot;modal fade show&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;loginDialogLabel&quot; aria-modal=&quot;true&quot; style=&quot;display: block;&quot;>...&lt;/div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe52217e3c2887a54cbb94ac9dd8d45
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more
+"/>
+         <system-out><![CDATA[2021-04-25 12:53:59 - [TEST_CASE][FAILED] - Test Cases/Non-existent login: Test Cases/Non-existent login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Non-existent login.run(Non-existent login:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe52217e3c2887a54cbb94ac9dd8d45
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more
+
+
+2021-04-25 12:53:59 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 12:53:59 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 12:54:00 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 12:54:00 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 12:54:00 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 12:54:01 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 12:54:01 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:03 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:03 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:03 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:03 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "donotexist"): Text 'donotexist' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 12:54:04 - [MESSAGE][PASSED] - Text 'donotexist' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 12:54:04 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "KsoqBxogrplJGgASp6qDOdpLx37a1ymW"): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 12:54:05 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 12:54:05 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Non-existent login.run(Non-existent login:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe52217e3c2887a54cbb94ac9dd8d45
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Script1618217897079.run(Script1618217897079.groovy:30)
+	... 13 more
+)
+
+2021-04-25 12:54:06 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Non-existent login.run(Non-existent login:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe52217e3c2887a54cbb94ac9dd8d45
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Script1618217897079.run(Script1618217897079.groovy:30)
+	... 13 more
+)
+[[ATTACHMENT|D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_125343\\All\\20210425_125343\\1619348046501.png]]]]></system-out>
+         <system-err><![CDATA[2021-04-25 12:53:59 - [TEST_CASE][FAILED] - Test Cases/Non-existent login: Test Cases/Non-existent login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Non-existent login.run(Non-existent login:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe52217e3c2887a54cbb94ac9dd8d45
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Good login" time="8.33" classname="Test Cases/Good login" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Good login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Good login.run(Good login:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button style=&quot;float:right;margin-right:30px;&quot; class=&quot;btn btn-danger&quot; type=&quot;button&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#loginDialog&quot;>...&lt;/button> is not clickable at point (1100, 38). Other element would receive the click: &lt;div id=&quot;loginDialog&quot; class=&quot;modal fade show&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;loginDialogLabel&quot; aria-modal=&quot;true&quot; style=&quot;display: block;&quot;>...&lt;/div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d29f4388348097edbd93d96ad6dddc5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more
+"/>
+         <system-out><![CDATA[2021-04-25 12:54:07 - [TEST_CASE][FAILED] - Test Cases/Good login: Test Cases/Good login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Good login.run(Good login:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d29f4388348097edbd93d96ad6dddc5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more
+
+
+2021-04-25 12:54:07 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 12:54:07 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 12:54:08 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 12:54:08 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 12:54:08 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 12:54:09 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 12:54:09 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:11 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:11 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:11 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:11 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/div_Username")): Object: 'Object Repository/Page_Home - HE-F1/div_Username' is clicked on
+
+2021-04-25 12:54:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/div_Username' is clicked on
+
+2021-04-25 12:54:12 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Home - HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 12:54:13 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Home - HE-F1/input_Username_username'
+
+2021-04-25 12:54:13 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Home - HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 12:54:13 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Home - HE-F1/input_Password_password'
+
+2021-04-25 12:54:13 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Good login.run(Good login:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d29f4388348097edbd93d96ad6dddc5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Script1618217330369.run(Script1618217330369.groovy:32)
+	... 13 more
+)
+
+2021-04-25 12:54:15 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Good login.run(Good login:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d29f4388348097edbd93d96ad6dddc5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Script1618217330369.run(Script1618217330369.groovy:32)
+	... 13 more
+)
+[[ATTACHMENT|D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210425_125343\\All\\20210425_125343\\1619348055044.png]]]]></system-out>
+         <system-err><![CDATA[2021-04-25 12:54:07 - [TEST_CASE][FAILED] - Test Cases/Good login: Test Cases/Good login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Good login.run(Good login:32)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d29f4388348097edbd93d96ad6dddc5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup already used email" time="8.222" classname="Test Cases/Signup already used email" status="PASSED">
+         <system-out><![CDATA[2021-04-25 12:54:15 - [TEST_CASE][PASSED] - Test Cases/Signup already used email: Test Cases/Signup already used email
+
+2021-04-25 12:54:15 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 12:54:15 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 12:54:16 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 12:54:16 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 12:54:16 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 12:54:18 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 12:54:18 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:19 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:19 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:19 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:19 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:20 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:20 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), "sebAlreadyUsedEmail"): Text 'sebAlreadyUsedEmail' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:20 - [MESSAGE][PASSED] - Text 'sebAlreadyUsedEmail' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:20 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), "seb@gmail.com"): Text 'seb@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:21 - [MESSAGE][PASSED] - Text 'seb@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:21 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:22 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:22 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:23 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:23 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 12:54:23 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup bad email" time="8.71" classname="Test Cases/Signup bad email" status="PASSED">
+         <system-out><![CDATA[2021-04-25 12:54:23 - [TEST_CASE][PASSED] - Test Cases/Signup bad email: Test Cases/Signup bad email
+
+2021-04-25 12:54:24 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 12:54:24 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 12:54:24 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 12:54:24 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 12:54:24 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 12:54:26 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 12:54:26 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:27 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:27 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:28 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:28 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:29 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:29 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:29 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:29 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), "just seb"): Text 'just seb' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:30 - [MESSAGE][PASSED] - Text 'just seb' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:30 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:31 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:31 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:31 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:31 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 12:54:32 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup bad password" time="8.304" classname="Test Cases/Signup bad password" status="PASSED">
+         <system-out><![CDATA[2021-04-25 12:54:32 - [TEST_CASE][PASSED] - Test Cases/Signup bad password: Test Cases/Signup bad password
+
+2021-04-25 12:54:32 - [TEST_STEP][PASSED] - dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH-mm-ss"): null
+
+2021-04-25 12:54:32 - [TEST_STEP][PASSED] - now = LocalDateTime.now(): null
+
+2021-04-25 12:54:32 - [TEST_STEP][PASSED] - DATE = dtf.format(now): null
+
+2021-04-25 12:54:32 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 12:54:32 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 12:54:33 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 12:54:33 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 12:54:33 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 12:54:35 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 12:54:35 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:36 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:36 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:36 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:36 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:37 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:37 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), DATE): Text '2021/04/25-12-54-32' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:38 - [MESSAGE][PASSED] - Text '2021/04/25-12-54-32' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:38 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), DATE + "@gmail.com"): Text '2021/04/25-12-54-32@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:38 - [MESSAGE][PASSED] - Text '2021/04/25-12-54-32@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:38 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:39 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:39 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "HeCM15nHKBI="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:40 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:40 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 12:54:40 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup" time="9.386" classname="Test Cases/Signup" status="PASSED">
+         <system-out><![CDATA[2021-04-25 12:54:40 - [TEST_CASE][PASSED] - Test Cases/Signup: Test Cases/Signup
+
+2021-04-25 12:54:41 - [TEST_STEP][PASSED] - dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH-mm-ss"): null
+
+2021-04-25 12:54:41 - [TEST_STEP][PASSED] - now = LocalDateTime.now(): null
+
+2021-04-25 12:54:41 - [TEST_STEP][PASSED] - DATE = dtf.format(now): null
+
+2021-04-25 12:54:41 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-25 12:54:41 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-25 12:54:42 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-25 12:54:42 - [MESSAGE][INFO] - User set preference: ['args', '[window-size=1200,1080]']
+
+2021-04-25 12:54:42 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-25 12:54:43 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-25 12:54:43 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:45 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-25 12:54:45 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/button_Sign in")): Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:45 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/button_Sign in' is clicked on
+
+2021-04-25 12:54:45 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Home - HE-F1/a_Sign up for free")): Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Home - HE-F1/a_Sign up for free' is clicked on
+
+2021-04-25 12:54:46 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), DATE): Text '2021/04/25-12-54-41' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:46 - [MESSAGE][PASSED] - Text '2021/04/25-12-54-41' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-25 12:54:46 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), DATE + "@gmail.com"): Text '2021/04/25-12-54-41@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:47 - [MESSAGE][PASSED] - Text '2021/04/25-12-54-41@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-25 12:54:47 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:48 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-25 12:54:48 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:49 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-25 12:54:49 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-25 12:54:49 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-04-25 12:53:50 - [TEST_SUITE][FAILED] - All: Test Cases/Non-existent login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Non-existent login.run(Non-existent login:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe52217e3c2887a54cbb94ac9dd8d45
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more]]></system-out>
+      <system-err><![CDATA[2021-04-25 12:53:50 - [TEST_SUITE][FAILED] - All: Test Cases/Non-existent login FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Home - HE-F1/button_Sign in'
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:75)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:42)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:73)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:619)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$1.call(Unknown Source)
+	at Non-existent login.run(Non-existent login:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:398)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:389)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:368)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:360)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:255)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:203)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:152)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:95)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1619348023144.run(TempTestSuite1619348023144.groovy:39)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button style="float:right;margin-right:30px;" class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#loginDialog">...</button> is not clickable at point (1100, 38). Other element would receive the click: <div id="loginDialog" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="loginDialogLabel" aria-modal="true" style="display: block;">...</div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-47AGURN', ip: '172.30.64.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\sebas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61383}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bbe52217e3c2887a54cbb94ac9dd8d45
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:68)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	... 19 more]]></system-err>
+   </testsuite>
+</testsuites>

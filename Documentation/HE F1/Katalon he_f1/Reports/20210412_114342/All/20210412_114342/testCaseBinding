@@ -1,0 +1,7 @@
+{"testCaseName":"Test Cases/Bad login","testCaseId":"Test Cases/Bad login"}
+{"testCaseName":"Test Cases/Non-existent login","testCaseId":"Test Cases/Non-existent login"}
+{"testCaseName":"Test Cases/Good login","testCaseId":"Test Cases/Good login"}
+{"testCaseName":"Test Cases/Signup already used email","testCaseId":"Test Cases/Signup already used email"}
+{"testCaseName":"Test Cases/Signup bad email","testCaseId":"Test Cases/Signup bad email"}
+{"testCaseName":"Test Cases/Signup bad password","testCaseId":"Test Cases/Signup bad password"}
+{"testCaseName":"Test Cases/Signup","testCaseId":"Test Cases/Signup"}
