@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="All" time="63.657" tests="7" failures="0" skips="0" errors="0">
+   <testsuite name="All" tests="7" failures="0" errors="0" time="63.657" skips="0" timestamp="2021-04-19 10:34:28" hostname="sebas - DESKTOP-47AGURN" id="Test Suites/All">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210419_103419\\All\\20210419_103419"/>
+         <property name="logFiles" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210419_103419\\All\\20210419_103419\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="sebas - DESKTOP-47AGURN"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="7.9.1.208"/>
+         <property name="browser" value="Chrome 89.0.4389.128"/>
+         <property name="hostAddress" value="172.16.128.196"/>
+         <property name="sessionId" value="90f7fcdff33c48860176293c6cdbad25"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/Bad login" time="6.771" classname="Test Cases/Bad login" status="PASSED">
+         <system-out><![CDATA[2021-04-19 10:34:30 - [TEST_CASE][PASSED] - Test Cases/Bad login: Test Cases/Bad login
+
+2021-04-19 10:34:31 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-19 10:34:31 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-19 10:34:31 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-19 10:34:33 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-19 10:34:33 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:34 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:34 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Menu")): Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:35 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:35 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign in")): Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:35 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:35 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Login/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-19 10:34:36 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-19 10:34:36 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Login/input_Password_password"), "vu86ZeCopXvP8WzHePPxcHNDgA8PcNbW"): Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-19 10:34:37 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-19 10:34:37 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Sign In")): Object: 'Object Repository/Page_Login/button_Sign In' is clicked on
+
+2021-04-19 10:34:37 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Sign In' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Non-existent login" time="6.947" classname="Test Cases/Non-existent login" status="PASSED">
+         <system-out><![CDATA[2021-04-19 10:34:37 - [TEST_CASE][PASSED] - Test Cases/Non-existent login: Test Cases/Non-existent login
+
+2021-04-19 10:34:37 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-19 10:34:37 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-19 10:34:38 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-19 10:34:38 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-19 10:34:40 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-19 10:34:40 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:41 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:41 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Menu")): Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:42 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:42 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign in")): Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:42 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:42 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Login/input_Username_username"), "syhbdsyberadfbfdb"): Text 'syhbdsyberadfbfdb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-19 10:34:43 - [MESSAGE][PASSED] - Text 'syhbdsyberadfbfdb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-19 10:34:43 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Login/input_Password_password"), "+0qaDxgZuXfSPXlgVmWnFw=="): Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-19 10:34:43 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-19 10:34:43 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Sign In")): Object: 'Object Repository/Page_Login/button_Sign In' is clicked on
+
+2021-04-19 10:34:44 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Sign In' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Good login" time="6.698" classname="Test Cases/Good login" status="PASSED">
+         <system-out><![CDATA[2021-04-19 10:34:44 - [TEST_CASE][PASSED] - Test Cases/Good login: Test Cases/Good login
+
+2021-04-19 10:34:44 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-19 10:34:44 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-19 10:34:45 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-19 10:34:45 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-19 10:34:47 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-19 10:34:47 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:48 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:48 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Menu")): Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:48 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:48 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign in")): Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:49 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:49 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Login/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-19 10:34:50 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-19 10:34:50 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Login/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-19 10:34:50 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-19 10:34:50 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Sign In")): Object: 'Object Repository/Page_Login/button_Sign In' is clicked on
+
+2021-04-19 10:34:51 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Sign In' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup already used email" time="8.448" classname="Test Cases/Signup already used email" status="PASSED">
+         <system-out><![CDATA[2021-04-19 10:34:51 - [TEST_CASE][PASSED] - Test Cases/Signup already used email: Test Cases/Signup already used email
+
+2021-04-19 10:34:51 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-19 10:34:51 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-19 10:34:52 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-19 10:34:52 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-19 10:34:53 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-19 10:34:53 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:55 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:34:55 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Menu")): Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:55 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:34:55 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign in")): Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:55 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:34:55 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign up for free")): Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:34:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:34:56 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:34:57 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:34:57 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), "seb@gmail.com"): Text 'seb@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:34:57 - [MESSAGE][PASSED] - Text 'seb@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:34:57 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:34:58 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:34:58 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:34:59 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:34:59 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-19 10:34:59 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup bad email" time="8.638" classname="Test Cases/Signup bad email" status="PASSED">
+         <system-out><![CDATA[2021-04-19 10:34:59 - [TEST_CASE][PASSED] - Test Cases/Signup bad email: Test Cases/Signup bad email
+
+2021-04-19 10:35:00 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-19 10:35:00 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-19 10:35:01 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-19 10:35:01 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-19 10:35:02 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-19 10:35:02 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:35:03 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:35:03 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Menu")): Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:35:04 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:35:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign in")): Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:35:04 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:35:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign up for free")): Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:35:05 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:35:05 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:35:06 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:35:06 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), "just seb"): Text 'just seb' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:35:06 - [MESSAGE][PASSED] - Text 'just seb' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:35:06 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:35:07 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:35:07 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:35:07 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:35:07 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-19 10:35:08 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup bad password" time="8.814" classname="Test Cases/Signup bad password" status="PASSED">
+         <system-out><![CDATA[2021-04-19 10:35:08 - [TEST_CASE][PASSED] - Test Cases/Signup bad password: Test Cases/Signup bad password
+
+2021-04-19 10:35:09 - [TEST_STEP][PASSED] - dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH-mm-ss"): null
+
+2021-04-19 10:35:09 - [TEST_STEP][PASSED] - now = LocalDateTime.now(): null
+
+2021-04-19 10:35:09 - [TEST_STEP][PASSED] - DATE = dtf.format(now): null
+
+2021-04-19 10:35:09 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-19 10:35:09 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-19 10:35:09 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-19 10:35:09 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-19 10:35:11 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-19 10:35:11 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:35:12 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:35:12 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Menu")): Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:35:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:35:12 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign in")): Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:35:13 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:35:13 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign up for free")): Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:35:14 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:35:14 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), DATE): Text '2021/04/19-10-35-09' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:35:14 - [MESSAGE][PASSED] - Text '2021/04/19-10-35-09' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:35:14 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), DATE + "@gmail.com"): Text '2021/04/19-10-35-09@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:35:15 - [MESSAGE][PASSED] - Text '2021/04/19-10-35-09@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:35:15 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:35:16 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:35:16 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "HeCM15nHKBI="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:35:16 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:35:16 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-19 10:35:17 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Signup" time="13.288" classname="Test Cases/Signup" status="PASSED">
+         <system-out><![CDATA[2021-04-19 10:35:17 - [TEST_CASE][PASSED] - Test Cases/Signup: Test Cases/Signup
+
+2021-04-19 10:35:17 - [TEST_STEP][PASSED] - dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH-mm-ss"): null
+
+2021-04-19 10:35:17 - [TEST_STEP][PASSED] - now = LocalDateTime.now(): null
+
+2021-04-19 10:35:17 - [TEST_STEP][PASSED] - DATE = dtf.format(now): null
+
+2021-04-19 10:35:17 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-19 10:35:17 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-19 10:35:18 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-19 10:35:18 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-19 10:35:20 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-19 10:35:20 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/"): Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:35:24 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/' successfully
+
+2021-04-19 10:35:24 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Menu")): Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:35:24 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Menu' is clicked on
+
+2021-04-19 10:35:24 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign in")): Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:35:24 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign in' is clicked on
+
+2021-04-19 10:35:24 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/a_Sign up for free")): Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:35:27 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/a_Sign up for free' is clicked on
+
+2021-04-19 10:35:27 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Username_username"), DATE): Text '2021/04/19-10-35-17' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:35:27 - [MESSAGE][PASSED] - Text '2021/04/19-10-35-17' is set on object 'Object Repository/Page_HE-F1/input_Username_username'
+
+2021-04-19 10:35:27 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_HE-F1/input_Email_email"), DATE + "@gmail.com"): Text '2021/04/19-10-35-17@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:35:28 - [MESSAGE][PASSED] - Text '2021/04/19-10-35-17@gmail.com' is set on object 'Object Repository/Page_HE-F1/input_Email_email'
+
+2021-04-19 10:35:28 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b"), "ENGINEER", true): All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:35:29 - [MESSAGE][PASSED] - All options with value 'ENGINEER' are selected in object 'Object Repository/Page_HE-F1/select_Manageur                    Ingnieur_05750b'  using regular expression
+
+2021-04-19 10:35:29 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_HE-F1/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:35:29 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_HE-F1/input_Password_password'
+
+2021-04-19 10:35:29 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_HE-F1/button_Register")): Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on
+
+2021-04-19 10:35:30 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_HE-F1/button_Register' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-04-19 10:34:28 - [TEST_SUITE][PASSED] - All: Test Cases/Signup]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

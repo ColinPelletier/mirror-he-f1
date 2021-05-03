@@ -1,0 +1,23 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+All,Chrome 89.0.4389.114,,,2021-04-12 10:59:33,2021-04-12 10:59:50,16.883s,PASSED
+,,,,,,,
+Test Cases/Bad login,Chrome 89.0.4389.114,,,2021-04-12 10:59:35,2021-04-12 10:59:40,5.176s,PASSED
+"openBrowser("""")",Chrome 89.0.4389.114,,,2021-04-12 10:59:35,2021-04-12 10:59:37,2.091s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 89.0.4389.114,,,2021-04-12 10:59:37,2021-04-12 10:59:38,0.931s,PASSED
+"setText(findTestObject(""Object Repository/Page_Login/input_Username_username""), ""seb"")",Chrome 89.0.4389.114,,,2021-04-12 10:59:38,2021-04-12 10:59:39,0.838s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Login/input_Password_password""), ""HeCM15nHKBI="")",Chrome 89.0.4389.114,,,2021-04-12 10:59:39,2021-04-12 10:59:39,0.448s,PASSED
+"click(findTestObject(""Object Repository/Page_Login/button_Sign In""))",Chrome 89.0.4389.114,,,2021-04-12 10:59:39,2021-04-12 10:59:40,0.496s,PASSED
+,,,,,,,
+Test Cases/Non-existent login,Chrome 89.0.4389.114,,,2021-04-12 10:59:40,2021-04-12 10:59:45,5.046s,PASSED
+"openBrowser("""")",Chrome 89.0.4389.114,,,2021-04-12 10:59:40,2021-04-12 10:59:42,2.098s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 89.0.4389.114,,,2021-04-12 10:59:42,2021-04-12 10:59:43,0.962s,PASSED
+"setText(findTestObject(""Object Repository/Page_Login/input_Username_username""), ""sebdonotexist"")",Chrome 89.0.4389.114,,,2021-04-12 10:59:43,2021-04-12 10:59:44,0.804s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Login/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 89.0.4389.114,,,2021-04-12 10:59:44,2021-04-12 10:59:44,0.394s,PASSED
+"click(findTestObject(""Object Repository/Page_Login/button_Sign In""))",Chrome 89.0.4389.114,,,2021-04-12 10:59:44,2021-04-12 10:59:45,0.480s,PASSED
+,,,,,,,
+Test Cases/Good login,Chrome 89.0.4389.114,,,2021-04-12 10:59:45,2021-04-12 10:59:50,5.114s,PASSED
+"openBrowser("""")",Chrome 89.0.4389.114,,,2021-04-12 10:59:45,2021-04-12 10:59:47,2.113s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 89.0.4389.114,,,2021-04-12 10:59:47,2021-04-12 10:59:48,1.004s,PASSED
+"setText(findTestObject(""Object Repository/Page_Login/input_Username_username""), ""seb"")",Chrome 89.0.4389.114,,,2021-04-12 10:59:48,2021-04-12 10:59:49,0.800s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Login/input_Password_password""), ""RigbBhfdqOBGNlJIWM1ClA=="")",Chrome 89.0.4389.114,,,2021-04-12 10:59:49,2021-04-12 10:59:50,0.382s,PASSED
+"click(findTestObject(""Object Repository/Page_Login/button_Sign In""))",Chrome 89.0.4389.114,,,2021-04-12 10:59:50,2021-04-12 10:59:50,0.487s,PASSED

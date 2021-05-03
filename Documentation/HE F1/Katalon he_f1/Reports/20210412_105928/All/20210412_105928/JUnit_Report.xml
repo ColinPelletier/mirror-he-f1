@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="All" time="17.934" tests="3" failures="0" skips="0" errors="0">
+   <testsuite name="All" tests="3" failures="0" errors="0" time="17.934" skips="0" timestamp="2021-04-12 10:59:33" hostname="sebas - DESKTOP-47AGURN" id="Test Suites/All">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210412_105928\\All\\20210412_105928"/>
+         <property name="logFiles" value="D:\\HES\\3e_annee\\JEE\\he-f1\\Test\\Katalon he_f1\\Reports\\20210412_105928\\All\\20210412_105928\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="sebas - DESKTOP-47AGURN"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="7.9.1.208"/>
+         <property name="browser" value="Chrome 89.0.4389.114"/>
+         <property name="hostAddress" value="172.16.128.196"/>
+         <property name="sessionId" value="9dffdb38fc402517d6dd1d0ed96b138c"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/Bad login" time="5.176" classname="Test Cases/Bad login" status="PASSED">
+         <system-out><![CDATA[2021-04-12 10:59:35 - [TEST_CASE][PASSED] - Test Cases/Bad login: Test Cases/Bad login
+
+2021-04-12 10:59:35 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-12 10:59:35 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-12 10:59:35 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-12 10:59:37 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-12 10:59:37 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2021-04-12 10:59:38 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2021-04-12 10:59:38 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Login/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-12 10:59:39 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-12 10:59:39 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Login/input_Password_password"), "HeCM15nHKBI="): Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-12 10:59:39 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-12 10:59:39 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Sign In")): Object: 'Object Repository/Page_Login/button_Sign In' is clicked on
+
+2021-04-12 10:59:40 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Sign In' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Non-existent login" time="5.046" classname="Test Cases/Non-existent login" status="PASSED">
+         <system-out><![CDATA[2021-04-12 10:59:40 - [TEST_CASE][PASSED] - Test Cases/Non-existent login: Test Cases/Non-existent login
+
+2021-04-12 10:59:40 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-12 10:59:40 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-12 10:59:41 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-12 10:59:41 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-12 10:59:42 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-12 10:59:42 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2021-04-12 10:59:43 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2021-04-12 10:59:43 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Login/input_Username_username"), "sebdonotexist"): Text 'sebdonotexist' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-12 10:59:44 - [MESSAGE][PASSED] - Text 'sebdonotexist' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-12 10:59:44 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Login/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-12 10:59:44 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-12 10:59:44 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Sign In")): Object: 'Object Repository/Page_Login/button_Sign In' is clicked on
+
+2021-04-12 10:59:45 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Sign In' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Good login" time="5.114" classname="Test Cases/Good login" status="PASSED">
+         <system-out><![CDATA[2021-04-12 10:59:45 - [TEST_CASE][PASSED] - Test Cases/Good login: Test Cases/Good login
+
+2021-04-12 10:59:45 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2021-04-12 10:59:45 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2021-04-12 10:59:46 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2021-04-12 10:59:46 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2021-04-12 10:59:47 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2021-04-12 10:59:47 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2021-04-12 10:59:48 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2021-04-12 10:59:48 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Login/input_Username_username"), "seb"): Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-12 10:59:49 - [MESSAGE][PASSED] - Text 'seb' is set on object 'Object Repository/Page_Login/input_Username_username'
+
+2021-04-12 10:59:49 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Login/input_Password_password"), "RigbBhfdqOBGNlJIWM1ClA=="): Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-12 10:59:50 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Login/input_Password_password'
+
+2021-04-12 10:59:50 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Login/button_Sign In")): Object: 'Object Repository/Page_Login/button_Sign In' is clicked on
+
+2021-04-12 10:59:50 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Login/button_Sign In' is clicked on]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-04-12 10:59:33 - [TEST_SUITE][PASSED] - All: Test Cases/Good login]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

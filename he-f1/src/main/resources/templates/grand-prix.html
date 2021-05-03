@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Grand Prix - HE-F1</title>
+
+    <head th:replace="fragments/fragments.html :: header"></head>
+</head>
+
+<body>
+    <!-- Menu -->
+    <div th:replace="fragments/fragments.html :: navigation"></div>
+
+    <!-- Display team properties -->
+    <div class="container mt-sm-3">
+        <h1>Grands Prix</h1>
+
+        <div class="row justify-content-end" style="margin-bottom:10px;margin-right:0px;">
+            <form class="form-inline my-2 my-lg-0" th:object="${gp}" th:action="@{/grand-prix}" method="get">
+                <input class="form-control" placeholder="search..." name="selectedName" type="text">
+                <input type="submit" class="btn btn-outline-danger my-2 my-sm-0 mt-1" value="Search by name" />
+
+            </form>
+            <form class="form-inline my-2 my-lg-0" th:action="@{/grand-prix}" method="get">
+                <input type="submit" class="btn btn-danger my-2 my-sm-0 mt-1" value="Reset filter" />
+            </form>
+        </div>
+
+        <div th:object="${gps}">
+            <div class="row justify-content-center">
+                <div th:each="gp : ${gps.content}" class="col-4">
+                    <div class="card" style="margin-bottom:30px;">
+                        <img class="card-img-top" th:src="@{/images/gp-thumbnail.jpg}" alt="thumbnail">
+                        <div class="card-body">
+                            <h5 th:text="${gp.name}" class="card-title"></h5>
+                            <h6 th:text="${gp.country}" class="card-subtitle mb-2 text-muted"></h6>
+                            <p th:text="${#dates.format(gp.date, 'dd-MM-yyyy HH:mm')}" class="card-text"></p>
+                            <form th:action="@{/grand-prix/simulating}" th:object="${gp}" method="post">
+                                <input type="hidden" th:value="*{id}" id="id" name="id" />
+                                <input type="hidden" th:value="*{date}" id="date" name="date" />
+                                <input type="hidden" th:value="*{name}" id="name" name="name" />
+                                <input type="hidden" th:value="*{country}" id="country" name="country" />
+                                <button th:if="${gp.date.after(#dates.createNow())}" sec:authorize="isAuthenticated()"
+                                    type="submit" class="btn btn-outline-danger btn-block">Let's race !</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <nav th:if="${gps.totalPages > 0}" aria-label="pagination">
+                    <ul class="pagination">
+                        <li th:if="${currentPage > 1}" class="page-item"><a class="page-link"
+                                th:href="@{/grand-prix(size=${gps.size}, page=${currentPage - 1}, selectedName=${search})}"><span
+                                    aria-hidden="true">&laquo;</span></a>
+                        </li>
+                        <li th:each="pageNumber : ${pageNumbers}"
+                            th:class="${pageNumber==gps.number + 1} ? 'page-item active' : 'page-item'"><a
+                                th:href="@{/grand-prix(size=${gps.size}, page=${pageNumber}, selectedName=${search})}"
+                                th:text=${pageNumber} class="page-link"></a>
+                        </li>
+                        <li th:if="${currentPage < gps.totalPages}" class="page-item"><a class="page-link"
+                                th:href="@{/grand-prix(size=${gps.size}, page=${currentPage + 1}, selectedName=${search})}"><span
+                                    aria-hidden="true">&raquo;</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include scripts -->
+    <div th:replace="fragments/fragments.html :: scripts"></div>
+</body>
+
+</html>
+<style>
+    .pagination>li>a {
+        background-color: white;
+        color: #dc3545;
+    }
+
+    .pagination>li>a:focus,
+    .pagination>li>a:hover,
+    .pagination>li>span:focus,
+    .pagination>li>span:hover {
+        color: #5a5a5a;
+        background-color: #eee;
+        border-color: #ddd;
+    }
+
+    .pagination>.active>a {
+        color: white;
+        background-color: #dc3545 !Important;
+        border: solid 1px #dc3545 !Important;
+    }
+
+    .pagination>.active>a:hover {
+        background-color: #dc3545 !Important;
+        border: solid 1px #dc3545;
+    }
+</style>

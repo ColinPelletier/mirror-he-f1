@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/fragments.html :: header"></div>
+
+<head>
+    <title>Sign up - HE-F1</title>
+
+    <head th:replace="fragments/fragments.html :: header"></head>
+</head>
+
+<body>
+
+    <!-- UPDATE CHAP_06 -->
+    <div th:replace="fragments/fragments.html :: navigation"></div>
+    <div class="container mt-sm-3">
+        <h1>Register</h1>
+
+        <div th:if="${param.error}">
+            <p style="font-size: 20; color: #FF1C19;">Email is incorrect or
+                already exist !</p>
+        </div>
+        <form class="form-horizontal" role="form" method="POST" th:action="@{/signup}" th:object="${user}">
+            <div class="form-group">
+                <label>Username</label> <input type="text" th:field="*{username}" placeholder="Enter a username"
+                    class="form-control" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+                <label>Email</label> <input type="email" th:field="*{email}" placeholder="Enter a email"
+                    class="form-control" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+                <label>Job</label>
+                <select class="form-control" th:field="*{role}">
+                    <option th:each="role : ${roles}" th:value="${role}" th:text="${role.description}"></option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword1">Password</label> <input type="password" th:field="*{password}"
+                    placeholder="Enter a password with minimum 5 characters" class="form-control" id="password"
+                    name="password" required pattern=".{5,}" title="5 characters minimum" />
+            </div>
+            <button type="submit" class="btn btn-danger float-right">Register</button>
+        </form>
+    </div>
+    <div th:replace="fragments/fragments.html :: scripts"></div>
+</body>
+
+</html>

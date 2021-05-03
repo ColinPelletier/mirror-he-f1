@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Notifications - HE-F1</title>
+
+    <head th:replace="fragments/fragments.html :: header"></head>
+</head>
+
+<body>
+    <!-- Replace fragment  -->
+    <div th:replace="fragments/fragments.html :: navigation"></div>
+
+    <div class="container mt-sm-3">
+        <h1>Notifications</h1>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="notification: ${notifications}">
+                    <th class="align-middle" th:text="${notification.id}" scope="row"></th>
+                    <td class="align-middle" th:text="${#dates.format(notification.date, 'dd-MM-yyyy HH:mm')}"></td>
+                    <td class="align-middle" th:text="${notification.message}"></td>
+                    <td class="align-middle" th:text="${notification.team.name}"></td>
+                    <td class="align-middle">
+                        <div class="row">
+                            <form class="mr-2" th:action="@{'/notification/' + ${notification.id} + '/accept'}"
+                                method="post">
+                                <input type="submit" class="btn btn-outline-success my-2 my-sm-0 mt-1" value="Accept" />
+                            </form>
+                            <form th:action="@{'/notification/' + ${notification.id} + '/decline'}" method="post">
+                                <input type="submit" class="btn btn-outline-danger my-2 my-sm-0 mt-1" value="Decline" />
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div th:replace="fragments/fragments.html :: scripts"></div>
+</body>
+
+</html>

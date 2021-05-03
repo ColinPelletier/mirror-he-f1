@@ -1,0 +1,14 @@
+{"testCaseName":"Test Cases/Bad login","testCaseId":"Test Cases/Bad login"}
+{"testCaseName":"Test Cases/Non-existent login","testCaseId":"Test Cases/Non-existent login"}
+{"testCaseName":"Test Cases/Good login","testCaseId":"Test Cases/Good login"}
+{"testCaseName":"Test Cases/Signup already used email","testCaseId":"Test Cases/Signup already used email"}
+{"testCaseName":"Test Cases/Signup bad email","testCaseId":"Test Cases/Signup bad email"}
+{"testCaseName":"Test Cases/Signup bad password","testCaseId":"Test Cases/Signup bad password"}
+{"testCaseName":"Test Cases/Signup","testCaseId":"Test Cases/Signup"}
+{"testCaseName":"Test Cases/Logout","testCaseId":"Test Cases/Logout"}
+{"testCaseName":"Test Cases/Test user advanced research","testCaseId":"Test Cases/Test user advanced research"}
+{"testCaseName":"Test Cases/Recruit seb2 from seb","testCaseId":"Test Cases/Recruit seb2 from seb"}
+{"testCaseName":"Test Cases/Accept seb invitation","testCaseId":"Test Cases/Accept seb invitation"}
+{"testCaseName":"Test Cases/Repair car piece","testCaseId":"Test Cases/Repair car piece"}
+{"testCaseName":"Test Cases/Upgarde car piece","testCaseId":"Test Cases/Upgarde car piece"}
+{"testCaseName":"Test Cases/Join GP","testCaseId":"Test Cases/Join GP"}
